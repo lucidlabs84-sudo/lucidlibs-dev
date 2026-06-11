@@ -3,8 +3,8 @@
 import { createContext, useContext, useState, useEffect, useCallback, ReactNode } from "react";
 import en from "./en.json";
 import zh from "./zh.json";
+import { Lang, detectLang, setStoredLang } from "@/lib/i18n-detect";
 
-type Lang = "en" | "zh";
 type Translations = Record<string, unknown>;
 
 const resources: Record<Lang, Translations> = { en, zh };
@@ -28,23 +28,18 @@ function getNestedValue(obj: Record<string, unknown>, path: string): unknown {
 }
 
 export function I18nProvider({ children }: { children: ReactNode }) {
-  // Always start with "en" to match SSR output, then switch after hydration
+  // Start with "en" to match SSR output, detect real lang after hydration
   const [lang, setLang] = useState<Lang>("en");
   const [hydrated, setHydrated] = useState(false);
 
   useEffect(() => {
-    const stored = localStorage.getItem("lang");
-    const detected: Lang =
-      stored === "en" || stored === "zh"
-        ? stored
-        : navigator.language.startsWith("zh")
-          ? "zh"
-          : "en";
-    if (detected !== "en") {
-      setLang(detected);
-      document.documentElement.lang = detected;
-    }
-    setHydrated(true);
+    detectLang().then((detected) => {
+      if (detected !== "en") {
+        setLang(detected);
+        document.documentElement.lang = detected;
+      }
+      setHydrated(true);
+    });
   }, []);
 
   const t = useCallback(
@@ -59,10 +54,7 @@ export function I18nProvider({ children }: { children: ReactNode }) {
   const toggleLang = useCallback(() => {
     const next: Lang = lang === "en" ? "zh" : "en";
     setLang(next);
-    if (typeof window !== "undefined") {
-      localStorage.setItem("lang", next);
-      document.documentElement.lang = next;
-    }
+    setStoredLang(next);
   }, [lang]);
 
   return (
