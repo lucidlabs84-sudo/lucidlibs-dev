@@ -1,8 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useStudioI18n } from "@/i18n/context";
 
 export default function Hero() {
+  const { t } = useStudioI18n();
+
   return (
     <section className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden">
       {/* Background gradient */}
@@ -33,14 +36,13 @@ export default function Hero() {
           </div>
 
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter text-foreground mb-6">
-            Building tools that
+            {t("hero.title") as string}
             <br />
-            <span className="text-accent">make dev delightful</span>
+            <span className="text-accent">{t("hero.titleAccent") as string}</span>
           </h1>
 
           <p className="text-muted text-lg md:text-xl max-w-[65ch] mx-auto mb-12 leading-relaxed">
-            Independent developer studio crafting browser extensions and
-            developer tools. Simple, focused, and built with care.
+            {t("hero.subtitle") as string}
           </p>
 
           {/* CTA */}
@@ -49,13 +51,13 @@ export default function Hero() {
               href="#products"
               className="h-12 px-8 rounded-full bg-accent text-background font-semibold text-sm hover:bg-accent/90 transition-colors flex items-center"
             >
-              Explore Products
+              {t("hero.ctaPrimary") as string}
             </a>
             <a
               href="#about"
               className="h-12 px-8 rounded-full border border-border text-foreground font-medium text-sm hover:border-border-hover hover:bg-surface-hover transition-all flex items-center"
             >
-              About the Studio
+              {t("hero.ctaSecondary") as string}
             </a>
           </div>
         </motion.div>

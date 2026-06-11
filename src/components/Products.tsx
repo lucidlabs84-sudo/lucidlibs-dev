@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { useStudioI18n } from "@/i18n/context";
 
 interface Product {
   name: string;
@@ -14,60 +15,37 @@ interface Product {
   icon: string;
 }
 
-const products: Product[] = [
-  {
-    name: "StyleSnap",
-    tagline: "CSS Style Extractor + AI Code Generator",
-    description:
-      "Point at any element on a webpage. Get its complete CSS, responsive code, and AI-generated alternatives. One click, zero guesswork.",
-    price: "$29 / lifetime",
-    status: "live",
-    href: "/stylesnap",
-    features: [
-      "One-click CSS extraction",
-      "AI-powered code generation",
-      "Responsive variant suggestions",
-      "Export to CSS / Tailwind / inline styles",
-    ],
-    icon: "SS",
-  },
-  {
-    name: "More coming soon",
-    tagline: "The next tool is on the way",
-    description:
-      "We're always building. The next product is already in the workshop. Follow us to get early access.",
-    price: "TBA",
-    status: "coming",
-    href: "#",
-    features: ["Stay tuned", "Early access for followers"],
-    icon: "?",
-  },
-  {
-    name: "Your idea here",
-    tagline: "Got a developer tool idea?",
-    description:
-      "We build what developers need. If you have a pain point that no tool solves well, let us know. We might just build it.",
-    price: "Open",
-    status: "planned",
-    href: "mailto:lucidlibs@outlook.com",
-    features: ["Community-driven", "Real developer problems"],
-    icon: "+",
-  },
-];
-
 const statusColors = {
   live: "bg-accent-soft text-accent border-accent/30",
   coming: "bg-muted/10 text-muted border-muted/30",
   planned: "bg-muted/5 text-muted/60 border-muted/20",
 };
 
-const statusLabels = {
-  live: "Available Now",
-  coming: "Coming Soon",
-  planned: "Open Idea",
-};
-
 export default function Products() {
+  const { t, lang } = useStudioI18n();
+
+  const statusLabels: Record<string, string> = {
+    live: t("products.statusLive") as string,
+    coming: t("products.statusComing") as string,
+    planned: t("products.statusPlanned") as string,
+  };
+
+  const productKeys = ["stylesnap", "coming", "planned"] as const;
+  const productStatuses = ["live", "coming", "planned"] as const;
+  const productHrefs = ["/stylesnap", "#", "mailto:lucidlibs@outlook.com"];
+  const productIcons = ["SS", "?", "+"];
+
+  const products: Product[] = productKeys.map((key, i) => ({
+    name: t(`products.${key}.name`) as string,
+    tagline: t(`products.${key}.tagline`) as string,
+    description: t(`products.${key}.description`) as string,
+    price: t(`products.${key}.price`) as string,
+    status: productStatuses[i],
+    href: productHrefs[i],
+    features: t(`products.${key}.features`, { returnObjects: true }) as string[],
+    icon: productIcons[i],
+  }));
+
   return (
     <section id="products" className="py-24 md:py-32">
       <div className="max-w-7xl mx-auto px-6">
@@ -80,14 +58,13 @@ export default function Products() {
           className="mb-16"
         >
           <p className="text-accent font-mono text-sm mb-3 tracking-wider uppercase">
-            Products
+            {t("products.tag") as string}
           </p>
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground">
-            Tools built with intention
+            {t("products.title") as string}
           </h2>
           <p className="text-muted text-base max-w-[50ch] mt-4 leading-relaxed">
-            Every product starts from a real pain point. No feature bloat, no
-            subscription traps. Just focused solutions.
+            {t("products.subtitle") as string}
           </p>
         </motion.div>
 
@@ -95,7 +72,7 @@ export default function Products() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {products.map((product, i) => (
             <motion.div
-              key={product.name}
+              key={productKeys[i]}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
@@ -110,14 +87,14 @@ export default function Products() {
                   href={product.href}
                   className="group block h-full rounded-2xl border border-border bg-surface p-8 transition-all duration-300 hover:border-border-hover hover:bg-surface-hover hover:shadow-lg hover:shadow-accent/5 hover:scale-[1.02]"
                 >
-                  <ProductContent product={product} />
+                  <ProductContent product={product} statusLabels={statusLabels} />
                 </Link>
               ) : (
                 <a
                   href={product.href}
                   className="group block h-full rounded-2xl border border-border bg-surface p-8 transition-all duration-300 hover:border-border-hover hover:bg-surface-hover hover:shadow-lg hover:shadow-accent/5 hover:scale-[1.02]"
                 >
-                  <ProductContent product={product} />
+                  <ProductContent product={product} statusLabels={statusLabels} />
                 </a>
               )}
             </motion.div>
@@ -128,7 +105,15 @@ export default function Products() {
   );
 }
 
-function ProductContent({ product }: { product: Product }) {
+function ProductContent({
+  product,
+  statusLabels,
+}: {
+  product: Product;
+  statusLabels: Record<string, string>;
+}) {
+  const { t } = useStudioI18n();
+
   return (
     <>
       {/* Icon + status */}
@@ -191,7 +176,7 @@ function ProductContent({ product }: { product: Product }) {
         <span className="text-sm font-mono text-accent">{product.price}</span>
         {product.status === "live" && (
           <span className="text-xs text-muted group-hover:text-foreground transition-colors flex items-center gap-1">
-            Get it now
+            {t("products.getItNow") as string}
             <svg
               width="12"
               height="12"

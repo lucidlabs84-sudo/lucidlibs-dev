@@ -27,7 +27,7 @@ function getNestedValue(obj: Record<string, unknown>, path: string): unknown {
   return current;
 }
 
-export function I18nProvider({ children }: { children: ReactNode }) {
+export function StudioI18nProvider({ children }: { children: ReactNode }) {
   // Always start with "en" to match SSR output, then switch after hydration
   const [lang, setLang] = useState<Lang>("en");
   const [hydrated, setHydrated] = useState(false);
@@ -72,8 +72,8 @@ export function I18nProvider({ children }: { children: ReactNode }) {
   );
 }
 
-export function useI18n() {
+export function useStudioI18n() {
   const ctx = useContext(I18nContext);
-  if (!ctx) throw new Error("useI18n must be used within I18nProvider");
+  if (!ctx) throw new Error("useStudioI18n must be used within StudioI18nProvider");
   return ctx;
 }

@@ -2,8 +2,11 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { useStudioI18n } from "@/i18n/context";
 
 export default function Footer() {
+  const { t } = useStudioI18n();
+
   return (
     <footer id="contact" className="border-t border-border py-16">
       <div className="max-w-7xl mx-auto px-6">
@@ -17,14 +20,13 @@ export default function Footer() {
         >
           <div className="rounded-2xl border border-border bg-surface p-8 md:p-12 text-center">
             <p className="text-accent font-mono text-sm mb-3 tracking-wider uppercase">
-              Contact
+              {t("footer.tag") as string}
             </p>
             <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-foreground mb-4">
-              Have an idea? Let&apos;s talk.
+              {t("footer.title") as string}
             </h2>
             <p className="text-muted text-base max-w-[50ch] mx-auto mb-8 leading-relaxed">
-              Whether it&apos;s feedback on StyleSnap, a bug report, or an idea
-              for the next tool — I&apos;m always listening.
+              {t("footer.subtitle") as string}
             </p>
             <a
               href="mailto:lucidlibs@outlook.com"
@@ -66,25 +68,25 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="text-muted hover:text-foreground transition-colors text-sm"
             >
-              GitHub
+              {t("footer.links.github") as string}
             </a>
             <Link
               href="/stylesnap"
               className="text-muted hover:text-foreground transition-colors text-sm"
             >
-              StyleSnap
+              {t("footer.links.stylesnap") as string}
             </Link>
             <a
               href="mailto:lucidlibs@outlook.com"
               className="text-muted hover:text-foreground transition-colors text-sm"
             >
-              Email
+              {t("footer.links.email") as string}
             </a>
           </div>
 
           {/* Copyright */}
           <p className="text-muted/60 text-xs">
-            &copy; {new Date().getFullYear()} LucidLibs. All rights reserved.
+            &copy; {new Date().getFullYear()} LucidLibs. {t("footer.copyright") as string}
           </p>
         </div>
       </div>

@@ -3,15 +3,17 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
-
-const navLinks = [
-  { label: "Products", href: "#products" },
-  { label: "About", href: "#about" },
-  { label: "Contact", href: "#contact" },
-];
+import { useStudioI18n } from "@/i18n/context";
 
 export default function Navbar() {
+  const { t, toggleLang, lang } = useStudioI18n();
   const [mobileOpen, setMobileOpen] = useState(false);
+
+  const navLinks = [
+    { label: t("nav.products") as string, href: "#products" },
+    { label: t("nav.about") as string, href: "#about" },
+    { label: t("nav.contact") as string, href: "#contact" },
+  ];
 
   return (
     <nav className="fixed top-0 w-full z-50 border-b border-border bg-background/80 backdrop-blur-xl">
@@ -41,36 +43,50 @@ export default function Navbar() {
             href="/stylesnap"
             className="text-muted hover:text-foreground transition-colors duration-200 text-sm font-medium"
           >
-            StyleSnap
+            {t("nav.stylesnap") as string}
           </Link>
+          <button
+            onClick={toggleLang}
+            className="text-xs font-mono px-2.5 py-1.5 rounded-md border border-border text-muted hover:text-foreground hover:border-border-hover transition-all"
+          >
+            {t("nav.switchLang") as string}
+          </button>
         </div>
 
         {/* Mobile toggle */}
-        <button
-          onClick={() => setMobileOpen(!mobileOpen)}
-          className="md:hidden text-muted hover:text-foreground transition-colors"
-          aria-label="Toggle menu"
-        >
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
+        <div className="md:hidden flex items-center gap-2">
+          <button
+            onClick={toggleLang}
+            className="text-xs font-mono px-2.5 py-1.5 rounded-md border border-border text-muted hover:text-foreground hover:border-border-hover transition-all"
           >
-            {mobileOpen ? (
-              <path d="M6 6L18 18M6 18L18 6" />
-            ) : (
-              <>
-                <path d="M4 6H20" />
-                <path d="M4 12H20" />
-                <path d="M4 18H20" />
-              </>
-            )}
-          </svg>
-        </button>
+            {t("nav.switchLang") as string}
+          </button>
+          <button
+            onClick={() => setMobileOpen(!mobileOpen)}
+            className="text-muted hover:text-foreground transition-colors"
+            aria-label="Toggle menu"
+          >
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+            >
+              {mobileOpen ? (
+                <path d="M6 6L18 18M6 18L18 6" />
+              ) : (
+                <>
+                  <path d="M4 6H20" />
+                  <path d="M4 12H20" />
+                  <path d="M4 18H20" />
+                </>
+              )}
+            </svg>
+          </button>
+        </div>
       </div>
 
       {/* Mobile menu */}
@@ -99,7 +115,7 @@ export default function Navbar() {
                 onClick={() => setMobileOpen(false)}
                 className="text-muted hover:text-foreground transition-colors text-sm font-medium"
               >
-                StyleSnap
+                {t("nav.stylesnap") as string}
               </Link>
             </div>
           </motion.div>

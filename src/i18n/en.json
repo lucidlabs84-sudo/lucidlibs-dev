@@ -1,0 +1,93 @@
+{
+  "nav": {
+    "products": "Products",
+    "about": "About",
+    "contact": "Contact",
+    "stylesnap": "StyleSnap",
+    "switchLang": "中文"
+  },
+  "hero": {
+    "title": "Building tools that",
+    "titleAccent": "make dev delightful",
+    "subtitle": "Independent developer studio crafting browser extensions and developer tools. Simple, focused, and built with care.",
+    "ctaPrimary": "Explore Products",
+    "ctaSecondary": "About the Studio"
+  },
+  "products": {
+    "tag": "Products",
+    "title": "Tools built with intention",
+    "subtitle": "Every product starts from a real pain point. No feature bloat, no subscription traps. Just focused solutions.",
+    "statusLive": "Available Now",
+    "statusComing": "Coming Soon",
+    "statusPlanned": "Open Idea",
+    "getItNow": "Get it now",
+    "stylesnap": {
+      "name": "StyleSnap",
+      "tagline": "CSS Style Extractor + AI Code Generator",
+      "description": "Point at any element on a webpage. Get its complete CSS, responsive code, and AI-generated alternatives. One click, zero guesswork.",
+      "price": "$29 / lifetime",
+      "features": [
+        "One-click CSS extraction",
+        "AI-powered code generation",
+        "Responsive variant suggestions",
+        "Export to CSS / Tailwind / inline styles"
+      ]
+    },
+    "coming": {
+      "name": "More coming soon",
+      "tagline": "The next tool is on the way",
+      "description": "We're always building. The next product is already in the workshop. Follow us to get early access.",
+      "price": "TBA",
+      "features": ["Stay tuned", "Early access for followers"]
+    },
+    "planned": {
+      "name": "Your idea here",
+      "tagline": "Got a developer tool idea?",
+      "description": "We build what developers need. If you have a pain point that no tool solves well, let us know. We might just build it.",
+      "price": "Open",
+      "features": ["Community-driven", "Real developer problems"]
+    }
+  },
+  "about": {
+    "tag": "About",
+    "title": "One person, one mission",
+    "story": {
+      "p1": "LucidLibs is an independent developer studio. Not a startup, not a team of 50. One person who builds tools for developers — because the best software comes from someone who actually uses it.",
+      "p2": "I got tired of tools that over-promise and under-deliver. So I started building my own. Every product under LucidLibs started from a real frustration: a workflow that should be simpler, a task that should take seconds not hours.",
+      "p3Prefix": "The name says it all — ",
+      "p3Lucid": "Lucid",
+      "p3LucidMeaning": " (clear, easy to understand) + ",
+      "p3Libs": "Libs",
+      "p3LibsMeaning": " (libraries, tools). Software that makes your life clearer, not more complicated."
+    },
+    "principles": [
+      {
+        "title": "Focus over features",
+        "desc": "Every tool solves one problem well. No bloat, no settings page fatigue."
+      },
+      {
+        "title": "Fair pricing",
+        "desc": "One-time purchases. No subscriptions, no hidden tiers. Pay once, own forever."
+      },
+      {
+        "title": "Crafted by hand",
+        "desc": "Not a VC-funded factory. Every pixel, every line of code is reviewed by one person who cares."
+      },
+      {
+        "title": "Open conversation",
+        "desc": "Feedback directly shapes the roadmap. No ticket queues, no corporate walls."
+      }
+    ]
+  },
+  "footer": {
+    "tag": "Contact",
+    "title": "Have an idea? Let's talk.",
+    "subtitle": "Whether it's feedback on StyleSnap, a bug report, or an idea for the next tool — I'm always listening.",
+    "links": {
+      "github": "GitHub",
+      "stylesnap": "StyleSnap",
+      "email": "Email"
+    },
+    "copyright": "All rights reserved."
+  }
+}
