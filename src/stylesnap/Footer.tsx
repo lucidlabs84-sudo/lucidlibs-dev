@@ -38,6 +38,11 @@ export default function StyleFooter() {
                   {t("footer.faq") as string}
                 </Link>
               </li>
+              <li>
+                <Link href="/stylesnap/recover" className="hover:text-foreground transition">
+                  {t("footer.recoverLicense") as string}
+                </Link>
+              </li>
             </ul>
           </div>
           <div>
