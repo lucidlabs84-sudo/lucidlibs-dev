@@ -1,0 +1,15 @@
+{
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "style.lucidlibs.dev"
+        }
+      ],
+      "destination": "https://lucidlibs.dev/stylesnap/:path*",
+      "statusCode": 301
+    }
+  ]
+}
