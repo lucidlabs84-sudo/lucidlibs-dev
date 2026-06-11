@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -67,12 +68,12 @@ export default function Footer() {
             >
               GitHub
             </a>
-            <a
-              href="https://style.lucidlibs.dev"
+            <Link
+              href="/stylesnap"
               className="text-muted hover:text-foreground transition-colors text-sm"
             >
               StyleSnap
-            </a>
+            </Link>
             <a
               href="mailto:lucidlibs@outlook.com"
               className="text-muted hover:text-foreground transition-colors text-sm"

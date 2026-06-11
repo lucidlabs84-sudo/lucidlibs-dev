@@ -1,0 +1,378 @@
+{
+  "nav": {
+    "features": "Features",
+    "pricing": "Pricing",
+    "faq": "FAQ",
+    "blog": "Blog",
+    "getStarted": "Get StyleSnap",
+    "switchLang": "中文"
+  },
+  "hero": {
+    "badge": "AI-Powered CSS Extraction",
+    "title": "Extract Any Style.",
+    "titleAccent": "Export Any Code.",
+    "subtitle": "Hover → Extract → Edit → Export. Turn any website's CSS into clean React, Vue, or Tailwind code in seconds.",
+    "cta": "Get StyleSnap — $29",
+    "ctaSub": "One-time purchase. Lifetime updates.",
+    "demo": "Watch Demo",
+    "users": "Trusted by 2,000+ developers"
+  },
+  "features": {
+    "tag": "Why StyleSnap",
+    "title": "Built for developers who value precision",
+    "subtitle": "Not just another CSS inspector. StyleSnap closes the loop from extraction to production-ready code.",
+    "items": [
+      {
+        "icon": "crosshair",
+        "title": "Pixel-Perfect Extraction",
+        "desc": "Hover over any element to instantly capture its computed styles, selectors, and specificity — no DevTools needed."
+      },
+      {
+        "icon": "code",
+        "title": "AI Code Generation",
+        "desc": "One click converts CSS to React (styled-components/CSS modules), Vue, or Tailwind utility classes — clean and idiomatic."
+      },
+      {
+        "icon": "palette",
+        "title": "Design Token Export",
+        "desc": "Extract colors, spacing, and typography into a structured design token JSON file. Import directly into Figma or your design system."
+      },
+      {
+        "icon": "edit",
+        "title": "Live Edit & Preview",
+        "desc": "Tweak any property in the side panel and see changes live on the page. Copy the result when it looks right."
+      },
+      {
+        "icon": "screenshot",
+        "title": "Screenshot & Annotate",
+        "desc": "Capture the styled element with a screenshot, add annotations, and share with your team as a reference."
+      },
+      {
+        "icon": "zap",
+        "title": "Tailwind-First Workflow",
+        "desc": "Deterministic CSS-to-Tailwind conversion with full class coverage. No AI hallucination — every class maps correctly."
+      }
+    ]
+  },
+  "workflow": {
+    "tag": "How It Works",
+    "title": "3 steps. Zero friction.",
+    "steps": [
+      {
+        "num": "01",
+        "title": "Hover & Select",
+        "desc": "Move your cursor to any element on the page. StyleSnap highlights it and shows a quick style summary."
+      },
+      {
+        "num": "02",
+        "title": "Edit & Refine",
+        "desc": "Open the side panel to see all computed styles. Edit any value and watch the page update in real time."
+      },
+      {
+        "num": "03",
+        "title": "Export & Ship",
+        "desc": "Choose your format — React, Vue, Tailwind, or design tokens. Copy or download production-ready code."
+      }
+    ]
+  },
+  "comparison": {
+    "tag": "Compare",
+    "title": "Why switch from CSS Scan?",
+    "headers": ["Feature", "StyleSnap", "CSS Scan"],
+    "rows": [
+      ["CSS Extraction", "✓", "✓"],
+      ["Live Edit & Preview", "✓", "✓"],
+      ["AI Code Generation (React/Vue/Tailwind)", "✓", "✗"],
+      ["Design Token Export", "✓", "✗"],
+      ["Screenshot & Annotate", "✓", "✗"],
+      ["Tailwind Class Conversion", "✓ Deterministic", "✓ Basic"],
+      ["Price", "$29 one-time", "$69 one-time"],
+      ["Browser Support", "Edge & Chrome", "Chrome only"]
+    ]
+  },
+  "pricing": {
+    "tag": "Pricing",
+    "title": "One price. Everything included.",
+    "subtitle": "No subscriptions. No hidden fees. Pay once, use forever.",
+    "price": "$29",
+    "period": "one-time",
+    "features": [
+      "Unlimited CSS extraction",
+      "AI code generation (React, Vue, Tailwind)",
+      "Design token export (JSON)",
+      "Live edit & preview",
+      "Screenshot & annotation",
+      "Lifetime updates",
+      "Edge & Chrome support",
+      "Priority email support"
+    ],
+    "cta": "Buy StyleSnap",
+    "guarantee": "7-day money-back guarantee",
+    "note": "Secure checkout via Dodo Payments. Activate with your email after purchase."
+  },
+  "faq": {
+    "tag": "FAQ",
+    "title": "Frequently Asked Questions",
+    "items": [
+      {
+        "q": "Which browsers are supported?",
+        "a": "StyleSnap supports Microsoft Edge and Google Chrome (Manifest V3). Firefox support is on the roadmap."
+      },
+      {
+        "q": "How does AI code generation work?",
+        "a": "StyleSnap uses a deterministic engine to convert CSS into idiomatic React (styled-components / CSS modules), Vue (scoped CSS), and Tailwind utility classes. It's not a black-box AI — every output maps precisely to the original CSS."
+      },
+      {
+        "q": "Is there a subscription?",
+        "a": "No. StyleSnap is a one-time purchase of $29. You get lifetime updates with no recurring fees."
+      },
+      {
+        "q": "Can I use it on any website?",
+        "a": "Yes. StyleSnap works on any website you can visit in your browser — no configuration needed."
+      },
+      {
+        "q": "What's a design token export?",
+        "a": "Design tokens are a structured JSON file containing all the colors, spacing values, and typography from the extracted styles. You can import them into Figma, Style Dictionary, or any design system tool."
+      },
+      {
+        "q": "How is this different from browser DevTools?",
+        "a": "DevTools shows raw CSS. StyleSnap goes further: it lets you edit live, convert to component code, export design tokens, and take annotated screenshots — all in a dedicated side panel without the clutter of DevTools."
+      },
+      {
+        "q": "What if I'm not satisfied?",
+        "a": "We offer a 7-day money-back guarantee. If StyleSnap doesn't meet your needs, email us and we'll refund you — no questions asked."
+      },
+      {
+        "q": "Will it slow down my browser?",
+        "a": "No. StyleSnap only activates when you click the extension icon. It uses a lightweight content script with near-zero performance impact."
+      }
+    ]
+  },
+  "blog": {
+    "tag": "Blog",
+    "title": "Learn & Explore",
+    "subtitle": "Tutorials, comparisons, and deep dives for frontend developers.",
+    "readMore": "Read more →",
+    "articles": [
+      {
+        "slug": "css-to-tailwind-guide",
+        "title": "The Complete Guide to Converting CSS to Tailwind Classes",
+        "excerpt": "Learn the systematic approach behind StyleSnap's deterministic CSS-to-Tailwind conversion engine, and how it avoids common pitfalls of AI-based tools.",
+        "date": "2026-05-29",
+        "category": "Tutorial"
+      },
+      {
+        "slug": "design-tokens-workflow",
+        "title": "From Website to Design System: Exporting Design Tokens",
+        "excerpt": "How to extract a website's visual DNA into structured design tokens and integrate them into Figma, Storybook, or your custom design system.",
+        "date": "2026-05-25",
+        "category": "Workflow"
+      },
+      {
+        "slug": "stylesnap-vs-cssscan",
+        "title": "StyleSnap vs CSS Scan: An Honest Comparison",
+        "excerpt": "A feature-by-feature breakdown of the two most popular CSS extraction tools. Spoiler: the $29 option does more.",
+        "date": "2026-05-20",
+        "category": "Comparison"
+      },
+      {
+        "slug": "react-css-modules-best-practices",
+        "title": "React CSS Modules Best Practices in 2026",
+        "excerpt": "A practical guide to organizing styles in React projects — from CSS modules to styled-components, and when to use each approach.",
+        "date": "2026-05-15",
+        "category": "Tutorial"
+      },
+      {
+        "slug": "why-tailwind-wins",
+        "title": "Why Tailwind CSS Keeps Winning in 2026",
+        "excerpt": "The utility-first approach isn't just a trend. Here's why Tailwind has become the default for new projects and how StyleSnap makes migration easier.",
+        "date": "2026-05-10",
+        "category": "Opinion"
+      },
+      {
+        "slug": "edge-extension-development",
+        "title": "Building Edge Extensions with Manifest V3: What You Need to Know",
+        "excerpt": "A developer's guide to the Manifest V3 migration, Side Panel API, and the Edge Add-ons marketplace.",
+        "date": "2026-05-05",
+        "category": "Developer"
+      }
+    ]
+  },
+  "blogArticles": {
+    "css-to-tailwind-guide": {
+      "title": "The Complete Guide to Converting CSS to Tailwind Classes",
+      "date": "2026-05-29",
+      "category": "Tutorial",
+      "readTime": "8 min read",
+      "content": [
+        "Converting CSS to Tailwind utility classes is one of the most common tasks when modernizing a frontend codebase. But doing it manually is error-prone and tedious — that's why StyleSnap includes a deterministic conversion engine.",
+        "## The Problem with AI-Based Conversion",
+        "Tools that rely on LLMs to convert CSS to Tailwind classes often produce incorrect results. An LLM might map `padding: 0.75rem` to `p-3` (correct) but could just as easily output `p-2` or `px-3 py-2` depending on the context. The result is unpredictable and untestable.",
+        "## StyleSnap's Deterministic Approach",
+        "StyleSnap uses a rule-based engine with complete coverage of Tailwind's utility class catalog. Every CSS property-value pair maps to exactly one Tailwind class (or a known set of candidates). There's no hallucination — the mapping is deterministic.",
+        "## How It Works",
+        "1. **Parse** the CSS declaration block into property-value pairs\n2. **Match** each pair against Tailwind's class definitions using the official Tailwind config\n3. **Resolve** conflicts (e.g., `margin: 1rem` → `m-4`, not `my-4 mx-4`)\n4. **Output** the minimal set of utility classes that reproduce the original styles",
+        "## Edge Cases Handled",
+        "- Arbitrary values: `margin: 13px` → `m-[13px]`\n- Responsive variants: preserved as prefixes\n- Pseudo-class states: flagged for manual review\n- Custom theme values: mapped when the Tailwind config is available",
+        "## Try It Yourself",
+        "Install StyleSnap, hover over any element, and click the Tailwind tab. You'll see the exact utility classes — no guessing, no AI hallucination."
+      ]
+    },
+    "design-tokens-workflow": {
+      "title": "From Website to Design System: Exporting Design Tokens",
+      "date": "2026-05-25",
+      "category": "Workflow",
+      "readTime": "6 min read",
+      "content": [
+        "Design tokens are the atomic building blocks of a design system — colors, spacing, typography, and more. Extracting them from existing websites used to be a manual, error-prone process. StyleSnap automates it.",
+        "## What Are Design Tokens?",
+        "Design tokens are named entities that store visual design attributes. They're platform-agnostic and can be consumed by CSS, iOS, Android, and design tools alike.",
+        "## The Export Process",
+        "With StyleSnap, extracting design tokens is one click:",
+        "1. **Select** the elements you want to extract from\n2. **Click** 'Export Design Tokens' in the side panel\n3. **Download** the JSON file containing all colors, spacing, and typography values",
+        "## Token Structure",
+        "The exported JSON follows the W3C Design Tokens Community Group format, making it compatible with tools like Style Dictionary, Figma's Variables, and Tokens Studio.",
+        "## Integrating with Your Workflow",
+        "- **Figma**: Import via Tokens Studio plugin\n- **Storybook**: Use with design-token addons\n- **Tailwind**: Map tokens to your `tailwind.config.js` theme\n- **CSS Custom Properties**: Direct use as `var(--token-name)`",
+        "Design tokens bridge the gap between design and engineering. StyleSnap makes the extraction step disappear."
+      ]
+    },
+    "stylesnap-vs-cssscan": {
+      "title": "StyleSnap vs CSS Scan: An Honest Comparison",
+      "date": "2026-05-20",
+      "category": "Comparison",
+      "readTime": "7 min read",
+      "content": [
+        "CSS Scan pioneered the one-click CSS extraction category. StyleSnap builds on that foundation with three major innovations that CSS Scan doesn't offer.",
+        "## Feature Parity",
+        "Both tools handle the basics well: hover-to-inspect, style extraction, and live editing. If that's all you need, either tool works.",
+        "## Where StyleSnap Pulls Ahead",
+        "### 1. AI Code Generation",
+        "CSS Scan gives you raw CSS. StyleSnap goes further by converting that CSS into production-ready component code — React (styled-components or CSS modules), Vue (scoped CSS), or Tailwind utility classes.",
+        "### 2. Design Token Export",
+        "StyleSnap can extract all visual properties into a structured design token JSON. This is invaluable for teams building or maintaining a design system. CSS Scan has no equivalent feature.",
+        "### 3. Screenshot & Annotation",
+        "StyleSnap lets you capture the styled element as an image and add annotations. Perfect for async design reviews and documentation.",
+        "## Price",
+        "StyleSnap costs $29. CSS Scan costs $69. You get more features for less than half the price.",
+        "## Verdict",
+        "If you only need basic CSS extraction, both tools work. But if you want code generation, design tokens, or annotated screenshots, StyleSnap is the clear choice."
+      ]
+    },
+    "react-css-modules-best-practices": {
+      "title": "React CSS Modules Best Practices in 2026",
+      "date": "2026-05-15",
+      "category": "Tutorial",
+      "readTime": "9 min read",
+      "content": [
+        "Styling in React has evolved significantly. Here's a practical guide to the current best practices and how StyleSnap fits into the workflow.",
+        "## The Three Main Approaches",
+        "1. **CSS Modules** — Locally scoped CSS with zero runtime cost\n2. **Styled Components** — CSS-in-JS with dynamic theming\n3. **Tailwind CSS** — Utility-first with minimal custom CSS",
+        "## When to Use Each",
+        "- **CSS Modules**: Best for teams that prefer traditional CSS syntax with scoping\n- **Styled Components**: Best for highly dynamic theming and component-level style logic\n- **Tailwind CSS**: Best for rapid prototyping and consistent design systems",
+        "## How StyleSnap Helps",
+        "StyleSnap generates code for all three approaches from the same extracted styles. This means you can evaluate different approaches without manual conversion work.",
+        "## Common Pitfalls",
+        "- Don't mix approaches within a single component\n- Keep your Tailwind config in sync with your design tokens\n- Use CSS custom properties for theming, not JavaScript variables",
+        "The right styling approach depends on your team and project. StyleSnap removes the friction of switching between them."
+      ]
+    },
+    "why-tailwind-wins": {
+      "title": "Why Tailwind CSS Keeps Winning in 2026",
+      "date": "2026-05-10",
+      "category": "Opinion",
+      "readTime": "5 min read",
+      "content": [
+        "Love it or hate it, Tailwind CSS has become the default for new frontend projects. Here's why the trend isn't slowing down.",
+        "## The Utility-First Advantage",
+        "Tailwind's core insight is simple: naming things is hard. By eliminating the need to invent class names, Tailwind removes a significant cognitive overhead from the styling process.",
+        "## Performance Matters",
+        "With JIT compilation and tree-shaking, Tailwind produces minimal CSS bundles. No unused styles ship to production. This is increasingly important as Core Web Vitals impact SEO rankings.",
+        "## Design System as Code",
+        "Tailwind's configuration file is a design system in code form. Colors, spacing, typography — everything is defined once and used consistently. This aligns perfectly with the design token workflow that StyleSnap enables.",
+        "## The Migration Problem",
+        "The biggest barrier to Tailwind adoption is migrating existing CSS. That's exactly where StyleSnap helps: extract → convert → ship. No manual rewriting required.",
+        "Tailwind isn't just a trend — it's a structural shift in how we think about CSS. Tools like StyleSnap make the transition seamless."
+      ]
+    },
+    "edge-extension-development": {
+      "title": "Building Edge Extensions with Manifest V3: What You Need to Know",
+      "date": "2026-05-05",
+      "category": "Developer",
+      "readTime": "10 min read",
+      "content": [
+        "Microsoft Edge's extension platform has matured significantly. Here's what developers need to know about building for Edge with Manifest V3.",
+        "## Manifest V3: The New Standard",
+        "Manifest V3 brings security improvements and API changes. The most impactful for CSS tools like StyleSnap is the Side Panel API, which provides a dedicated UI surface alongside the browser viewport.",
+        "## Side Panel API",
+        "The Side Panel API (`chrome.sidePanel`) allows extensions to display a persistent panel next to the web content. This is perfect for tools like StyleSnap that need to show extracted styles alongside the page.",
+        "## Edge vs Chrome Differences",
+        "Edge and Chrome share the same extension API surface (both are Chromium-based), but there are differences in the store review process and update cadence.",
+        "## Publishing to Edge Add-ons",
+        "The Edge Add-ons marketplace has lower barriers than the Chrome Web Store — no mandatory testing group requirement, faster review times, and a simpler submission process.",
+        "## Tips for Cross-Browser Extensions",
+        "- Use the `chrome` namespace (works in both Edge and Chrome)\n- Test with both browsers during development\n- Keep your manifest.json compatible with both stores\n- Use the Side Panel API for persistent UI (replaces popup-based workflows)",
+        "Manifest V3 is the present and future of browser extensions. The Side Panel API opens up new interaction patterns that weren't possible before."
+      ]
+    }
+  },
+  "footer": {
+    "description": "AI-powered CSS extraction & code generation for modern developers.",
+    "product": "Product",
+    "resources": "Resources",
+    "company": "Company",
+    "features": "Features",
+    "pricing": "Pricing",
+    "faq": "FAQ",
+    "blog": "Blog",
+    "changelog": "Changelog",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "contact": "Contact",
+    "feedback": "Feedback",
+    "copyright": "© 2026 StyleSnap. All rights reserved."
+  },
+  "feedback": {
+    "tag": "Feedback",
+    "title": "Share Your Thoughts",
+    "subtitle": "Your feedback helps us make StyleSnap better. We read every message.",
+    "typeLabel": "Type",
+    "typePraise": "Love It",
+    "typeBug": "Bug",
+    "typeFeature": "Request",
+    "typeGeneral": "Other",
+    "messageLabel": "Message",
+    "messagePlaceholder": "Tell us what you think…",
+    "ratingLabel": "Overall experience (optional)",
+    "emailLabel": "Email (optional)",
+    "emailPlaceholder": "your@email.com — for replies",
+    "submit": "Send Feedback",
+    "thanks": "Thank you! 🙌",
+    "thanksDesc": "We read every message and use it to improve StyleSnap.",
+    "error": "Failed to submit. Please try again.",
+    "directContact": "Need direct help? Email us at"
+  },
+  "recovery": {
+    "seoTitle": "Recover License Key",
+    "seoDesc": "Forgot your StyleSnap license key? Enter your purchase email to recover it.",
+    "title": "Recover Your License Key",
+    "subtitle": "Enter the email you used to purchase StyleSnap, and we'll send your license key to that address.",
+    "emailLabel": "Purchase email",
+    "emailPlaceholder": "you@example.com",
+    "submit": "Send Recovery Email",
+    "sending": "Sending...",
+    "checkInbox": "Check your inbox!",
+    "checkSpam": "If you don't see it within a minute, check your spam folder.",
+    "errorNetwork": "Network error. Please try again.",
+    "backHome": "Back to Home",
+    "contactSupport": "Still need help? Contact support"
+  },
+  "seo": {
+    "homeTitle": "StyleSnap - AI-Powered CSS Style Extractor & Code Generator",
+    "homeDesc": "Extract any CSS style, edit live, and export as React/Vue/Tailwind code. $29 one-time purchase.",
+    "faqTitle": "FAQ - StyleSnap",
+    "faqDesc": "Frequently asked questions about StyleSnap CSS extractor. Pricing, features, browser support, and more.",
+    "blogTitle": "Blog - StyleSnap",
+    "blogDesc": "Tutorials, comparisons, and deep dives on CSS extraction, Tailwind conversion, and frontend tooling."
+  }
+}

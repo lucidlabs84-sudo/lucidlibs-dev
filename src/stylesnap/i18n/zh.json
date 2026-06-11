@@ -1,0 +1,378 @@
+{
+  "nav": {
+    "features": "功能",
+    "pricing": "价格",
+    "faq": "常见问题",
+    "blog": "博客",
+    "getStarted": "获取 StyleSnap",
+    "switchLang": "English"
+  },
+  "hero": {
+    "badge": "AI 驱动的 CSS 提取",
+    "title": "提取任意样式。",
+    "titleAccent": "导出任意代码。",
+    "subtitle": "悬停 → 提取 → 编辑 → 导出。将任何网站的 CSS 转为干净的 React、Vue 或 Tailwind 代码，仅需数秒。",
+    "cta": "获取 StyleSnap — ¥199",
+    "ctaSub": "一次买断，终身更新。",
+    "demo": "观看演示",
+    "users": "2,000+ 开发者的选择"
+  },
+  "features": {
+    "tag": "为什么选 StyleSnap",
+    "title": "为追求精确的开发者而生",
+    "subtitle": "不只是 CSS 检查器。StyleSnap 打通了从提取到生产级代码的完整闭环。",
+    "items": [
+      {
+        "icon": "crosshair",
+        "title": "像素级精确提取",
+        "desc": "悬停任意元素，即刻捕获计算样式、选择器和特异性——无需打开 DevTools。"
+      },
+      {
+        "icon": "code",
+        "title": "AI 代码生成",
+        "desc": "一键将 CSS 转为 React（styled-components/CSS modules）、Vue 或 Tailwind 工具类——干净且符合惯用写法。"
+      },
+      {
+        "icon": "palette",
+        "title": "设计令牌导出",
+        "desc": "将颜色、间距和排版提取为结构化设计令牌 JSON 文件，直接导入 Figma 或设计系统。"
+      },
+      {
+        "icon": "edit",
+        "title": "实时编辑预览",
+        "desc": "在侧面板调整任何属性，页面实时更新。满意后一键复制。"
+      },
+      {
+        "icon": "screenshot",
+        "title": "截图标注",
+        "desc": "捕获样式元素截图，添加标注，与团队分享作为设计参考。"
+      },
+      {
+        "icon": "zap",
+        "title": "Tailwind 优先工作流",
+        "desc": "确定性 CSS→Tailwind 转换，完整覆盖所有工具类。无 AI 幻觉——每个类都精确映射。"
+      }
+    ]
+  },
+  "workflow": {
+    "tag": "工作原理",
+    "title": "3 步完成，零摩擦。",
+    "steps": [
+      {
+        "num": "01",
+        "title": "悬停选择",
+        "desc": "将光标移到页面任意元素上，StyleSnap 高亮显示并展示样式摘要。"
+      },
+      {
+        "num": "02",
+        "title": "编辑优化",
+        "desc": "打开侧面板查看所有计算样式，编辑任意值，页面实时更新。"
+      },
+      {
+        "num": "03",
+        "title": "导出交付",
+        "desc": "选择格式——React、Vue、Tailwind 或设计令牌。复制或下载生产级代码。"
+      }
+    ]
+  },
+  "comparison": {
+    "tag": "对比",
+    "title": "为什么从 CSS Scan 切换？",
+    "headers": ["功能", "StyleSnap", "CSS Scan"],
+    "rows": [
+      ["CSS 提取", "✓", "✓"],
+      ["实时编辑预览", "✓", "✓"],
+      ["AI 代码生成 (React/Vue/Tailwind)", "✓", "✗"],
+      ["设计令牌导出", "✓", "✗"],
+      ["截图标注", "✓", "✗"],
+      ["Tailwind 类转换", "✓ 确定性", "✓ 基础"],
+      ["价格", "$29 买断", "$69 买断"],
+      ["浏览器支持", "Edge & Chrome", "仅 Chrome"]
+    ]
+  },
+  "pricing": {
+    "tag": "价格",
+    "title": "一个价格，全部包含。",
+    "subtitle": "无订阅，无隐藏费用。一次买断，永久使用。",
+    "price": "$29",
+    "period": "买断",
+    "features": [
+      "无限 CSS 提取",
+      "AI 代码生成 (React, Vue, Tailwind)",
+      "设计令牌导出 (JSON)",
+      "实时编辑预览",
+      "截图与标注",
+      "终身更新",
+      "Edge & Chrome 支持",
+      "优先邮件支持"
+    ],
+    "cta": "购买 StyleSnap",
+    "guarantee": "7 天无理由退款",
+    "note": "通过 Dodo Payments 安全支付。购买后用邮箱激活 Pro。"
+  },
+  "faq": {
+    "tag": "常见问题",
+    "title": "常见问题解答",
+    "items": [
+      {
+        "q": "支持哪些浏览器？",
+        "a": "StyleSnap 支持 Microsoft Edge 和 Google Chrome（Manifest V3）。Firefox 支持正在规划中。"
+      },
+      {
+        "q": "AI 代码生成是如何工作的？",
+        "a": "StyleSnap 使用确定性引擎将 CSS 转换为惯用的 React（styled-components / CSS modules）、Vue（scoped CSS）和 Tailwind 工具类。它不是黑箱 AI——每个输出都精确映射到原始 CSS。"
+      },
+      {
+        "q": "有订阅吗？",
+        "a": "没有。StyleSnap 一次性购买 $29，终身更新，无任何续费。"
+      },
+      {
+        "q": "可以在任何网站上使用吗？",
+        "a": "是的。StyleSnap 可以在浏览器中访问的任何网站上工作——无需配置。"
+      },
+      {
+        "q": "什么是设计令牌导出？",
+        "a": "设计令牌是一个结构化 JSON 文件，包含从提取样式中获取的所有颜色、间距值和排版信息。你可以将它们导入 Figma、Style Dictionary 或任何设计系统工具。"
+      },
+      {
+        "q": "这和浏览器 DevTools 有什么区别？",
+        "a": "DevTools 显示原始 CSS。StyleSnap 更进一步：实时编辑、转换为组件代码、导出设计令牌、带标注截图——全部在专用侧面板中完成，没有 DevTools 的杂乱。"
+      },
+      {
+        "q": "如果不满意怎么办？",
+        "a": "我们提供 7 天无理由退款保证。如果 StyleSnap 不满足你的需求，发邮件给我们即可退款——无需任何理由。"
+      },
+      {
+        "q": "会拖慢浏览器吗？",
+        "a": "不会。StyleSnap 只在点击扩展图标时激活。它使用轻量级内容脚本，性能影响几乎为零。"
+      }
+    ]
+  },
+  "blog": {
+    "tag": "博客",
+    "title": "学习与探索",
+    "subtitle": "面向前端开发者的教程、对比和深度分析。",
+    "readMore": "阅读更多 →",
+    "articles": [
+      {
+        "slug": "css-to-tailwind-guide",
+        "title": "CSS 转 Tailwind 类完全指南",
+        "excerpt": "了解 StyleSnap 确定性 CSS→Tailwind 转换引擎背后的系统方法，以及它如何避免基于 AI 工具的常见陷阱。",
+        "date": "2026-05-29",
+        "category": "教程"
+      },
+      {
+        "slug": "design-tokens-workflow",
+        "title": "从网站到设计系统：导出设计令牌",
+        "excerpt": "如何将网站的视觉 DNA 提取为结构化设计令牌，并集成到 Figma、Storybook 或自定义设计系统中。",
+        "date": "2026-05-25",
+        "category": "工作流"
+      },
+      {
+        "slug": "stylesnap-vs-cssscan",
+        "title": "StyleSnap vs CSS Scan：诚实对比",
+        "excerpt": "两款最流行的 CSS 提取工具的功能逐一对比。剧透：$29 的选项功能更多。",
+        "date": "2026-05-20",
+        "category": "对比"
+      },
+      {
+        "slug": "react-css-modules-best-practices",
+        "title": "2026 年 React CSS Modules 最佳实践",
+        "excerpt": "React 项目中组织样式的实用指南——从 CSS modules 到 styled-components，以及何时使用每种方式。",
+        "date": "2026-05-15",
+        "category": "教程"
+      },
+      {
+        "slug": "why-tailwind-wins",
+        "title": "为什么 Tailwind CSS 在 2026 年持续胜出",
+        "excerpt": "工具优先方法不只是一时风潮。以下是 Tailwind 成为新项目默认选择的原因，以及 StyleSnap 如何简化迁移。",
+        "date": "2026-05-10",
+        "category": "观点"
+      },
+      {
+        "slug": "edge-extension-development",
+        "title": "使用 Manifest V3 开发 Edge 扩展：你需要知道的",
+        "excerpt": "Manifest V3 迁移、Side Panel API 和 Edge 扩展商店的开发者指南。",
+        "date": "2026-05-05",
+        "category": "开发者"
+      }
+    ]
+  },
+  "blogArticles": {
+    "css-to-tailwind-guide": {
+      "title": "CSS 转 Tailwind 类完全指南",
+      "date": "2026-05-29",
+      "category": "教程",
+      "readTime": "8 分钟阅读",
+      "content": [
+        "将 CSS 转换为 Tailwind 工具类是前端代码库现代化最常见的任务之一。但手动操作既容易出错又枯燥——这就是 StyleSnap 内置确定性转换引擎的原因。",
+        "## 基于 AI 的转换问题",
+        "依赖 LLM 将 CSS 转为 Tailwind 类的工具经常产生错误结果。LLM 可能将 `padding: 0.75rem` 映射为 `p-3`（正确），但也可能根据上下文输出 `p-2` 或 `px-3 py-2`。结果不可预测且无法测试。",
+        "## StyleSnap 的确定性方法",
+        "StyleSnap 使用基于规则的引擎，完整覆盖 Tailwind 工具类目录。每个 CSS 属性-值对精确映射到一个 Tailwind 类（或一组已知候选）。没有幻觉——映射是确定性的。",
+        "## 工作原理",
+        "1. **解析** CSS 声明块为属性-值对\n2. **匹配** 每对与 Tailwind 类定义（使用官方 Tailwind 配置）\n3. **解决** 冲突（如 `margin: 1rem` → `m-4`，而非 `my-4 mx-4`）\n4. **输出** 重现原始样式的最小工具类集合",
+        "## 处理的边界情况",
+        "- 任意值：`margin: 13px` → `m-[13px]`\n- 响应式变体：作为前缀保留\n- 伪类状态：标记为人工审查\n- 自定义主题值：当 Tailwind 配置可用时映射",
+        "## 亲自试试",
+        "安装 StyleSnap，悬停任意元素，点击 Tailwind 标签页。你会看到精确的工具类——没有猜测，没有 AI 幻觉。"
+      ]
+    },
+    "design-tokens-workflow": {
+      "title": "从网站到设计系统：导出设计令牌",
+      "date": "2026-05-25",
+      "category": "工作流",
+      "readTime": "6 分钟阅读",
+      "content": [
+        "设计令牌是设计系统的原子构建块——颜色、间距、排版等。从现有网站提取它们曾是手动、易错的过程。StyleSnap 将其自动化。",
+        "## 什么是设计令牌？",
+        "设计令牌是存储视觉设计属性的命名实体。它们与平台无关，可被 CSS、iOS、Android 和设计工具共同消费。",
+        "## 导出流程",
+        "使用 StyleSnap，提取设计令牌只需一步：",
+        "1. **选择** 要提取的元素\n2. **点击** 侧面板中的「导出设计令牌」\n3. **下载** 包含所有颜色、间距和排版值的 JSON 文件",
+        "## 令牌结构",
+        "导出的 JSON 遵循 W3C 设计令牌社区组格式，兼容 Style Dictionary、Figma Variables 和 Tokens Studio 等工具。",
+        "## 集成到工作流",
+        "- **Figma**：通过 Tokens Studio 插件导入\n- **Storybook**：与设计令牌插件配合使用\n- **Tailwind**：将令牌映射到 `tailwind.config.js` 主题\n- **CSS 自定义属性**：直接使用 `var(--token-name)`",
+        "设计令牌弥合了设计与工程之间的鸿沟。StyleSnap 让提取步骤消失。"
+      ]
+    },
+    "stylesnap-vs-cssscan": {
+      "title": "StyleSnap vs CSS Scan：诚实对比",
+      "date": "2026-05-20",
+      "category": "对比",
+      "readTime": "7 分钟阅读",
+      "content": [
+        "CSS Scan 开创了一键 CSS 提取品类。StyleSnap 在此基础上增加了 CSS Scan 不具备的三大创新。",
+        "## 功能对等",
+        "两个工具都能很好地处理基本功能：悬停检查、样式提取和实时编辑。如果这就是你需要的，两个工具都可以。",
+        "## StyleSnap 的领先之处",
+        "### 1. AI 代码生成",
+        "CSS Scan 提供原始 CSS。StyleSnap 更进一步，将 CSS 转换为生产级组件代码——React（styled-components 或 CSS modules）、Vue（scoped CSS）或 Tailwind 工具类。",
+        "### 2. 设计令牌导出",
+        "StyleSnap 可以将所有视觉属性提取为结构化设计令牌 JSON。对于构建或维护设计系统的团队来说，这极为重要。CSS Scan 没有等效功能。",
+        "### 3. 截图标注",
+        "StyleSnap 允许你捕获样式元素图像并添加标注。非常适合异步设计评审和文档记录。",
+        "## 价格",
+        "StyleSnap 售价 $29。CSS Scan 售价 $69。不到一半的价格获得更多功能。",
+        "## 结论",
+        "如果你只需要基础 CSS 提取，两个工具都可以。但如果你需要代码生成、设计令牌或标注截图，StyleSnap 是明确的选择。"
+      ]
+    },
+    "react-css-modules-best-practices": {
+      "title": "2026 年 React CSS Modules 最佳实践",
+      "date": "2026-05-15",
+      "category": "教程",
+      "readTime": "9 分钟阅读",
+      "content": [
+        "React 中的样式方案已显著演进。以下是当前最佳实践的实用指南，以及 StyleSnap 如何融入工作流。",
+        "## 三种主要方案",
+        "1. **CSS Modules** — 局部作用域 CSS，零运行时开销\n2. **Styled Components** — CSS-in-JS，支持动态主题\n3. **Tailwind CSS** — 工具优先，最少的自定义 CSS",
+        "## 何时使用每种方案",
+        "- **CSS Modules**：适合偏好传统 CSS 语法+作用域的团队\n- **Styled Components**：适合高度动态主题和组件级样式逻辑\n- **Tailwind CSS**：适合快速原型和一致的设计系统",
+        "## StyleSnap 如何帮助",
+        "StyleSnap 可以从相同的提取样式生成所有三种方案的代码。这意味着你可以评估不同方案而无需手动转换工作。",
+        "## 常见陷阱",
+        "- 不要在单个组件内混合方案\n- 保持 Tailwind 配置与设计令牌同步\n- 使用 CSS 自定义属性进行主题化，而非 JavaScript 变量",
+        "正确的样式方案取决于团队和项目。StyleSnap 消除了在方案间切换的摩擦。"
+      ]
+    },
+    "why-tailwind-wins": {
+      "title": "为什么 Tailwind CSS 在 2026 年持续胜出",
+      "date": "2026-05-10",
+      "category": "观点",
+      "readTime": "5 分钟阅读",
+      "content": [
+        "无论喜欢与否，Tailwind CSS 已成为新前端项目的默认选择。这一趋势并未放缓。",
+        "## 工具优先的优势",
+        "Tailwind 的核心洞察很简单：命名是困难的。通过消除发明类名的需求，Tailwind 移除了样式过程中的重大认知负担。",
+        "## 性能至关重要",
+        "借助 JIT 编译和 tree-shaking，Tailwind 生成最小的 CSS 包。没有未使用的样式会发布到生产环境。随着 Core Web Vitals 影响 SEO 排名，这一点越来越重要。",
+        "## 代码即设计系统",
+        "Tailwind 的配置文件是代码形式的设计系统。颜色、间距、排版——一切定义一次，一致使用。这与 StyleSnap 启用的设计令牌工作流完美对齐。",
+        "## 迁移问题",
+        "采用 Tailwind 的最大障碍是迁移现有 CSS。这正是 StyleSnap 帮助的地方：提取 → 转换 → 交付。无需手动重写。",
+        "Tailwind 不仅是趋势——它是我们思考 CSS 方式的结构性转变。StyleSnap 等工具让过渡无缝。"
+      ]
+    },
+    "edge-extension-development": {
+      "title": "使用 Manifest V3 开发 Edge 扩展：你需要知道的",
+      "date": "2026-05-05",
+      "category": "开发者",
+      "readTime": "10 分钟阅读",
+      "content": [
+        "微软 Edge 的扩展平台已显著成熟。以下是开发者在使用 Manifest V3 构建 Edge 扩展时需要了解的内容。",
+        "## Manifest V3：新标准",
+        "Manifest V3 带来了安全改进和 API 变更。对 StyleSnap 等 CSS 工具影响最大的是 Side Panel API，它在浏览器视口旁提供了专用 UI 空间。",
+        "## Side Panel API",
+        "Side Panel API（`chrome.sidePanel`）允许扩展在网页内容旁显示持久面板。这非常适合 StyleSnap 等需要在页面旁显示提取样式的工具。",
+        "## Edge 与 Chrome 的差异",
+        "Edge 和 Chrome 共享相同的扩展 API 接口（都基于 Chromium），但在商店审核流程和更新节奏上有所不同。",
+        "## 发布到 Edge 扩展商店",
+        "Edge 扩展商店的门槛低于 Chrome Web Store——无强制测试组要求、更快的审核时间和更简单的提交流程。",
+        "## 跨浏览器扩展技巧",
+        "- 使用 `chrome` 命名空间（Edge 和 Chrome 都兼容）\n- 开发期间在两个浏览器中测试\n- 保持 manifest.json 与两个商店兼容\n- 使用 Side Panel API 实现持久 UI（替代弹窗式工作流）",
+        "Manifest V3 是浏览器扩展的现在和未来。Side Panel API 开启了以前不可能的全新交互模式。"
+      ]
+    }
+  },
+  "footer": {
+    "description": "AI 驱动的 CSS 提取与代码生成，为现代开发者打造。",
+    "product": "产品",
+    "resources": "资源",
+    "company": "公司",
+    "features": "功能",
+    "pricing": "价格",
+    "faq": "常见问题",
+    "blog": "博客",
+    "changelog": "更新日志",
+    "privacy": "隐私政策",
+    "terms": "服务条款",
+    "contact": "联系我们",
+    "feedback": "意见反馈",
+    "copyright": "© 2026 StyleSnap. 保留所有权利。"
+  },
+  "feedback": {
+    "tag": "意见反馈",
+    "title": "分享您的想法",
+    "subtitle": "您的反馈让 StyleSnap 越来越好，我们会认真阅读每一条留言。",
+    "typeLabel": "反馈类型",
+    "typePraise": "很棒",
+    "typeBug": "报告Bug",
+    "typeFeature": "功能建议",
+    "typeGeneral": "其他",
+    "messageLabel": "内容",
+    "messagePlaceholder": "告诉我们您的想法…",
+    "ratingLabel": "总体体验（可选）",
+    "emailLabel": "邮箱（可选）",
+    "emailPlaceholder": "your@email.com — 方便我们回复",
+    "submit": "提交反馈",
+    "thanks": "感谢您的反馈！🙌",
+    "thanksDesc": "我们会认真阅读每一条留言，持续改进 StyleSnap。",
+    "error": "提交失败，请重试。",
+    "directContact": "需要直接帮助？发邮件给我们："
+  },
+  "recovery": {
+    "seoTitle": "找回许可证密钥",
+    "seoDesc": "忘记 StyleSnap 许可证密钥？输入购买邮箱即可找回。",
+    "title": "找回许可证密钥",
+    "subtitle": "输入您购买 StyleSnap 时使用的邮箱，我们会将许可证密钥发送到该邮箱。",
+    "emailLabel": "购买邮箱",
+    "emailPlaceholder": "you@example.com",
+    "submit": "发送找回邮件",
+    "sending": "发送中...",
+    "checkInbox": "请查收邮件！",
+    "checkSpam": "如果一分钟内未收到，请检查垃圾邮件文件夹。",
+    "errorNetwork": "网络错误，请重试。",
+    "backHome": "返回首页",
+    "contactSupport": "仍需帮助？联系客服"
+  },
+  "seo": {
+    "homeTitle": "StyleSnap - AI 驱动的 CSS 样式提取器与代码生成器",
+    "homeDesc": "提取任意 CSS 样式，实时编辑，导出为 React/Vue/Tailwind 代码。$29 一次性买断。",
+    "faqTitle": "常见问题 - StyleSnap",
+    "faqDesc": "关于 StyleSnap CSS 提取器的常见问题。价格、功能、浏览器支持等。",
+    "blogTitle": "博客 - StyleSnap",
+    "blogDesc": "CSS 提取、Tailwind 转换和前端工具的教程、对比和深度分析。"
+  }
+}

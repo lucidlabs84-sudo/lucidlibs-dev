@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
 
 const navLinks = [
   { label: "Products", href: "#products" },
@@ -16,14 +17,14 @@ export default function Navbar() {
     <nav className="fixed top-0 w-full z-50 border-b border-border bg-background/80 backdrop-blur-xl">
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-2.5 group">
+        <Link href="/" className="flex items-center gap-2.5 group">
           <div className="w-8 h-8 rounded-lg bg-accent flex items-center justify-center text-background font-mono font-bold text-sm">
             LL
           </div>
           <span className="font-semibold text-foreground tracking-tight">
             LucidLibs
           </span>
-        </a>
+        </Link>
 
         {/* Desktop links */}
         <div className="hidden md:flex items-center gap-8">
@@ -36,6 +37,12 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
+          <Link
+            href="/stylesnap"
+            className="text-muted hover:text-foreground transition-colors duration-200 text-sm font-medium"
+          >
+            StyleSnap
+          </Link>
         </div>
 
         {/* Mobile toggle */}
@@ -87,6 +94,13 @@ export default function Navbar() {
                   {link.label}
                 </a>
               ))}
+              <Link
+                href="/stylesnap"
+                onClick={() => setMobileOpen(false)}
+                className="text-muted hover:text-foreground transition-colors text-sm font-medium"
+              >
+                StyleSnap
+              </Link>
             </div>
           </motion.div>
         )}

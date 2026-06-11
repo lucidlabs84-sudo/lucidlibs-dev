@@ -5,18 +5,18 @@ import { motion } from "framer-motion";
 export default function Hero() {
   return (
     <section className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden">
-      {/* Animated background gradient */}
+      {/* Background gradient */}
       <div
         className="absolute inset-0 animate-gradient opacity-30"
         style={{
           background:
-            "linear-gradient(135deg, #0a0a0a 0%, #1a1a0a 25%, #0a1a1a 50%, #0a0a1a 75%, #0a0a0a 100%)",
+            "linear-gradient(135deg, #fafafa 0%, #fff7e6 25%, #fafafa 50%, #f0f0f0 75%, #fafafa 100%)",
         }}
       />
 
       {/* Accent glow orbs */}
-      <div className="absolute top-1/4 left-1/4 w-[400px] h-[400px] rounded-full bg-accent/5 animate-glow blur-[120px]" />
-      <div className="absolute bottom-1/4 right-1/4 w-[300px] h-[300px] rounded-full bg-accent/3 animate-glow blur-[100px]" />
+      <div className="absolute top-1/4 left-1/4 w-[400px] h-[400px] rounded-full bg-accent/8 animate-glow blur-[120px]" />
+      <div className="absolute bottom-1/4 right-1/4 w-[300px] h-[300px] rounded-full bg-accent/5 animate-glow blur-[100px]" />
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
