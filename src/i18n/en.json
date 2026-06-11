@@ -50,10 +50,10 @@
   },
   "about": {
     "tag": "About",
-    "title": "One person, one mission",
+    "title": "Small studio, sharp focus",
     "story": {
-      "p1": "LucidLibs is an independent developer studio. Not a startup, not a team of 50. One person who builds tools for developers — because the best software comes from someone who actually uses it.",
-      "p2": "I got tired of tools that over-promise and under-deliver. So I started building my own. Every product under LucidLibs started from a real frustration: a workflow that should be simpler, a task that should take seconds not hours.",
+      "p1": "LucidLibs is an independent developer studio. We build browser extensions and developer tools — not because we have a board meeting telling us what to ship, but because we use these tools ourselves every day.",
+      "p2": "Every product under LucidLibs started from a real frustration: a workflow that should be simpler, a task that should take seconds not hours. We don't chase trends or pad feature lists. We solve problems.",
       "p3Prefix": "The name says it all — ",
       "p3Lucid": "Lucid",
       "p3LucidMeaning": " (clear, easy to understand) + ",
@@ -70,8 +70,8 @@
         "desc": "One-time purchases. No subscriptions, no hidden tiers. Pay once, own forever."
       },
       {
-        "title": "Crafted by hand",
-        "desc": "Not a VC-funded factory. Every pixel, every line of code is reviewed by one person who cares."
+        "title": "Crafted with care",
+        "desc": "Every pixel, every line of code is reviewed and refined. Quality over velocity."
       },
       {
         "title": "Open conversation",
@@ -82,7 +82,7 @@
   "footer": {
     "tag": "Contact",
     "title": "Have an idea? Let's talk.",
-    "subtitle": "Whether it's feedback on StyleSnap, a bug report, or an idea for the next tool — I'm always listening.",
+    "subtitle": "Whether it's feedback on StyleSnap, a bug report, or an idea for the next tool — we're always listening.",
     "links": {
       "github": "GitHub",
       "stylesnap": "StyleSnap",
