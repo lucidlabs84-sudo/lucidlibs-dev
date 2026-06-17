@@ -62,19 +62,19 @@
         "num": "01",
         "title": "悬停选择",
         "desc": "将光标移到页面任意元素上，StyleSnap 高亮显示并展示样式摘要。",
-        "image": "/screenshots/step1-hover.svg"
+        "image": "/screenshots/step1-hover.png"
       },
       {
         "num": "02",
         "title": "编辑优化",
         "desc": "打开侧面板查看所有计算样式，编辑任意值，页面实时更新。",
-        "image": "/screenshots/step2-edit.svg"
+        "image": "/screenshots/step2-edit.png"
       },
       {
         "num": "03",
         "title": "导出交付",
         "desc": "选择格式——React、Vue、Tailwind 或设计令牌。复制或下载生产级代码。",
-        "image": "/screenshots/step3-export.svg"
+        "image": "/screenshots/step3-export.png"
       }
     ]
   },
