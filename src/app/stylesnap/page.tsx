@@ -165,58 +165,6 @@ export default function StyleSnapHome() {
         </div>
       </section>
 
-      {/* Comparison */}
-      <section className="py-24 bg-background">
-        <div className="max-w-4xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <span className="text-xs font-semibold uppercase tracking-widest text-muted">
-              {t("comparison.tag") as string}
-            </span>
-            <h2 className="text-3xl md:text-5xl font-bold mt-3">
-              {t("comparison.title") as string}
-            </h2>
-          </div>
-          <div className="overflow-x-auto">
-            <table className="w-full text-sm">
-              <thead>
-                <tr className="border-b-2 border-foreground">
-                      key={i}
-                      className={`py-4 px-4 text-left font-semibold ${
-                        i > 0 ? "text-center w-28" : ""
-                      }`}
-                    >
-                      {h}
-                    </th>
-                  ))}
-                </tr>
-              </thead>
-              <tbody>
-                    key={i}
-                    className="border-b border-border hover:bg-surface transition"
-                  >
-                    {row.map((cell, j) => (
-                      <td
-                        key={j}
-                        className={`py-4 px-4 ${
-                          j > 0 ? "text-center font-medium" : "text-muted"
-                        }`}
-                      >
-                        {cell === "✓" ? (
-                          <span className="text-accent">✓</span>
-                        ) : cell === "✗" ? (
-                          <span className="text-border">✗</span>
-                        ) : (
-                          cell
-                        )}
-                      </td>
-                    ))}
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
 
       {/* Pricing */}
       <section id="pricing" className="py-24">
