@@ -61,17 +61,20 @@
       {
         "num": "01",
         "title": "Hover & Select",
-        "desc": "Move your cursor to any element on the page. StyleSnap highlights it and shows a quick style summary."
+        "desc": "Move your cursor to any element on the page. StyleSnap highlights it and shows a quick style summary.",
+        "image": "/screenshots/step1-hover.png"
       },
       {
         "num": "02",
         "title": "Edit & Refine",
-        "desc": "Open the side panel to see all computed styles. Edit any value and watch the page update in real time."
+        "desc": "Open the side panel to see all computed styles. Edit any value and watch the page update in real time.",
+        "image": "/screenshots/step2-edit.png"
       },
       {
         "num": "03",
         "title": "Export & Ship",
-        "desc": "Choose your format — React, Vue, Tailwind, or design tokens. Copy or download production-ready code."
+        "desc": "Choose your format — React, Vue, Tailwind, or design tokens. Copy or download production-ready code.",
+        "image": "/screenshots/step3-export.png"
       }
     ]
   },
