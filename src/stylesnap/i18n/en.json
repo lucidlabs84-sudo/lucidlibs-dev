@@ -427,5 +427,6 @@
     "step2": "2. Open chrome://extensions/ in Chrome",
     "step3": "3. Enable 'Developer mode' (top right)",
     "step4": "4. Click 'Load unpacked' and select the unzipped folder"
-  }
+  },
+  "recoverLicenseKey": "Recover license key"
 }
