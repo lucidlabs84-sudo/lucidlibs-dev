@@ -48,12 +48,6 @@ export default function StyleSnapHome() {
     title: string;
     desc: string;
   }>;
-  const compRows = t("comparison.rows", { returnObjects: true }) as string[][];
-  const compHeaders = t("comparison.headers", { returnObjects: true }) as string[];
-  const pricingFeatures = t("pricing.features", { returnObjects: true }) as string[];
-
-  return (
-    <>
       {/* SEO structured data */}
       <script
         type="application/ld+json"
@@ -186,8 +180,6 @@ export default function StyleSnapHome() {
             <table className="w-full text-sm">
               <thead>
                 <tr className="border-b-2 border-foreground">
-                  {compHeaders.map((h, i) => (
-                    <th
                       key={i}
                       className={`py-4 px-4 text-left font-semibold ${
                         i > 0 ? "text-center w-28" : ""
@@ -199,8 +191,6 @@ export default function StyleSnapHome() {
                 </tr>
               </thead>
               <tbody>
-                {compRows.map((row, i) => (
-                  <tr
                     key={i}
                     className="border-b border-border hover:bg-surface transition"
                   >
