@@ -75,57 +75,6 @@
       }
     ]
   },
-  "comparison": {
-    "tag": "Compare",
-    "title": "Why switch from CSS Scan?",
-    "headers": [
-      "Feature",
-      "StyleSnap",
-      "CSS Scan"
-    ],
-    "rows": [
-      [
-        "CSS Extraction",
-        "✓",
-        "✓"
-      ],
-      [
-        "Live Edit & Preview",
-        "✓",
-        "✓"
-      ],
-      [
-        "AI Code Generation (React/Vue/Tailwind)",
-        "✓",
-        "✗"
-      ],
-      [
-        "Design Token Export",
-        "✓",
-        "✗"
-      ],
-      [
-        "Screenshot & Annotate",
-        "✓",
-        "✗"
-      ],
-      [
-        "Tailwind Class Conversion",
-        "✓ Deterministic",
-        "✓ Basic"
-      ],
-      [
-        "Price",
-        "$29 one-time",
-        "$69 one-time"
-      ],
-      [
-        "Browser Support",
-        "Edge & Chrome",
-        "Chrome only"
-      ]
-    ]
-  },
   "pricing": {
     "tag": "Pricing",
     "title": "One price. Everything included.",
