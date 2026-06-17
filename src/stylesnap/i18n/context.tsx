@@ -11,7 +11,7 @@ const resources: Record<Lang, Translations> = { en, zh };
 
 interface I18nContextType {
   lang: Lang;
-  t: (key: string, options?: { returnObjects?: boolean }) => string | unknown;
+  t: (key: string, options?: { returnObjects?: boolean }) => any; // eslint-disable-line @typescript-eslint/no-explicit-any
   toggleLang: () => void;
 }
 
@@ -43,10 +43,10 @@ export function I18nProvider({ children }: { children: ReactNode }) {
   }, []);
 
   const t = useCallback(
-    (key: string, options?: { returnObjects?: boolean }) => {
+    (key: string, options?: { returnObjects?: boolean }): any => {
       const value = getNestedValue(resources[lang] as Record<string, unknown>, key);
       if (options?.returnObjects) return value;
-      return (value as string) ?? key;
+      return String(value ?? key);
     },
     [lang]
   );

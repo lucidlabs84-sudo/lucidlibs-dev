@@ -37,17 +37,17 @@ export default function StyleSnapHome() {
     fetchPrice();
   }, []);
 
-  const features = t("features.items", { returnObjects: true }) as Array<{
+  const features = (t("features.items", { returnObjects: true }) as Array<{
     icon: string;
     title: string;
     desc: string;
-  }>;
+  }>) || [];
 
-  const steps = t("workflow.steps", { returnObjects: true }) as Array<{
+  const steps = (t("workflow.steps", { returnObjects: true }) as Array<{
     num: string;
     title: string;
     desc: string;
-  }>;
+  }>) || [];
 
   return (
     <>
@@ -79,7 +79,7 @@ export default function StyleSnapHome() {
           <div className="text-center max-w-3xl mx-auto">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-border text-xs font-medium text-muted mb-8">
               <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
-              {t("hero.badge")}
+              {t("hero.badge") as string}
             </div>
             <h1 className="text-5xl md:text-7xl font-black tracking-tight leading-[1.1] mb-6">
               {t("hero.title1")}<br />
@@ -92,7 +92,7 @@ export default function StyleSnapHome() {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <button
-                onClick={() => openCheckout(t)}
+                onClick={() => openCheckout()}
                 className="bg-foreground text-background font-semibold px-8 py-4 rounded-xl text-lg hover:bg-accent transition-all hover:scale-[1.02] shadow-xl shadow-foreground/10 cursor-pointer"
               >
                 {t("hero.cta")} — {priceLoading ? t("pricing.price") : productPrice}
@@ -189,7 +189,7 @@ export default function StyleSnapHome() {
                 </span>
               </div>
               <ul className="space-y-3 text-sm text-left mb-8">
-                {(t("pricing.features", { returnObjects: true }) as string[]).map((f, i) => (
+                {(t("pricing.features", { returnObjects: true }) as string[] || []).map((f, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <span className="mt-0.5 text-accent">✓</span>
                     <span>{f}</span>
@@ -197,7 +197,7 @@ export default function StyleSnapHome() {
                 ))}
               </ul>
               <button
-                onClick={() => openCheckout(t)}
+                onClick={() => openCheckout()}
                 className="block w-full bg-foreground text-background font-semibold py-4 rounded-xl hover:bg-accent transition-all text-lg cursor-pointer"
               >
                 {t("pricing.cta")}
@@ -273,7 +273,7 @@ export default function StyleSnapHome() {
                 ⬇ {t("platforms.download")}
               </a>
               <div className="space-y-3 text-sm">
-                {(t("platforms.steps", { returnObjects: true }) as string[]).map((s, i) => (
+                {(t("platforms.steps", { returnObjects: true }) as string[] || []).map((s, i) => (
                   <div key={i} className="flex gap-3">
                     <span className="text-accent font-bold">{i + 1}</span>
                     <span className="text-muted">{s}</span>
@@ -295,7 +295,7 @@ export default function StyleSnapHome() {
             {t("cta.subtitle")}
           </p>
           <button
-            onClick={() => openCheckout(t)}
+            onClick={() => openCheckout()}
             className="inline-block bg-background text-foreground font-semibold px-10 py-4 rounded-xl text-lg hover:bg-accent transition-all cursor-pointer"
           >
             {t("cta.cta")} — {priceLoading ? t("pricing.price") : productPrice}
