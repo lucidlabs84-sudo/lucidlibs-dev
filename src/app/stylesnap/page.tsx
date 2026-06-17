@@ -226,7 +226,7 @@ export default function StyleSnapHome() {
               </div>
               <div className="mt-2 mb-6">
                 <span className="text-6xl font-black">
-                  {t("pricing.price") as string}
+                  {(priceLoading ? t("pricing.price") : productPrice) as string}
                 </span>
                 <span className="text-muted text-lg ml-2">
                   {t("pricing.period") as string}
