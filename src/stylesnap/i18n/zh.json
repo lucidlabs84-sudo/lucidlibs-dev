@@ -78,16 +78,52 @@
   "comparison": {
     "tag": "对比",
     "title": "为什么从 CSS Scan 切换？",
-    "headers": ["功能", "StyleSnap", "CSS Scan"],
+    "headers": [
+      "功能",
+      "StyleSnap",
+      "CSS Scan"
+    ],
     "rows": [
-      ["CSS 提取", "✓", "✓"],
-      ["实时编辑预览", "✓", "✓"],
-      ["AI 代码生成 (React/Vue/Tailwind)", "✓", "✗"],
-      ["设计令牌导出", "✓", "✗"],
-      ["截图标注", "✓", "✗"],
-      ["Tailwind 类转换", "✓ 确定性", "✓ 基础"],
-      ["价格", "$29 买断", "$69 买断"],
-      ["浏览器支持", "Edge & Chrome", "仅 Chrome"]
+      [
+        "CSS 提取",
+        "✓",
+        "✓"
+      ],
+      [
+        "实时编辑预览",
+        "✓",
+        "✓"
+      ],
+      [
+        "AI 代码生成 (React/Vue/Tailwind)",
+        "✓",
+        "✗"
+      ],
+      [
+        "设计令牌导出",
+        "✓",
+        "✗"
+      ],
+      [
+        "截图标注",
+        "✓",
+        "✗"
+      ],
+      [
+        "Tailwind 类转换",
+        "✓ 确定性",
+        "✓ 基础"
+      ],
+      [
+        "价格",
+        "$29 买断",
+        "$69 买断"
+      ],
+      [
+        "浏览器支持",
+        "Edge & Chrome",
+        "仅 Chrome"
+      ]
     ]
   },
   "pricing": {
@@ -375,5 +411,21 @@
     "faqDesc": "关于 StyleSnap CSS 提取器的常见问题。价格、功能、浏览器支持等。",
     "blogTitle": "博客 - StyleSnap",
     "blogDesc": "CSS 提取、Tailwind 转换和前端工具的教程、对比和深度分析。"
+  },
+  "platforms": {
+    "tag": "更多平台",
+    "title": "更多浏览器版本即将推出",
+    "subtitle": "我们正在努力将 StyleSnap 带到更多浏览器。",
+    "edge": "Microsoft Edge — 正在准备上架 Edge Add-ons 商店",
+    "firefox": "Mozilla Firefox — 开发中",
+    "safari": "Apple Safari — 规划中",
+    "chromeAvailable": "Chrome 版本现已可用",
+    "manualTitle": "手动安装（Chrome）",
+    "manualDesc": "不使用 Edge/Firefox？你可以手动安装 Chrome 版本：",
+    "downloadBtn": "下载 Chrome 版本 ZIP",
+    "step1": "1. 下载并解压文件",
+    "step2": "2. 在 Chrome 中打开 chrome://extensions/",
+    "step3": "3. 开启右上角「开发者模式」",
+    "step4": "4. 点击「加载已解压的扩展」，选择解压后的文件夹"
   }
 }
