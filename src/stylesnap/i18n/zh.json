@@ -427,5 +427,6 @@
     "step2": "2. 在 Chrome 中打开 chrome://extensions/",
     "step3": "3. 开启右上角「开发者模式」",
     "step4": "4. 点击「加载已解压的扩展」，选择解压后的文件夹"
-  }
+  },
+  "recoverLicenseKey": "找回授权 Key"
 }
