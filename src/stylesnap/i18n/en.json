@@ -78,16 +78,52 @@
   "comparison": {
     "tag": "Compare",
     "title": "Why switch from CSS Scan?",
-    "headers": ["Feature", "StyleSnap", "CSS Scan"],
+    "headers": [
+      "Feature",
+      "StyleSnap",
+      "CSS Scan"
+    ],
     "rows": [
-      ["CSS Extraction", "✓", "✓"],
-      ["Live Edit & Preview", "✓", "✓"],
-      ["AI Code Generation (React/Vue/Tailwind)", "✓", "✗"],
-      ["Design Token Export", "✓", "✗"],
-      ["Screenshot & Annotate", "✓", "✗"],
-      ["Tailwind Class Conversion", "✓ Deterministic", "✓ Basic"],
-      ["Price", "$29 one-time", "$69 one-time"],
-      ["Browser Support", "Edge & Chrome", "Chrome only"]
+      [
+        "CSS Extraction",
+        "✓",
+        "✓"
+      ],
+      [
+        "Live Edit & Preview",
+        "✓",
+        "✓"
+      ],
+      [
+        "AI Code Generation (React/Vue/Tailwind)",
+        "✓",
+        "✗"
+      ],
+      [
+        "Design Token Export",
+        "✓",
+        "✗"
+      ],
+      [
+        "Screenshot & Annotate",
+        "✓",
+        "✗"
+      ],
+      [
+        "Tailwind Class Conversion",
+        "✓ Deterministic",
+        "✓ Basic"
+      ],
+      [
+        "Price",
+        "$29 one-time",
+        "$69 one-time"
+      ],
+      [
+        "Browser Support",
+        "Edge & Chrome",
+        "Chrome only"
+      ]
     ]
   },
   "pricing": {
@@ -375,5 +411,21 @@
     "faqDesc": "Frequently asked questions about StyleSnap CSS extractor. Pricing, features, browser support, and more.",
     "blogTitle": "Blog - StyleSnap",
     "blogDesc": "Tutorials, comparisons, and deep dives on CSS extraction, Tailwind conversion, and frontend tooling."
+  },
+  "platforms": {
+    "tag": "More Platforms",
+    "title": "More browsers coming soon",
+    "subtitle": "We're working on bringing StyleSnap to more browsers.",
+    "edge": "Microsoft Edge — preparing for Edge Add-ons store",
+    "firefox": "Mozilla Firefox — in development",
+    "safari": "Apple Safari — planning",
+    "chromeAvailable": "Chrome version available now",
+    "manualTitle": "Manual Install (Chrome)",
+    "manualDesc": "Don't use Edge/Firefox? You can install the Chrome version manually:",
+    "downloadBtn": "Download Chrome ZIP",
+    "step1": "1. Download and unzip the file",
+    "step2": "2. Open chrome://extensions/ in Chrome",
+    "step3": "3. Enable 'Developer mode' (top right)",
+    "step4": "4. Click 'Load unpacked' and select the unzipped folder"
   }
 }
