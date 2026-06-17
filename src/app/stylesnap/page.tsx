@@ -84,9 +84,9 @@ export default function StyleSnapHome() {
               {t("hero.badge") as string}
             </div>
             <h1 className="text-5xl md:text-7xl font-black tracking-tight leading-[1.1] mb-6">
-              {t("hero.title1")}<br />
+              {t("hero.title")}<br />
               <span className="bg-gradient-to-r from-foreground via-accent to-muted bg-clip-text text-transparent">
-                {t("hero.title2")}
+                {t("hero.titleAccent")}
               </span>
             </h1>
             <p className="text-lg md:text-xl text-muted leading-relaxed mb-10 max-w-2xl mx-auto">
@@ -99,9 +99,9 @@ export default function StyleSnapHome() {
               >
                 {t("hero.cta")} — {priceLoading ? t("pricing.price") : productPrice}
               </button>
-              <span className="text-sm text-muted">{t("hero.note")}</span>
+              <span className="text-sm text-muted">{t("hero.ctaSub")}</span>
             </div>
-            <p className="mt-8 text-sm text-muted">{t("hero.socialProof")}</p>
+            <p className="mt-8 text-sm text-muted">{t("hero.users")}</p>
           </div>
         </div>
       </section>
@@ -301,16 +301,16 @@ export default function StyleSnapHome() {
       <section className="py-24 bg-foreground text-background">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            {t("cta.title1")} {/* Extract Any Style. */}
+            {t("hero.title")} {t("hero.titleAccent")}
           </h2>
           <p className="text-background/60 text-lg mb-10">
-            {t("cta.subtitle")}
+            {t("hero.subtitle")}
           </p>
           <button
             onClick={() => openCheckout()}
             className="inline-block bg-background text-foreground font-semibold px-10 py-4 rounded-xl text-lg hover:bg-accent transition-all cursor-pointer"
           >
-            {t("cta.cta")} — {priceLoading ? t("pricing.price") : productPrice}
+            {t("hero.cta")} — {priceLoading ? t("pricing.price") : productPrice}
           </button>
         </div>
       </section>
