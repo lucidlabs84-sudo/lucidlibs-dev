@@ -1,5 +1,7 @@
 "use client";
 
+import { useState, useEffect } from 'react';
+
 import { useI18n } from "@/stylesnap/i18n/context";
   
   // Dynamic pricing from DodoPayments
