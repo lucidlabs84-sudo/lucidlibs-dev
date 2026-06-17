@@ -41,12 +41,14 @@ export default function StyleSnapHome() {
     icon: string;
     title: string;
     desc: string;
+    image?: string;
   }>) || [];
 
   const steps = (t("workflow.steps", { returnObjects: true }) as Array<{
     num: string;
     title: string;
     desc: string;
+    image?: string;
   }>) || [];
 
   return (
@@ -129,6 +131,11 @@ export default function StyleSnapHome() {
                 </div>
                 <h3 className="font-bold text-lg mb-2">{s.title}</h3>
                 <p className="text-muted text-sm leading-relaxed">{s.desc}</p>
+                {s.image && (
+                  <div className="mt-5 rounded-lg overflow-hidden border border-border">
+                    <img src={s.image} alt={s.title} className="w-full h-auto" />
+                  </div>
+                )}
               </div>
             ))}
           </div>
@@ -154,7 +161,12 @@ export default function StyleSnapHome() {
                 )}
                 <div className="text-6xl font-black text-border mb-4">{s.num}</div>
                 <h3 className="text-xl font-bold mb-2">{s.title}</h3>
-                <p className="text-muted text-sm leading-relaxed">{s.desc}</p>
+                <p className="text-muted text-sm leading-relaxed mb-4">{s.desc}</p>
+                {s.image && (
+                  <div className="rounded-lg overflow-hidden border border-border">
+                    <img src={s.image} alt={s.title} className="w-full h-auto" />
+                  </div>
+                )}
               </div>
             ))}
           </div>
