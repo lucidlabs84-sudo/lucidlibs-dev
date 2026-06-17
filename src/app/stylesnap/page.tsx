@@ -257,6 +257,101 @@ export default function StyleSnapHome() {
         </div>
       </section>
 
+      {/* Platforms */}
+      <section id="platforms" className="py-24 bg-background">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <span className="text-xs font-semibold uppercase tracking-widest text-muted">
+              {t("platforms.tag") as string}
+            </span>
+            <h2 className="text-3xl md:text-5xl font-bold mt-3">
+              {t("platforms.title") as string}
+            </h2>
+            <p className="text-muted text-lg mt-4 max-w-2xl mx-auto">
+              {t("platforms.subtitle") as string}
+            </p>
+          </div>
+
+          {/* Platform badges */}
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
+            {/* Chrome - available */}
+            <div className="flex items-center gap-3 px-5 py-3 rounded-xl border-2 border-foreground bg-foreground text-background">
+              <span className="text-lg">🌐</span>
+              <div className="text-left">
+                <div className="font-semibold text-sm">Chrome</div>
+                <div className="text-xs opacity-70">Available now</div>
+              </div>
+              <span className="ml-2 text-xs bg-accent text-background px-2 py-0.5 rounded-full">LIVE</span>
+            </div>
+            {/* Edge - preparing */}
+            <div className="flex items-center gap-3 px-5 py-3 rounded-xl border border-border bg-surface">
+              <span className="text-lg">🔵</span>
+              <div className="text-left">
+                <div className="font-semibold text-sm">Edge</div>
+                <div className="text-xs text-muted">{t("platforms.edge") as string}</div>
+              </div>
+            </div>
+            {/* Firefox - in development */}
+            <div className="flex items-center gap-3 px-5 py-3 rounded-xl border border-border bg-surface">
+              <span className="text-lg">🦊</span>
+              <div className="text-left">
+                <div className="font-semibold text-sm">Firefox</div>
+                <div className="text-xs text-muted">{t("platforms.firefox") as string}</div>
+              </div>
+            </div>
+            {/* Safari - planning */}
+            <div className="flex items-center gap-3 px-5 py-3 rounded-xl border border-border bg-surface">
+              <span className="text-lg">🧭</span>
+              <div className="text-left">
+                <div className="font-semibold text-sm">Safari</div>
+                <div className="text-xs text-muted">{t("platforms.safari") as string}</div>
+              </div>
+            </div>
+          </div>
+
+          {/* Manual Install Section */}
+          <div className="max-w-2xl mx-auto">
+            <div className="rounded-2xl border border-border bg-surface p-8">
+              <h3 className="text-xl font-bold mb-2">
+                {t("platforms.manualTitle") as string}
+              </h3>
+              <p className="text-muted text-sm mb-6">
+                {t("platforms.manualDesc") as string}
+              </p>
+
+              {/* Download button */}
+              <a
+                href="/downloads/stylesnap-chrome.zip"
+                download
+                className="inline-block bg-foreground text-background font-semibold px-6 py-3 rounded-xl text-sm hover:bg-accent transition-all mb-6"
+              >
+                ⬇ {t("platforms.downloadBtn") as string}
+              </a>
+
+              {/* Steps */}
+              <div className="space-y-3 text-sm">
+                <div className="flex gap-3">
+                  <span className="text-accent font-bold">1</span>
+                  <span className="text-muted">{t("platforms.step1") as string}</span>
+                </div>
+                <div className="flex gap-3">
+                  <span className="text-accent font-bold">2</span>
+                  <span className="text-muted">{t("platforms.step2") as string}</span>
+                </div>
+                <div className="flex gap-3">
+                  <span className="text-accent font-bold">3</span>
+                  <span className="text-muted">{t("platforms.step3") as string}</span>
+                </div>
+                <div className="flex gap-3">
+                  <span className="text-accent font-bold">4</span>
+                  <span className="text-muted">{t("platforms.step4") as string}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-24 bg-foreground text-background">
         <div className="max-w-3xl mx-auto px-6 text-center">
