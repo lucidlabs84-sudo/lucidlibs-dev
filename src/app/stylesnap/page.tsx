@@ -1,6 +1,27 @@
 "use client";
 
 import { useI18n } from "@/stylesnap/i18n/context";
+  
+  // Dynamic pricing from DodoPayments
+  const [productPrice, setProductPrice] = useState<string>('$29');
+  const [priceLoading, setPriceLoading] = useState<boolean>(true);
+  
+  useEffect(() => {
+    async function fetchPrice() {
+      try {
+        const res = await fetch('https://api.lucidlibs.dev/api/product-info');
+        const data = await res.json();
+        if (data.formatted_price) {
+          setProductPrice(data.formatted_price);
+        }
+      } catch (e) {
+        console.error('Failed to fetch price:', e);
+      } finally {
+        setPriceLoading(false);
+      }
+    }
+    fetchPrice();
+  }, []);
 import { openCheckout } from "@/stylesnap/lib/checkout";
 
 const iconMap: Record<string, string> = {
