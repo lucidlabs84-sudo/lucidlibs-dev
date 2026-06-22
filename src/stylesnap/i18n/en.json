@@ -10,47 +10,47 @@
   "hero": {
     "badge": "AI-Powered CSS Extraction",
     "title": "Extract Any Style.",
-    "titleAccent": "Export Any Code.",
-    "subtitle": "Hover → Extract → Edit → Export. Turn any website's CSS into clean React, Vue, or Tailwind code in seconds.",
-    "cta": "Get StyleSnap — $29",
+    "titleAccent": "Instantly.",
+    "subtitle": "Hover → Lock → Edit → Copy. Extract any website's CSS, edit values live on the page, and export as Tailwind classes — all without leaving the page.",
+    "cta": "Get StyleSnap",
     "ctaSub": "One-time purchase. Lifetime updates.",
     "demo": "Watch Demo",
     "users": "Trusted by 2,000+ developers"
   },
   "features": {
     "tag": "Why StyleSnap",
-    "title": "Built for developers who value precision",
-    "subtitle": "Not just another CSS inspector. StyleSnap closes the loop from extraction to production-ready code.",
+    "title": "Built for developers who value speed",
+    "subtitle": "No side panel. No DevTools. Everything happens right on the page.",
     "items": [
       {
         "icon": "crosshair",
-        "title": "Pixel-Perfect Extraction",
-        "desc": "Hover over any element to instantly capture its computed styles, selectors, and specificity — no DevTools needed."
-      },
-      {
-        "icon": "code",
-        "title": "AI Code Generation",
-        "desc": "One click converts CSS to React (styled-components/CSS modules), Vue, or Tailwind utility classes — clean and idiomatic."
-      },
-      {
-        "icon": "palette",
-        "title": "Design Token Export",
-        "desc": "Extract colors, spacing, and typography into a structured design token JSON file. Import directly into Figma or your design system."
+        "title": "Hover & Lock",
+        "desc": "Hover over any element to see its styles. Click to lock it — the CSS overlay appears right next to the element with all computed properties."
       },
       {
         "icon": "edit",
-        "title": "Live Edit & Preview",
-        "desc": "Tweak any property in the side panel and see changes live on the page. Copy the result when it looks right."
+        "title": "Live Inline Editing",
+        "desc": "Click any CSS value in the overlay to edit it directly. Press Enter to apply — watch the page update instantly. No side panel, no popup."
       },
       {
-        "icon": "screenshot",
-        "title": "Screenshot & Annotate",
-        "desc": "Capture the styled element with a screenshot, add annotations, and share with your team as a reference."
+        "icon": "code",
+        "title": "Tailwind Classes Export",
+        "desc": "Deterministic CSS-to-Tailwind conversion — no AI hallucination. Maps color, spacing, typography, and layout to exact Tailwind utility classes."
+      },
+      {
+        "icon": "palette",
+        "title": "Color Palette Extraction",
+        "desc": "Extract the entire page's color palette with one click. See every color with its hex code and semantic role — build your design system faster."
       },
       {
         "icon": "zap",
-        "title": "Tailwind-First Workflow",
-        "desc": "Deterministic CSS-to-Tailwind conversion with full class coverage. No AI hallucination — every class maps correctly."
+        "title": "AI Component Generator",
+        "desc": "One click generates a complete React + TypeScript + Tailwind component from any element. Includes state management based on ARIA annotations."
+      },
+      {
+        "icon": "screenshot",
+        "title": "Copy & Export",
+        "desc": "Copy CSS as text or JSON, export Tailwind classes, or generate a full React component. All from the overlay footer — no app switching."
       }
     ]
   },
@@ -60,20 +60,20 @@
     "steps": [
       {
         "num": "01",
-        "title": "Hover & Select",
-        "desc": "Move your cursor to any element on the page. StyleSnap highlights it and shows a quick style summary.",
+        "title": "Hover & Lock",
+        "desc": "Move your cursor over any element. StyleSnap highlights it. Click to lock — the CSS overlay appears right there with all computed styles.",
         "image": "/screenshots/step1-hover.png"
       },
       {
         "num": "02",
-        "title": "Edit & Refine",
-        "desc": "Open the side panel to see all computed styles. Edit any value and watch the page update in real time.",
+        "title": "Edit & Preview",
+        "desc": "Click any CSS value in the overlay to edit it. Press Enter and see the change live on the page. Copy CSS, export Tailwind classes, or extract the color palette — all from the same overlay.",
         "image": "/screenshots/step2-edit.png"
       },
       {
         "num": "03",
         "title": "Export & Ship",
-        "desc": "Choose your format — React, Vue, Tailwind, or design tokens. Copy or download production-ready code.",
+        "desc": "Copy CSS, JSON, or Tailwind classes. Or let AI generate a complete React component with state management and animations.",
         "image": "/screenshots/step3-export.png"
       }
     ]
@@ -86,10 +86,11 @@
     "period": "one-time",
     "features": [
       "Unlimited CSS extraction",
-      "AI code generation (React, Vue, Tailwind)",
-      "Design token export (JSON)",
-      "Live edit & preview",
-      "Screenshot & annotation",
+      "Live inline editing on any page",
+      "Tailwind class export",
+      "Color palette extraction",
+      "AI React component generation (free 1/day)",
+      "Copy CSS / JSON / Tailwind",
       "Lifetime updates",
       "Edge & Chrome support",
       "Priority email support"
@@ -365,19 +366,19 @@
     "blogDesc": "Tutorials, comparisons, and deep dives on CSS extraction, Tailwind conversion, and frontend tooling."
   },
   "platforms": {
-    "tag": "More Platforms",
-    "title": "More browsers coming soon",
-    "subtitle": "We're working on bringing StyleSnap to more browsers.",
-    "edge": "Microsoft Edge — preparing for Edge Add-ons store",
+    "tag": "Platforms",
+    "title": "Available on Edge & Chrome",
+    "subtitle": "StyleSnap works on both Microsoft Edge and Google Chrome. Firefox and Safari coming soon.",
+    "edge": "Microsoft Edge — available now on Edge Add-ons",
     "firefox": "Mozilla Firefox — in development",
     "safari": "Apple Safari — planning",
-    "chromeAvailable": "Chrome version available now",
-    "manualTitle": "Manual Install (Chrome)",
-    "manualDesc": "Don't use Edge/Firefox? You can install the Chrome version manually:",
-    "downloadBtn": "Download Chrome ZIP",
+    "chromeAvailable": "Chrome version also available",
+    "manualTitle": "Manual Install",
+    "manualDesc": "Prefer to install manually? Download the latest version:",
+    "downloadBtn": "Download for Edge/Chrome (ZIP)",
     "step1": "1. Download and unzip the file",
-    "step2": "2. Open chrome://extensions/ in Chrome",
-    "step3": "3. Enable 'Developer mode' (top right)",
+    "step2": "2. Open edge://extensions/ in Edge (or chrome://extensions/ in Chrome)",
+    "step3": "3. Enable 'Developer mode' (toggle at bottom left)",
     "step4": "4. Click 'Load unpacked' and select the unzipped folder"
   },
   "recoverLicenseKey": "Recover license key"

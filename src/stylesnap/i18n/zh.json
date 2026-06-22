@@ -10,47 +10,47 @@
   "hero": {
     "badge": "AI 驱动的 CSS 提取",
     "title": "提取任意样式。",
-    "titleAccent": "导出任意代码。",
-    "subtitle": "悬停 → 提取 → 编辑 → 导出。将任何网站的 CSS 转为干净的 React、Vue 或 Tailwind 代码，仅需数秒。",
-    "cta": "获取 StyleSnap — ¥199",
+    "titleAccent": "即时可得。",
+    "subtitle": "悬停 → 锁定 → 编辑 → 复制。提取网站的 CSS，在页面上实时修改，导出为 Tailwind 类 — 全程无需离开页面。",
+    "cta": "获取 StyleSnap",
     "ctaSub": "一次买断，终身更新。",
     "demo": "观看演示",
     "users": "2,000+ 开发者的选择"
   },
   "features": {
     "tag": "为什么选 StyleSnap",
-    "title": "为追求精确的开发者而生",
-    "subtitle": "不只是 CSS 检查器。StyleSnap 打通了从提取到生产级代码的完整闭环。",
+    "title": "为追求效率的开发者而生",
+    "subtitle": "没有侧边栏，不用 DevTools。一切都在页面上完成。",
     "items": [
       {
         "icon": "crosshair",
-        "title": "像素级精确提取",
-        "desc": "悬停任意元素，即刻捕获计算样式、选择器和特异性——无需打开 DevTools。"
-      },
-      {
-        "icon": "code",
-        "title": "AI 代码生成",
-        "desc": "一键将 CSS 转为 React（styled-components/CSS modules）、Vue 或 Tailwind 工具类——干净且符合惯用写法。"
-      },
-      {
-        "icon": "palette",
-        "title": "设计令牌导出",
-        "desc": "将颜色、间距和排版提取为结构化设计令牌 JSON 文件，直接导入 Figma 或设计系统。"
+        "title": "悬停锁定",
+        "desc": "悬停任意元素查看样式。点击锁定 — CSS 覆盖层直接在元素旁边展示所有计算属性。"
       },
       {
         "icon": "edit",
-        "title": "实时编辑预览",
-        "desc": "在侧面板调整任何属性，页面实时更新。满意后一键复制。"
+        "title": "实时在线编辑",
+        "desc": "点覆盖层中的任意 CSS 值直接编辑，回车应用 — 页面立即更新。无需侧边栏，无需弹窗。"
       },
       {
-        "icon": "screenshot",
-        "title": "截图标注",
-        "desc": "捕获样式元素截图，添加标注，与团队分享作为设计参考。"
+        "icon": "code",
+        "title": "Tailwind 类导出",
+        "desc": "确定性 CSS→Tailwind 转换 — 无 AI 幻觉。颜色、间距、排版、布局一一映射到精确 Tailwind 工具类。"
+      },
+      {
+        "icon": "palette",
+        "title": "配色方案提取",
+        "desc": "一键提取整页配色方案。每个颜色显示 hex 码和语义角色 — 更快构建设计系统。"
       },
       {
         "icon": "zap",
-        "title": "Tailwind 优先工作流",
-        "desc": "确定性 CSS→Tailwind 转换，完整覆盖所有工具类。无 AI 幻觉——每个类都精确映射。"
+        "title": "AI 组件生成",
+        "desc": "一键将任意元素转为完整 React + TypeScript + Tailwind 组件。基于 ARIA 标注自动推断交互行为。"
+      },
+      {
+        "icon": "screenshot",
+        "title": "复制与导出",
+        "desc": "复制 CSS 文本或 JSON、导出 Tailwind 类、或生成完整 React 组件。全在覆盖层底部完成 — 无需切换窗口。"
       }
     ]
   },
@@ -60,20 +60,20 @@
     "steps": [
       {
         "num": "01",
-        "title": "悬停选择",
-        "desc": "将光标移到页面任意元素上，StyleSnap 高亮显示并展示样式摘要。",
+        "title": "悬停锁定",
+        "desc": "光标移到任意元素上方。StyleSnap 高亮显示。点击锁定 — CSS 覆盖层直接出现在元素旁。",
         "image": "/screenshots/step1-hover.png"
       },
       {
         "num": "02",
-        "title": "编辑优化",
-        "desc": "打开侧面板查看所有计算样式，编辑任意值，页面实时更新。",
+        "title": "编辑预览",
+        "desc": "点覆盖层中的 CSS 值直接编辑，回车 即见页面变化。复制 CSS、导出 Tailwind 类、提取配色 — 全在同一个覆盖层完成。",
         "image": "/screenshots/step2-edit.png"
       },
       {
         "num": "03",
         "title": "导出交付",
-        "desc": "选择格式——React、Vue、Tailwind 或设计令牌。复制或下载生产级代码。",
+        "desc": "复制 CSS、JSON 或 Tailwind 类。或者让 AI 生成完整 React 组件 — 包含状态管理和动画。",
         "image": "/screenshots/step3-export.png"
       }
     ]
@@ -86,10 +86,11 @@
     "period": "买断",
     "features": [
       "无限 CSS 提取",
-      "AI 代码生成 (React, Vue, Tailwind)",
-      "设计令牌导出 (JSON)",
-      "实时编辑预览",
-      "截图与标注",
+      "页面上实时在线编辑",
+      "Tailwind 类导出",
+      "配色方案提取",
+      "AI React 组件生成 (免费 1 次/天)",
+      "复制 CSS / JSON / Tailwind",
       "终身更新",
       "Edge & Chrome 支持",
       "优先邮件支持"
@@ -358,27 +359,27 @@
   },
   "seo": {
     "homeTitle": "StyleSnap - AI 驱动的 CSS 样式提取器与代码生成器",
-    "homeDesc": "提取任意 CSS 样式，实时编辑，导出为 React/Vue/Tailwind 代码。$29 一次性买断。",
+    "homeDesc": "提取任意 CSS 样式，直接编辑，导出 Tailwind 类。$29 一次性买断。",
     "faqTitle": "常见问题 - StyleSnap",
     "faqDesc": "关于 StyleSnap CSS 提取器的常见问题。价格、功能、浏览器支持等。",
     "blogTitle": "博客 - StyleSnap",
     "blogDesc": "CSS 提取、Tailwind 转换和前端工具的教程、对比和深度分析。"
   },
   "platforms": {
-    "tag": "更多平台",
-    "title": "更多浏览器版本即将推出",
-    "subtitle": "我们正在努力将 StyleSnap 带到更多浏览器。",
-    "edge": "Microsoft Edge — 正在准备上架 Edge Add-ons 商店",
+    "tag": "支持平台",
+    "title": "Edge & Chrome 双平台支持",
+    "subtitle": "StyleSnap 同时支持 Microsoft Edge 和 Google Chrome。Firefox 和 Safari 即将推出。",
+    "edge": "Microsoft Edge — 现已上架 Edge Add-ons",
     "firefox": "Mozilla Firefox — 开发中",
     "safari": "Apple Safari — 规划中",
-    "chromeAvailable": "Chrome 版本现已可用",
-    "manualTitle": "手动安装（Chrome）",
-    "manualDesc": "不使用 Edge/Firefox？你可以手动安装 Chrome 版本：",
-    "downloadBtn": "下载 Chrome 版本 ZIP",
+    "chromeAvailable": "Chrome 版本同样可用",
+    "manualTitle": "手动安装",
+    "manualDesc": "想要手动安装？下载最新版本：",
+    "downloadBtn": "下载 Edge/Chrome 版本 (ZIP)",
     "step1": "1. 下载并解压文件",
-    "step2": "2. 在 Chrome 中打开 chrome://extensions/",
-    "step3": "3. 开启右上角「开发者模式」",
-    "step4": "4. 点击「加载已解压的扩展」，选择解压后的文件夹"
+    "step2": "2. 在 Edge 中打开 edge://extensions/（Chrome 则为 chrome://extensions/）",
+    "step3": "3. 开启左下角「开发人员模式」",
+    "step4": "4. 点击「加载解压缩的扩展」，选择解压后的文件夹"
   },
   "recoverLicenseKey": "找回授权 Key"
 }

@@ -236,21 +236,21 @@ export default function StyleSnapHome() {
             </p>
           </div>
           <div className="flex flex-wrap justify-center gap-4 mb-12">
-            {/* Chrome - Available */}
+            {/* Edge - Available */}
             <div className="flex items-center gap-3 px-5 py-3 rounded-xl border-2 border-foreground bg-foreground text-background">
-              <span className="text-lg">🌐</span>
+              <span className="text-lg">🔵</span>
               <div className="text-left">
-                <div className="font-semibold text-sm">Chrome</div>
+                <div className="font-semibold text-sm">Edge</div>
                 <div className="text-xs opacity-70">Available now</div>
               </div>
               <span className="ml-2 text-xs bg-accent text-background px-2 py-0.5 rounded-full">LIVE</span>
             </div>
-            {/* Edge - Preparing */}
+            {/* Chrome - Available */}
             <div className="flex items-center gap-3 px-5 py-3 rounded-xl border border-border bg-surface">
-              <span className="text-lg">🔵</span>
+              <span className="text-lg">🌐</span>
               <div className="text-left">
-                <div className="font-semibold text-sm">Edge</div>
-                <div className="text-xs text-muted">Microsoft Edge — preparing for Edge Add-ons store</div>
+                <div className="font-semibold text-sm">Chrome</div>
+                <div className="text-xs text-muted">Google Chrome — also available</div>
               </div>
             </div>
             {/* Firefox - In development */}
