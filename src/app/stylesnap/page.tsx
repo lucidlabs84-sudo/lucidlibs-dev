@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from 'react';
+import Script from 'next/script';
 import { useI18n } from "@/stylesnap/i18n/context";
 import { openCheckout } from "@/stylesnap/lib/checkout";
 
@@ -137,6 +138,39 @@ export default function StyleSnapHome() {
         </div>
       </section>
 
+      {/* ═══ Live Demo ═══ */}
+      <section className="py-24 bg-background">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-10">
+            <span className="text-xs font-semibold uppercase tracking-widest text-muted">Try It Live</span>
+            <h2 className="text-3xl md:text-5xl font-bold mt-3 mb-4 text-foreground">Hover any element below</h2>
+            <p className="text-muted text-lg max-w-2xl mx-auto">
+              This is the <strong className="text-foreground">real StyleSnap engine</strong> running right in your browser. No installation needed.
+              Hover over any demo element to see its computed CSS and Tailwind classes extracted live.
+            </p>
+          </div>
+
+          {/* Demo mount point */}
+          <div className="max-w-4xl mx-auto rounded-2xl border-2 border-dashed border-border p-10 bg-surface relative">
+            <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-accent text-white text-xs font-semibold px-4 py-1 rounded-full">
+              LIVE DEMO
+            </div>
+            <div id="stylesnap-demo" className="min-h-[120px]" />
+            <p className="text-center text-xs text-muted mt-8">
+              👆 Hover over any element above — the CSS panel is extracted by the real StyleSnap engine
+            </p>
+          </div>
+
+          <div className="text-center mt-10">
+            <button onClick={() => openCheckout()}
+              className="bg-foreground text-background font-semibold px-8 py-4 rounded-xl text-lg hover:bg-accent transition-all hover:scale-[1.02] shadow-xl shadow-foreground/10 cursor-pointer">
+              Get StyleSnap Pro — $29 lifetime
+            </button>
+            <p className="text-xs text-muted mt-3">Install once, extract CSS anywhere on any website</p>
+          </div>
+        </div>
+      </section>
+
       {/* ═══ Pricing ═══ */}
       <section id="pricing" className="py-24 bg-background">
         <div className="max-w-6xl mx-auto px-6">
@@ -223,6 +257,9 @@ export default function StyleSnapHome() {
           <p className="text-xs text-background/40 mt-4">7-day money-back guarantee</p>
         </div>
       </section>
+
+      {/* Demo script — real StyleSnap engine */}
+      <Script src="/stylesnap-demo.js" strategy="lazyOnload" />
     </>
   );
 }
