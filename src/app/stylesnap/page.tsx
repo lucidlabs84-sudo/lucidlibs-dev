@@ -24,16 +24,6 @@ export default function StyleSnapHome() {
       .catch(() => {}).finally(() => setPriceLoading(false))
   }, []);
 
-  // Load the live demo script (real StyleSnap engine)
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.src = '/stylesnap-demo.js';
-    script.async = true;
-    script.onload = () => console.log('[StyleSnap] Demo engine loaded');
-    document.body.appendChild(script);
-    return () => { script.remove() };
-  }, []);
-
   const features = (t("features.items", { returnObjects: true }) as Array<{ icon: string; title: string; desc: string }>) || [];
   const personas = (t("personas.items", { returnObjects: true }) as Array<{ who: string; desc: string; highlight: string }>) || [];
   const steps = (t("workflow.steps", { returnObjects: true }) as Array<{ num: string; title: string; desc: string }>) || [];
@@ -142,35 +132,34 @@ export default function StyleSnapHome() {
         </div>
       </section>
 
-      {/* ═══ Live Demo ═══ */}
+      {/* ═══ Screenshots Gallery ═══ */}
       <section className="py-24 bg-background">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center mb-10">
-            <span className="text-xs font-semibold uppercase tracking-widest text-muted">Try It Live</span>
-            <h2 className="text-3xl md:text-5xl font-bold mt-3 mb-4 text-foreground">Hover any element below</h2>
+          <div className="text-center mb-16">
+            <span className="text-xs font-semibold uppercase tracking-widest text-muted">See It In Action</span>
+            <h2 className="text-3xl md:text-5xl font-bold mt-3 mb-4 text-foreground">Real screenshots from real websites</h2>
             <p className="text-muted text-lg max-w-2xl mx-auto">
-              This is the <strong className="text-foreground">real StyleSnap engine</strong> running right in your browser. No installation needed.
-              Hover over any demo element to see its computed CSS and Tailwind classes extracted live.
+              Every feature shown below works on any website — Tailwind, Bootstrap, custom CSS, doesn't matter.
             </p>
           </div>
-
-          {/* Demo mount point */}
-          <div className="max-w-4xl mx-auto rounded-2xl border-2 border-dashed border-border p-10 bg-surface relative">
-            <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-accent text-white text-xs font-semibold px-4 py-1 rounded-full">
-              LIVE DEMO
-            </div>
-            <div id="stylesnap-demo" className="min-h-[120px]" />
-            <p className="text-center text-xs text-muted mt-8">
-              👆 Hover over any element above — the CSS panel is extracted by the real StyleSnap engine
-            </p>
-          </div>
-
-          <div className="text-center mt-10">
-            <button onClick={() => openCheckout()}
-              className="bg-foreground text-background font-semibold px-8 py-4 rounded-xl text-lg hover:bg-accent transition-all hover:scale-[1.02] shadow-xl shadow-foreground/10 cursor-pointer">
-              Get StyleSnap Pro — $29 lifetime
-            </button>
-            <p className="text-xs text-muted mt-3">Install once, extract CSS anywhere on any website</p>
+          <div className="grid md:grid-cols-2 gap-8">
+            {[
+              { src: '/screenshots/css-inspection.png', label: 'CSS Inspection', title: 'Hover any element → instant CSS panel', desc: 'All computed styles organized by category: Layout, Typography, Visual, Flex/Grid.' },
+              { src: '/screenshots/tailwind-export.png', label: 'Tailwind Export', title: 'CSS → Tailwind in one click', desc: 'Deterministic mapping — no AI hallucinations. 300+ rules covering colors, spacing, typography.' },
+              { src: '/screenshots/design-tokens.png', label: 'Design Tokens', title: 'Extract color palettes & spacing', desc: 'Full design token extraction from any element or entire page. Export to JSON.' },
+              { src: '/screenshots/ai-prompt.png', label: 'AI Prompt Gen', title: 'Generate AI component prompts', desc: 'Select any element → get a ready-to-use prompt for v0, Bolt, or Cursor AI.' },
+            ].map((item, i) => (
+              <div key={i} className="group relative rounded-2xl border border-border bg-surface overflow-hidden hover:border-border-hover transition-all">
+                <div className="absolute top-3 left-3 z-10 bg-foreground text-background text-xs font-semibold px-3 py-1 rounded-full">{item.label}</div>
+                <div className="aspect-[16/10] overflow-hidden bg-gradient-to-br from-slate-900 to-slate-800">
+                  <img src={item.src} alt={item.title} className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500" loading="lazy" />
+                </div>
+                <div className="p-6">
+                  <h3 className="font-semibold text-base text-foreground mb-2">{item.title}</h3>
+                  <p className="text-muted text-sm leading-relaxed">{item.desc}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
