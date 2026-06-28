@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from 'react';
-import Script from 'next/script';
 import { useI18n } from "@/stylesnap/i18n/context";
 import { openCheckout } from "@/stylesnap/lib/checkout";
 
@@ -20,14 +19,19 @@ export default function StyleSnapHome() {
   const [priceLoading, setPriceLoading] = useState<boolean>(true);
 
   useEffect(() => {
-    async function fetchPrice() {
-      try {
-        const res = await fetch('https://api.lucidlibs.dev/api/product-info');
-        const data = await res.json();
-        if (data.formatted_price) setProductPrice(data.formatted_price);
-      } catch (_) {} finally { setPriceLoading(false); }
-    }
-    fetchPrice();
+    fetch('https://api.lucidlibs.dev/api/product-info')
+      .then(r => r.json()).then(d => { if (d.formatted_price) setProductPrice(d.formatted_price) })
+      .catch(() => {}).finally(() => setPriceLoading(false))
+  }, []);
+
+  // Load the live demo script (real StyleSnap engine)
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = '/stylesnap-demo.js';
+    script.async = true;
+    script.onload = () => console.log('[StyleSnap] Demo engine loaded');
+    document.body.appendChild(script);
+    return () => { script.remove() };
   }, []);
 
   const features = (t("features.items", { returnObjects: true }) as Array<{ icon: string; title: string; desc: string }>) || [];
@@ -258,8 +262,6 @@ export default function StyleSnapHome() {
         </div>
       </section>
 
-      {/* Demo script — real StyleSnap engine */}
-      <Script src="/stylesnap-demo.js" strategy="afterInteractive" />
     </>
   );
 }
