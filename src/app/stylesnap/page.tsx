@@ -259,7 +259,7 @@ export default function StyleSnapHome() {
       </section>
 
       {/* Demo script — real StyleSnap engine */}
-      <Script src="/stylesnap-demo.js" strategy="lazyOnload" />
+      <Script src="/stylesnap-demo.js" strategy="afterInteractive" />
     </>
   );
 }
