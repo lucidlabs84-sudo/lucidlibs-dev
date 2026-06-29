@@ -23,7 +23,7 @@ export default function StyleSnapLayout({
 }) {
   return (
     <I18nProvider>
-      <div className="min-h-screen flex flex-col bg-surface text-foreground">
+      <div className="snap-theme min-h-screen flex flex-col bg-background text-foreground">
         <StyleNav />
         <main className="flex-1">{children}</main>
         <StyleFooter />

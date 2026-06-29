@@ -12,7 +12,7 @@ export default function StyleFooter() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           <div className="md:col-span-1">
             <div className="text-xl font-bold tracking-tight mb-3">
-              Style<span className="text-muted">Snap</span>
+              Style<span className="text-accent">Snap</span>
             </div>
             <p className="text-sm text-muted leading-relaxed">
               {t("footer.description") as string}
@@ -56,7 +56,7 @@ export default function StyleFooter() {
                 </Link>
               </li>
               <li>
-                <span className="text-border">{t("footer.changelog") as string}</span>
+                <span className="text-muted/40">{t("footer.changelog") as string}</span>
               </li>
             </ul>
           </div>
@@ -66,10 +66,10 @@ export default function StyleFooter() {
             </h4>
             <ul className="space-y-2 text-sm text-muted">
               <li>
-                <span className="text-border">{t("footer.privacy") as string}</span>
+                <span className="text-muted/40">{t("footer.privacy") as string}</span>
               </li>
               <li>
-                <span className="text-border">{t("footer.terms") as string}</span>
+                <span className="text-muted/40">{t("footer.terms") as string}</span>
               </li>
               <li>
                 <Link href="/stylesnap/feedback" className="hover:text-foreground transition">

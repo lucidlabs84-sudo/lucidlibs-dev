@@ -21,7 +21,7 @@ export default function StyleNav() {
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
         <Link href="/stylesnap" className="text-xl font-bold tracking-tight">
-          Style<span className="text-muted">Snap</span>
+          Style<span className="text-accent">Snap</span>
         </Link>
 
         {/* Desktop links */}
@@ -47,7 +47,7 @@ export default function StyleNav() {
           </button>
           <button
             onClick={() => openCheckout()}
-            className="bg-foreground text-background text-sm font-medium px-5 py-2 rounded-lg hover:bg-accent transition cursor-pointer"
+            className="bg-gradient-to-r from-accent to-accent-2 text-white text-sm font-medium px-5 py-2 rounded-lg hover:scale-[1.03] shadow-lg shadow-accent/25 transition cursor-pointer"
           >
             {t("nav.getStarted") as string}
           </button>

@@ -52,7 +52,7 @@ export default function StyleSnapHome() {
             </div>
             <h1 className="text-5xl md:text-7xl font-black tracking-tight leading-[1.1] mb-6">
               {t("hero.title")}<br />
-              <span className="bg-gradient-to-r from-foreground via-accent to-muted bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-accent to-accent-2 bg-clip-text text-transparent">
                 {t("hero.titleAccent")}
               </span>
             </h1>
@@ -61,7 +61,7 @@ export default function StyleSnapHome() {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <button onClick={() => openCheckout()}
-                className="bg-foreground text-background font-semibold px-8 py-4 rounded-xl text-lg hover:bg-accent transition-all hover:scale-[1.02] shadow-xl shadow-foreground/10 cursor-pointer">
+                className="bg-gradient-to-r from-accent to-accent-2 text-white font-semibold px-8 py-4 rounded-xl text-lg transition-all hover:scale-[1.02] shadow-lg shadow-accent/25 hover:shadow-xl hover:shadow-accent/40 cursor-pointer">
                 {t("hero.cta")} — {priceLoading ? t("pricing.price") : productPrice}
               </button>
               <span className="text-sm text-muted">{t("hero.ctaSub")}</span>
@@ -75,7 +75,7 @@ export default function StyleSnapHome() {
       <section className="py-24 bg-surface">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16">
-            <span className="text-xs font-semibold uppercase tracking-widest text-muted">{t("personas.tag")}</span>
+            <span className="text-xs font-semibold uppercase tracking-widest text-accent">{t("personas.tag")}</span>
             <h2 className="text-3xl md:text-5xl font-bold mt-3 text-foreground">{t("personas.title")}</h2>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
@@ -94,14 +94,14 @@ export default function StyleSnapHome() {
       <section id="features" className="py-24 bg-background">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16">
-            <span className="text-xs font-semibold uppercase tracking-widest text-muted">{t("features.tag")}</span>
+            <span className="text-xs font-semibold uppercase tracking-widest text-accent">{t("features.tag")}</span>
             <h2 className="text-3xl md:text-5xl font-bold mt-3 mb-4">{t("features.title")}</h2>
             <p className="text-muted text-lg max-w-2xl mx-auto">{t("features.subtitle")}</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {features.map((f, i) => (
               <div key={i} className="bg-surface rounded-2xl border border-border p-8 hover:border-border-hover transition-all group">
-                <div className="w-10 h-10 rounded-xl bg-foreground text-background flex items-center justify-center text-lg mb-5 group-hover:bg-accent transition-colors">
+                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-accent to-accent-2 text-white flex items-center justify-center text-lg mb-5 shadow-lg shadow-accent/20 transition-transform group-hover:scale-110">
                   {iconMap[f.icon] || "?"}
                 </div>
                 <h3 className="font-semibold text-base mb-2 text-foreground">{f.title}</h3>
@@ -116,7 +116,7 @@ export default function StyleSnapHome() {
       <section className="py-24 bg-surface">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16">
-            <span className="text-xs font-semibold uppercase tracking-widest text-muted">{t("workflow.tag")}</span>
+            <span className="text-xs font-semibold uppercase tracking-widest text-accent">{t("workflow.tag")}</span>
             <h2 className="text-3xl md:text-5xl font-bold mt-3">{t("workflow.title")}</h2>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
@@ -136,7 +136,7 @@ export default function StyleSnapHome() {
       <section className="py-24 bg-background">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16">
-            <span className="text-xs font-semibold uppercase tracking-widest text-muted">See It In Action</span>
+            <span className="text-xs font-semibold uppercase tracking-widest text-accent">See It In Action</span>
             <h2 className="text-3xl md:text-5xl font-bold mt-3 mb-4 text-foreground">Real screenshots from real websites</h2>
             <p className="text-muted text-lg max-w-2xl mx-auto">
               Every feature shown below works on any website — Tailwind, Bootstrap, custom CSS, doesn't matter.
@@ -150,7 +150,7 @@ export default function StyleSnapHome() {
               { src: '/screenshots/ai-prompt.png', label: 'AI Prompt Gen', title: 'Generate AI component prompts', desc: 'Select any element → get a ready-to-use prompt for v0, Bolt, or Cursor AI.' },
             ].map((item, i) => (
               <div key={i} className="group relative rounded-2xl border border-border bg-surface overflow-hidden hover:border-border-hover transition-all">
-                <div className="absolute top-3 left-3 z-10 bg-foreground text-background text-xs font-semibold px-3 py-1 rounded-full">{item.label}</div>
+                <div className="absolute top-3 left-3 z-10 bg-accent-soft text-accent border border-accent/30 backdrop-blur-sm text-xs font-semibold px-3 py-1 rounded-full">{item.label}</div>
                 <div className="aspect-[16/10] overflow-hidden bg-gradient-to-br from-slate-900 to-slate-800">
                   <img src={item.src} alt={item.title} className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500" loading="lazy" />
                 </div>
@@ -168,13 +168,13 @@ export default function StyleSnapHome() {
       <section id="pricing" className="py-24 bg-background">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16">
-            <span className="text-xs font-semibold uppercase tracking-widest text-muted">{t("pricing.tag")}</span>
+            <span className="text-xs font-semibold uppercase tracking-widest text-accent">{t("pricing.tag")}</span>
             <h2 className="text-3xl md:text-5xl font-bold mt-3 mb-4">{t("pricing.title")}</h2>
             <p className="text-muted text-lg">{t("pricing.subtitle")}</p>
           </div>
           <div className="max-w-md mx-auto">
-            <div className="rounded-2xl border-2 border-foreground p-10 text-center relative bg-surface">
-              <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-foreground text-background text-xs font-semibold px-4 py-1 rounded-full">LIFETIME</div>
+            <div className="rounded-2xl border-2 border-accent/40 p-10 text-center relative bg-surface shadow-2xl shadow-accent/10">
+              <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-accent to-accent-2 text-white text-xs font-semibold px-4 py-1 rounded-full">LIFETIME</div>
               <div className="mt-2 mb-6">
                 <span className="text-6xl font-black">{priceLoading ? t("pricing.price") : productPrice}</span>
                 <span className="text-muted text-lg ml-2">{t("pricing.period")}</span>
@@ -188,7 +188,7 @@ export default function StyleSnapHome() {
                 ))}
               </ul>
               <button onClick={() => openCheckout()}
-                className="block w-full bg-foreground text-background font-semibold py-4 rounded-xl hover:bg-accent transition-all text-lg cursor-pointer">
+                className="block w-full bg-gradient-to-r from-accent to-accent-2 text-white font-semibold py-4 rounded-xl transition-all hover:scale-[1.02] shadow-lg shadow-accent/25 text-lg cursor-pointer">
                 {t("pricing.cta")}
               </button>
               <p className="text-xs text-muted mt-4">{t("pricing.guarantee")}</p>
@@ -202,15 +202,15 @@ export default function StyleSnapHome() {
       <section id="platforms" className="py-24 bg-surface">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16">
-            <span className="text-xs font-semibold uppercase tracking-widest text-muted">{t("platforms.tag")}</span>
+            <span className="text-xs font-semibold uppercase tracking-widest text-accent">{t("platforms.tag")}</span>
             <h2 className="text-3xl md:text-5xl font-bold mt-3">{t("platforms.title")}</h2>
             <p className="text-muted text-lg mt-4 max-w-2xl mx-auto">{t("platforms.subtitle")}</p>
           </div>
           <div className="flex flex-wrap justify-center gap-4 mb-12">
-            <div className="flex items-center gap-3 px-5 py-3 rounded-xl border-2 border-foreground bg-foreground text-background">
+            <div className="flex items-center gap-3 px-5 py-3 rounded-xl bg-gradient-to-r from-accent to-accent-2 text-white shadow-lg shadow-accent/25">
               <span className="text-lg">🔵</span>
-              <div className="text-left"><div className="font-semibold text-sm">Edge</div><div className="text-xs opacity-70">Available now</div></div>
-              <span className="ml-2 text-xs bg-accent text-background px-2 py-0.5 rounded-full">LIVE</span>
+              <div className="text-left"><div className="font-semibold text-sm">Edge</div><div className="text-xs opacity-80">Available now</div></div>
+              <span className="ml-2 text-xs bg-white/20 text-white px-2 py-0.5 rounded-full">LIVE</span>
             </div>
             <div className="flex items-center gap-3 px-5 py-3 rounded-xl border border-border bg-background">
               <span className="text-lg">🌐</span>
@@ -222,7 +222,7 @@ export default function StyleSnapHome() {
               <h3 className="text-xl font-bold mb-2">{t("platforms.manualTitle")}</h3>
               <p className="text-muted text-sm mb-6">{t("platforms.manualDesc")}</p>
               <a href="/downloads/stylesnap-chrome.zip" download
-                className="inline-block bg-foreground text-background font-semibold px-6 py-3 rounded-xl text-sm hover:bg-accent transition-all mb-6">
+                className="inline-block bg-gradient-to-r from-accent to-accent-2 text-white font-semibold px-6 py-3 rounded-xl text-sm transition-all hover:scale-[1.02] shadow-lg shadow-accent/25 mb-6">
                 ⬇ {t("platforms.download")}
               </a>
               <div className="space-y-3 text-sm">
@@ -239,15 +239,16 @@ export default function StyleSnapHome() {
       </section>
 
       {/* ═══ Bottom CTA ═══ */}
-      <section className="py-24 bg-foreground text-background">
-        <div className="max-w-3xl mx-auto px-6 text-center">
+      <section className="relative py-24 overflow-hidden bg-gradient-to-br from-accent to-accent-2 text-white">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(255,255,255,0.15)_0%,transparent_60%)]" />
+        <div className="relative max-w-3xl mx-auto px-6 text-center">
           <h2 className="text-3xl md:text-5xl font-bold mb-6">Ready to stop digging through DevTools?</h2>
-          <p className="text-background/60 text-lg mb-10">One click. Full styles. Tailwind or AI prompts. {priceLoading ? t("pricing.price") : productPrice} once.</p>
+          <p className="text-white/70 text-lg mb-10">One click. Full styles. Tailwind or AI prompts. {priceLoading ? t("pricing.price") : productPrice} once.</p>
           <button onClick={() => openCheckout()}
-            className="inline-block bg-background text-foreground font-semibold px-10 py-4 rounded-xl text-lg hover:bg-accent transition-all cursor-pointer">
+            className="inline-block bg-white text-accent font-semibold px-10 py-4 rounded-xl text-lg hover:scale-[1.02] shadow-xl shadow-black/10 transition-all cursor-pointer">
             {t("hero.cta")} — {priceLoading ? t("pricing.price") : productPrice}
           </button>
-          <p className="text-xs text-background/40 mt-4">7-day money-back guarantee</p>
+          <p className="text-xs text-white/50 mt-4">7-day money-back guarantee</p>
         </div>
       </section>
 

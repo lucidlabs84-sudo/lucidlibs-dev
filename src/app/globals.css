@@ -7,10 +7,27 @@
   --surface: #ffffff;
   --surface-hover: #f5f5f5;
   --muted: #666666;
-  --accent: #f59e0b;
-  --accent-soft: rgba(245, 158, 11, 0.12);
+  /* Accent matches the StyleSnap product UI: indigo → violet */
+  --accent: #6366f1;
+  --accent-2: #8b5cf6;
+  --accent-soft: rgba(99, 102, 241, 0.12);
   --border: #e5e5e5;
   --border-hover: #d4d4d4;
+}
+
+/* StyleSnap subsite — dark theme matching the product UI (overlay screenshots).
+   Scoped to the /stylesnap subtree so the rest of the official site is unaffected. */
+.snap-theme {
+  --background: #0b1120;
+  --foreground: #e2e8f0;
+  --surface: #0f172a;
+  --surface-hover: #1e293b;
+  --muted: #94a3b8;
+  --accent: #6366f1;
+  --accent-2: #8b5cf6;
+  --accent-soft: rgba(99, 102, 241, 0.16);
+  --border: rgba(255, 255, 255, 0.08);
+  --border-hover: rgba(255, 255, 255, 0.18);
 }
 
 @theme inline {
@@ -20,6 +37,7 @@
   --color-surface-hover: var(--surface-hover);
   --color-muted: var(--muted);
   --color-accent: var(--accent);
+  --color-accent-2: var(--accent-2);
   --color-accent-soft: var(--accent-soft);
   --color-border: var(--border);
   --color-border-hover: var(--border-hover);
