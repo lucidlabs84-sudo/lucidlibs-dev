@@ -15,7 +15,8 @@
     "cta": "获取 StyleSnap",
     "ctaSub": "一次买断，终身更新。",
     "demo": "观看演示",
-    "users": "2,000+ 开发者的选择"
+    "users": "2,000+ 开发者的选择",
+    "socialProof": "为追求快速交付的设计师与开发者打造"
   },
   "features": {
     "tag": "为什么选 StyleSnap",
@@ -51,6 +52,27 @@
         "icon": "screenshot",
         "title": "复制与导出",
         "desc": "复制 CSS 文本或 JSON、导出 Tailwind 类、或生成完整 React 组件。全在覆盖层底部完成 — 无需切换窗口。"
+      }
+    ]
+  },
+  "personas": {
+    "tag": "为你的工作方式打造",
+    "title": "一个工具，三种工作流",
+    "items": [
+      {
+        "who": "开发者",
+        "desc": "看到想要的组件？悬停、锁定、复制成 Tailwind 或 AI prompt。无需翻 DevTools，无需手动转换，粘贴即用。",
+        "highlight": "Tailwind 转换 · 实时编辑 · AI Prompt"
+      },
+      {
+        "who": "设计师",
+        "desc": "想从参考网站取配色或字体？打开 Design 面板——所有颜色和字体一览无余，需要哪个复制哪个。",
+        "highlight": "Design 面板 · 字体检查 · HEX/RGB/HSL"
+      },
+      {
+        "who": "产品经理",
+        "desc": "想传达设计决策？锁定元素、抓取精确样式，用 Box Model 图清晰说明间距构成。",
+        "highlight": "Box Model · CSS 快照 · 历史记录"
       }
     ]
   },
@@ -380,7 +402,14 @@
     "safari": "Apple Safari — 规划中",
     "chromeAvailable": "Chrome 版本同样可用",
     "manualTitle": "手动安装",
-    "manualDesc": "想要手动安装？下载最新版本：",
+    "manualDesc": "如果你所在地区无法访问商店，可下载扩展包手动加载。",
+    "download": "下载扩展 (ZIP)",
+    "steps": [
+      "下载 ZIP 文件并解压到一个文件夹。",
+      "打开 chrome://extensions（Chrome）或 edge://extensions（Edge）。",
+      "开启右上角的「开发者模式」。",
+      "点击「加载解压缩的扩展」，选择解压后的文件夹。"
+    ],
     "downloadBtn": "下载 Edge/Chrome 版本 (ZIP)",
     "step1": "1. 下载并解压文件",
     "step2": "2. 在 Edge 中打开 edge://extensions/（Chrome 则为 chrome://extensions/）",

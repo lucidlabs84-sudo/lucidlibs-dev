@@ -190,6 +190,58 @@
       { "q": "Does it slow down my browser?", "a": "No. StyleSnap only activates when you click the extension icon. Near-zero performance impact." }
     ]
   },
+  "footer": {
+    "description": "Copy any style, paste any code. Built for designers and developers who ship fast.",
+    "product": "Product",
+    "resources": "Resources",
+    "company": "Company",
+    "features": "Features",
+    "pricing": "Pricing",
+    "faq": "FAQ",
+    "recoverLicense": "Recover license",
+    "blog": "Blog",
+    "changelog": "Changelog",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "contact": "Contact",
+    "feedback": "Feedback",
+    "copyright": "© 2026 StyleSnap. All rights reserved."
+  },
+  "feedback": {
+    "tag": "Feedback",
+    "title": "Share your thoughts",
+    "subtitle": "Your feedback makes StyleSnap better — we read every message.",
+    "typeLabel": "Feedback type",
+    "typePraise": "Love it",
+    "typeBug": "Report a bug",
+    "typeFeature": "Feature request",
+    "typeGeneral": "Other",
+    "messageLabel": "Message",
+    "messagePlaceholder": "Tell us what you think…",
+    "ratingLabel": "Overall experience (optional)",
+    "emailLabel": "Email (optional)",
+    "emailPlaceholder": "your@email.com — so we can reply",
+    "submit": "Submit feedback",
+    "thanks": "Thanks for your feedback! 🙌",
+    "thanksDesc": "We read every message and keep improving StyleSnap.",
+    "error": "Submission failed. Please try again.",
+    "directContact": "Need direct help? Email us:"
+  },
+  "recovery": {
+    "seoTitle": "Recover License Key",
+    "seoDesc": "Forgot your StyleSnap license key? Enter your purchase email to recover it.",
+    "title": "Recover your license key",
+    "subtitle": "Enter the email you used to purchase StyleSnap and we'll send your license key to it.",
+    "emailLabel": "Purchase email",
+    "emailPlaceholder": "you@example.com",
+    "submit": "Send recovery email",
+    "sending": "Sending…",
+    "checkInbox": "Check your inbox!",
+    "checkSpam": "If you don't see it within a minute, check your spam folder.",
+    "errorNetwork": "Network error. Please try again.",
+    "backHome": "Back to home",
+    "contactSupport": "Still need help? Contact support"
+  },
   "seo": {
     "blogDesc": "Tutorials, comparisons, and deep dives on CSS extraction, Tailwind conversion, and frontend tooling."
   }
