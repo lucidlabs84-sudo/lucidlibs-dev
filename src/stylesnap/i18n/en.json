@@ -29,7 +29,7 @@
       {
         "icon": "palette",
         "title": "Design Panel",
-        "desc": "Extract a page's entire color palette, font stack, and spacing/radius scale in one click. Switch between HEX, RGB, HSL. Export as CSS variables or JSON."
+        "desc": "Extract a page's entire color palette and font stack in one click. Switch between HEX, RGB, HSL. Export as CSS variables or JSON."
       },
       {
         "icon": "code",

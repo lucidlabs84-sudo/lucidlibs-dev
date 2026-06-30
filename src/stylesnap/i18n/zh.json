@@ -41,7 +41,7 @@
       {
         "icon": "palette",
         "title": "配色方案提取",
-        "desc": "一键提取整页配色、字体与间距/圆角刻度。颜色支持 HEX/RGB/HSL 切换，可导出 CSS 变量或 JSON。"
+        "desc": "一键提取整页配色与字体。颜色支持 HEX/RGB/HSL 切换，可导出 CSS 变量或 JSON。"
       },
       {
         "icon": "zap",
