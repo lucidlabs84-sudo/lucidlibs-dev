@@ -144,10 +144,12 @@ export default function StyleSnapHome() {
           </div>
           <div className="grid md:grid-cols-2 gap-8">
             {[
-              { src: '/screenshots/css-inspection.png', label: 'CSS Inspection', title: 'Hover any element → instant CSS panel', desc: 'All computed styles organized by category: Layout, Typography, Visual, Flex/Grid.' },
-              { src: '/screenshots/tailwind-export.png', label: 'Tailwind Export', title: 'CSS → Tailwind in one click', desc: 'Deterministic mapping — no AI hallucinations. 300+ rules covering colors, spacing, typography.' },
-              { src: '/screenshots/design-tokens.png', label: 'Design Tokens', title: 'Extract color palettes & spacing', desc: 'Full design token extraction from any element or entire page. Export to JSON.' },
-              { src: '/screenshots/ai-prompt.png', label: 'AI Prompt Gen', title: 'Generate AI component prompts', desc: 'Select any element → get a ready-to-use prompt for v0, Bolt, or Cursor AI.' },
+              { src: '/screenshots/css-inspection.png', label: 'CSS Inspection', title: 'Hover any element → instant CSS panel', desc: 'All computed styles organized by category: Typography, Visual, Layout. Copy CSS or Tailwind in one click.' },
+              { src: '/screenshots/tailwind-export.png', label: 'Tailwind Conversion', title: 'CSS → Tailwind in one click', desc: 'Deterministic mapping — no AI hallucinations. Every class maps precisely to the original CSS value.' },
+              { src: '/screenshots/design-tokens.png', label: 'Design Panel', title: 'Page colors & fonts in one click', desc: 'Extract the whole page’s color palette and font stack. Switch between HEX, RGB, and HSL. Export as CSS variables or JSON.' },
+              { src: '/screenshots/box-model.png', label: 'Box Model', title: 'See margin · border · padding · content', desc: 'A nested box-model diagram appears beside the locked element so you can read spacing at a glance.' },
+              { src: '/screenshots/ai-prompt.png', label: 'AI Prompt', title: 'Accessibility-aware AI prompts', desc: 'StyleSnap reads the element’s ARIA roles and writes a prompt telling the AI to implement keyboard nav, focus & state — output React, Vue, or HTML.' },
+              { src: '/screenshots/history.png', label: 'History', title: 'Jump back to anything you inspected', desc: 'Every locked element is saved this session — click to re-lock and reopen its styles instantly.' },
             ].map((item, i) => (
               <div key={i} className="group relative rounded-2xl border border-border bg-surface overflow-hidden hover:border-border-hover transition-all">
                 <div className="absolute top-3 left-3 z-10 bg-accent-soft text-accent border border-accent/30 backdrop-blur-sm text-xs font-semibold px-3 py-1 rounded-full">{item.label}</div>

@@ -40,12 +40,12 @@
       {
         "icon": "palette",
         "title": "配色方案提取",
-        "desc": "一键提取整页配色方案。每个颜色显示 hex 码和语义角色 — 更快构建设计系统。"
+        "desc": "一键提取整页配色、字体与间距/圆角刻度。颜色支持 HEX/RGB/HSL 切换，可导出 CSS 变量或 JSON。"
       },
       {
         "icon": "zap",
-        "title": "AI 组件生成",
-        "desc": "一键将任意元素转为完整 React + TypeScript + Tailwind 组件。基于 ARIA 标注自动推断交互行为。"
+        "title": "可访问性感知 AI Prompt",
+        "desc": "读取元素的 ARIA 角色，自动生成要求 AI 实现键盘导航、焦点管理与 state 的 prompt，按 React / Vue / HTML 输出，可粘贴进 Claude、ChatGPT 或 Cursor。"
       },
       {
         "icon": "screenshot",

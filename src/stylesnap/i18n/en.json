@@ -29,7 +29,7 @@
       {
         "icon": "palette",
         "title": "Design Panel",
-        "desc": "Extract a page's entire color palette and font stack in one click. Switch between HEX, RGB, HSL. Export as CSS variables or JSON."
+        "desc": "Extract a page's entire color palette, font stack, and spacing/radius scale in one click. Switch between HEX, RGB, HSL. Export as CSS variables or JSON."
       },
       {
         "icon": "code",
@@ -48,8 +48,8 @@
       },
       {
         "icon": "ai",
-        "title": "AI-Ready Export",
-        "desc": "Generate optimized prompts for ChatGPT, Claude, or Cursor. Get React/Vue/HTML component code from any website's styles."
+        "title": "Accessibility-Aware AI Prompts",
+        "desc": "StyleSnap reads the element's ARIA roles and writes a prompt that tells the AI to implement keyboard navigation, focus management, and state — then output React, Vue, or HTML. Paste into Claude, ChatGPT, or Cursor."
       }
     ]
   },
