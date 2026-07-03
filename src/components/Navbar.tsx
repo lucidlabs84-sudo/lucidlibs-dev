@@ -39,12 +39,14 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
-          <Link
-            href="/tools/pdf"
+          <a
+            href="https://tools.lucidlibs.dev"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-muted hover:text-foreground transition-colors duration-200 text-sm font-medium"
           >
             Free Tools
-          </Link>
+          </a>
           <Link
             href="/stylesnap"
             className="text-muted hover:text-foreground transition-colors duration-200 text-sm font-medium"
