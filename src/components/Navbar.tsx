@@ -40,6 +40,12 @@ export default function Navbar() {
             </a>
           ))}
           <Link
+            href="/tools/pdf"
+            className="text-muted hover:text-foreground transition-colors duration-200 text-sm font-medium"
+          >
+            Free Tools
+          </Link>
+          <Link
             href="/stylesnap"
             className="text-muted hover:text-foreground transition-colors duration-200 text-sm font-medium"
           >
