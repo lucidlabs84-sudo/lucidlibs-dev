@@ -54,11 +54,11 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <Script
-        src="https://www.googletagmanager.com/gtag/js?id=G-BSMKNW3R94"
+        src="https://www.googletagmanager.com/gtag/js?id=G-PT27K9GE8Z"
         strategy="afterInteractive"
       />
       <Script id="ga4-init" strategy="afterInteractive">
-        {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BSMKNW3R94');`}
+        {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-PT27K9GE8Z');`}
       </Script>
       <body className="min-h-full flex flex-col bg-background text-foreground">
         <I18nWrapper>{children}</I18nWrapper>
