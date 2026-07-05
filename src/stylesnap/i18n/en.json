@@ -11,7 +11,7 @@
     "badge": "Inspect · Edit · Export — All in One",
     "title": "Copy Any Style.",
     "titleAccent": "Paste Any Code.",
-    "subtitle": "See something you like? Hover it, lock it, edit the CSS live, and copy as Tailwind or AI-ready prompts — all without DevTools.",
+    "subtitle": "See something you like? Hover it, lock it, edit the CSS live, and copy as Tailwind — all without DevTools.",
     "cta": "Get StyleSnap",
     "ctaSub": "One-time purchase. Lifetime updates. 7-day refund.",
     "socialProof": "Built for designers & developers who ship fast"
@@ -59,8 +59,8 @@
     "items": [
       {
         "who": "Developers",
-        "desc": "See a component you want? Hover, lock, copy as Tailwind or an AI prompt. No DevTools digging. No manual conversion. Paste and ship.",
-        "highlight": "Tailwind Conversion · Live Edit · AI Prompts"
+        "desc": "See a component you want? Hover, lock, copy as Tailwind. No DevTools digging. No manual conversion. Paste and ship.",
+        "highlight": "Tailwind Conversion · Live Edit"
       },
       {
         "who": "Designers",
@@ -91,7 +91,7 @@
       {
         "num": "03",
         "title": "Export & Use",
-        "desc": "Copy as Tailwind classes, CSS variables, or generate a ready-to-use AI prompt for your favorite LLM."
+        "desc": "Copy as Tailwind classes or CSS variables, ready to paste into your project."
       }
     ]
   },
@@ -107,7 +107,6 @@
       "Design panel (colors + fonts)",
       "Live CSS editing",
       "Box Model visualization",
-      "AI prompt generation",
       "Inspection history",
       "Edge & Chrome support",
       "Lifetime updates",
