@@ -1,20 +1,4 @@
 import type { Metadata } from "next";
-import { I18nProvider } from "@/stylesnap/i18n/context";
-import StyleNav from "@/stylesnap/Nav";
-import StyleFooter from "@/stylesnap/Footer";
-
-const localeMeta: Record<string, { title: string; description: string }> = {
-  en: {
-    title: "StyleSnap - AI-Powered CSS Style Extractor & Code Generator",
-    description:
-      "Extract any CSS style, edit live, and export as React/Vue/Tailwind code. $29 one-time purchase.",
-  },
-  zh: {
-    title: "StyleSnap - AI 驱动 CSS 样式提取器与代码生成器",
-    description:
-      "提取任意 CSS 样式，实时编辑，导出为 React/Vue/Tailwind 代码。一次买断 $29。",
-  },
-};
 
 export async function generateMetadata({
   params,
@@ -22,11 +6,36 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const meta = localeMeta[locale] || localeMeta.en;
+
+  const isZh = locale === "zh";
 
   return {
-    title: meta.title,
-    description: meta.description,
+    title: isZh
+      ? "StyleSnap — AI驱动的CSS样式提取器浏览器扩展"
+      : "StyleSnap — AI-Powered CSS Style Extractor",
+    description: isZh
+      ? "一键提取任意网页的CSS样式，即时生成可复用代码。支持Tailwind CSS、CSS变量、设计Token导出。$29一次性买断。"
+      : "Extract CSS styles from any website with one click. Generate reusable code instantly. Tailwind CSS, CSS variables, design tokens export. $29 one-time purchase.",
+    openGraph: {
+      title: isZh
+        ? "StyleSnap — AI驱动的CSS样式提取器"
+        : "StyleSnap — AI-Powered CSS Style Extractor",
+      description: isZh
+        ? "一键提取任意网页的CSS样式，即时生成可复用代码。"
+        : "Extract CSS styles from any website with one click. Generate reusable code instantly.",
+      url: `https://lucidlibs.dev/${locale}/stylesnap`,
+      siteName: "LucidLibs",
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: isZh
+        ? "StyleSnap — AI驱动的CSS样式提取器"
+        : "StyleSnap — AI-Powered CSS Style Extractor",
+      description: isZh
+        ? "一键提取任意网页的CSS样式。$29一次性买断。"
+        : "Extract CSS styles from any website. $29 one-time.",
+    },
     alternates: {
       canonical: `https://lucidlibs.dev/${locale}/stylesnap`,
       languages: {
@@ -34,32 +43,49 @@ export async function generateMetadata({
         zh: "/zh/stylesnap",
       },
     },
-    openGraph: {
-      title: meta.title,
-      description: meta.description,
-      url: `https://lucidlibs.dev/${locale}/stylesnap`,
-      siteName: "LucidLibs",
-      type: "website",
-    },
+    keywords: [
+      "CSS extractor",
+      "StyleSnap",
+      "browser extension",
+      "CSS to Tailwind",
+      "design tokens",
+      "CSS变量提取",
+      "样式提取",
+    ],
   };
 }
 
-export default async function StyleSnapLayout({
+export default function StylesnapLayout({
   children,
   params,
 }: {
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
 }) {
-  const { locale } = await params;
+  const locale = "en"; // will be resolved by parent, safe fallback
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: "StyleSnap",
+    applicationCategory: "BrowserApplication",
+    operatingSystem: "Windows, macOS, Linux",
+    offers: {
+      "@type": "Offer",
+      price: "29",
+      priceCurrency: "USD",
+    },
+    description:
+      "AI-powered CSS style extractor browser extension. Extract, convert, and export CSS from any website.",
+    url: `https://lucidlibs.dev/${locale || "en"}/stylesnap`,
+  };
 
   return (
-    <I18nProvider initialLocale={locale as "en" | "zh"}>
-      <div className="snap-theme min-h-screen flex flex-col bg-background text-foreground">
-        <StyleNav />
-        <main className="flex-1">{children}</main>
-        <StyleFooter />
-      </div>
-    </I18nProvider>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      {children}
+    </>
   );
 }

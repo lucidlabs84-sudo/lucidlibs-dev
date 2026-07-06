@@ -6,12 +6,14 @@ const DEFAULT_LOCALE = "en";
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
-  // 1. Skip static assets, API routes, and internal Next.js paths
+  // 1. Skip static assets, API routes, internal Next.js paths, and crawler files
   if (
     pathname.startsWith("/_next") ||
     pathname.startsWith("/api") ||
     pathname.startsWith("/screenshots") ||
     pathname.startsWith("/downloads") ||
+    pathname === "/sitemap.xml" ||
+    pathname === "/robots.txt" ||
     /\.(ico|png|jpg|jpeg|svg|gif|webp|css|js|zip|woff2?|ttf|eot)$/.test(pathname)
   ) {
     return NextResponse.next();
@@ -32,5 +34,5 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/((?!_next|api|screenshots|downloads|favicon\\.ico).*)"],
+  matcher: ["/((?!_next|api|screenshots|downloads|favicon\\.ico|sitemap\\.xml|robots\\.txt).*)"],
 };
