@@ -14,6 +14,8 @@ export function middleware(request: NextRequest) {
     pathname.startsWith("/downloads") ||
     pathname === "/sitemap.xml" ||
     pathname === "/robots.txt" ||
+    pathname === "/opengraph-image" ||
+    pathname.startsWith("/opengraph-image") ||
     /\.(ico|png|jpg|jpeg|svg|gif|webp|css|js|zip|woff2?|ttf|eot)$/.test(pathname)
   ) {
     return NextResponse.next();
@@ -34,5 +36,5 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/((?!_next|api|screenshots|downloads|favicon\\.ico|sitemap\\.xml|robots\\.txt).*)"],
+  matcher: ["/((?!_next|api|screenshots|downloads|favicon\\.ico|sitemap\\.xml|robots\\.txt|opengraph-image).*)"],
 };
