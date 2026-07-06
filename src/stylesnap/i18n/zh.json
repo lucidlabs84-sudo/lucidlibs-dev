@@ -430,5 +430,24 @@
     "step3": "3. 开启左下角「开发人员模式」",
     "step4": "4. 点击「加载解压缩的扩展」，选择解压后的文件夹"
   },
-  "recoverLicenseKey": "找回授权 Key"
+  "recoverLicenseKey": "找回授权 Key",
+  "screenshots": {
+    "tag": "实际效果展示",
+    "title": "真实网页上的真实截图",
+    "subtitle": "以下所有功能适用于任何网站 — Tailwind、Bootstrap、自定义 CSS，都能用。",
+    "items": [
+      { "src": "/screenshots/css-inspection.png", "label": "CSS 检查", "title": "悬停任意元素 → 即时 CSS 面板", "desc": "所有计算属性按分类整理：排版、视觉、布局。一键复制 CSS 或 Tailwind。" },
+      { "src": "/screenshots/tailwind-export.png", "label": "Tailwind 转换", "title": "CSS → Tailwind 一键转换", "desc": "确定性映射 — 无 AI 幻觉。每个 class 都精确对应原始 CSS 值。" },
+      { "src": "/screenshots/design-tokens.png", "label": "设计面板", "title": "一键提取页面配色与字体", "desc": "获取整个页面的调色板和字体栈。在 HEX、RGB、HSL 之间切换。导出为 CSS 变量或 JSON。" },
+      { "src": "/screenshots/box-model.png", "label": "盒模型", "title": "直观查看 margin · border · padding · content", "desc": "嵌套盒模型图出现在锁定元素旁边，间距一目了然。" },
+      { "src": "/screenshots/ai-prompt.png", "label": "AI 提示词", "title": "无障碍友好的 AI 提示词", "desc": "StyleSnap 读取元素的 ARIA 角色，生成包含键盘导航、焦点和状态等需求的 AI 提示词 — 输出 React、Vue 或 HTML。" },
+      { "src": "/screenshots/history.png", "label": "历史记录", "title": "随时回到检查过的元素", "desc": "本次会话中所有锁定的元素都会被保存 — 点击即可重新锁定并查看样式。" }
+    ]
+  },
+  "bottomCta": {
+    "title": "准备好告别反复翻 DevTools 了吗？",
+    "subtitle": "一键。完整样式。Tailwind 或 AI 提示词。{price} 一次买断。",
+    "cta": "获取 StyleSnap — {price}",
+    "guarantee": "7 天无理由退款保障"
+  }
 }

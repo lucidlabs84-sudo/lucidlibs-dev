@@ -18,7 +18,7 @@ export default function PrivacyPage() {
             <ul className="list-disc pl-5 mt-2 space-y-1">
               <li><strong className="text-foreground">License key</strong> — sent to our license server when you activate or validate StyleSnap Pro.</li>
               <li><strong className="text-foreground">Email address</strong> — only if you choose to provide one for checkout, license recovery, or feedback.</li>
-              <li><strong className="text-foreground">A coarse device label</strong> (e.g. “macOS”, “Windows”) — used only to name your activation so you can manage your devices.</li>
+              <li><strong className="text-foreground">A coarse device label</strong> (e.g. "macOS", "Windows") — used only to name your activation so you can manage your devices.</li>
               <li><strong className="text-foreground">Feedback you submit</strong> — the message and optional rating/email you send via the feedback form.</li>
             </ul>
             <p className="mt-2">
@@ -37,7 +37,7 @@ export default function PrivacyPage() {
               <li><strong className="text-foreground">storage</strong> — to save your license state and preferences locally on your device.</li>
               <li><strong className="text-foreground">tabs</strong> — to message the active tab and to open the checkout or support page in a new tab.</li>
               <li><strong className="text-foreground">clipboardWrite</strong> — to copy CSS, Tailwind classes, or an AI prompt to your clipboard.</li>
-              <li><strong className="text-foreground">notifications</strong> — to show brief confirmations such as “Copied!”.</li>
+              <li><strong className="text-foreground">notifications</strong> — to show brief confirmations such as "Copied!".</li>
               <li><strong className="text-foreground">contextMenus</strong> — to add a right-click entry that opens Settings.</li>
             </ul>
             <p className="mt-2">
@@ -70,7 +70,7 @@ export default function PrivacyPage() {
             <h2 className="text-xl font-semibold text-foreground mb-3">5. Contact</h2>
             <p>
               For privacy-related questions, contact us at{" "}
-              <a href="https://lucidlibs.dev/stylesnap/feedback" className="text-accent underline">
+              <a href="/stylesnap/feedback" className="text-accent underline">
                 lucidlibs.dev/stylesnap/feedback
               </a>{" "}or lucidlibs@outlook.com.
             </p>

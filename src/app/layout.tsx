@@ -41,8 +41,6 @@ export const metadata: Metadata = {
   },
 };
 
-import I18nWrapper from "@/components/I18nWrapper";
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -61,7 +59,7 @@ export default function RootLayout({
         {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-PT27K9GE8Z');`}
       </Script>
       <body className="min-h-full flex flex-col bg-background text-foreground">
-        <I18nWrapper>{children}</I18nWrapper>
+        {children}
       </body>
     </html>
   );

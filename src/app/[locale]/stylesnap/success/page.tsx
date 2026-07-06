@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useI18n } from "@/stylesnap/i18n/context";
 
 function SuccessContent() {
-  const { t } = useI18n();
+  const { t, lang } = useI18n();
   const searchParams = useSearchParams();
   const [copied, setCopied] = useState(false);
 
@@ -117,7 +117,7 @@ function SuccessContent() {
         )}
 
         <Link
-          href="/stylesnap"
+          href={`/${lang}/stylesnap`}
           className="inline-block text-sm text-muted hover:text-foreground transition"
         >
           {t("success.backHome") as string}

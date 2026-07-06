@@ -264,5 +264,24 @@
   },
   "seo": {
     "blogDesc": "Tutorials, comparisons, and deep dives on CSS extraction, Tailwind conversion, and frontend tooling."
+  },
+  "screenshots": {
+    "tag": "See It In Action",
+    "title": "Real screenshots from real websites",
+    "subtitle": "Every feature shown below works on any website — Tailwind, Bootstrap, custom CSS, doesn't matter.",
+    "items": [
+      { "src": "/screenshots/css-inspection.png", "label": "CSS Inspection", "title": "Hover any element → instant CSS panel", "desc": "All computed styles organized by category: Typography, Visual, Layout. Copy CSS or Tailwind in one click." },
+      { "src": "/screenshots/tailwind-export.png", "label": "Tailwind Conversion", "title": "CSS → Tailwind in one click", "desc": "Deterministic mapping — no AI hallucinations. Every class maps precisely to the original CSS value." },
+      { "src": "/screenshots/design-tokens.png", "label": "Design Panel", "title": "Page colors & fonts in one click", "desc": "Extract the whole page's color palette and font stack. Switch between HEX, RGB, and HSL. Export as CSS variables or JSON." },
+      { "src": "/screenshots/box-model.png", "label": "Box Model", "title": "See margin · border · padding · content", "desc": "A nested box-model diagram appears beside the locked element so you can read spacing at a glance." },
+      { "src": "/screenshots/ai-prompt.png", "label": "AI Prompt", "title": "Accessibility-aware AI prompts", "desc": "StyleSnap reads the element's ARIA roles and writes a prompt telling the AI to implement keyboard nav, focus & state — output React, Vue, or HTML." },
+      { "src": "/screenshots/history.png", "label": "History", "title": "Jump back to anything you inspected", "desc": "Every locked element is saved this session — click to re-lock and reopen its styles instantly." }
+    ]
+  },
+  "bottomCta": {
+    "title": "Ready to stop digging through DevTools?",
+    "subtitle": "One click. Full styles. Tailwind or AI prompts. {price} once.",
+    "cta": "Get StyleSnap — {price}",
+    "guarantee": "7-day money-back guarantee"
   }
 }

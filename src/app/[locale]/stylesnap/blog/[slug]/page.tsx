@@ -28,7 +28,7 @@ export default function BlogPostPage() {
         <div className="max-w-3xl mx-auto px-6 text-center">
           <h1 className="text-3xl font-bold mb-4">404</h1>
           <p className="text-muted mb-8">Article not found.</p>
-          <Link href="/stylesnap/blog" className="text-sm font-medium underline">
+          <Link href={`/${lang}/stylesnap/blog`} className="text-sm font-medium underline">
             ← Back to Blog
           </Link>
         </div>
@@ -55,7 +55,7 @@ export default function BlogPostPage() {
       <article className="py-24">
         <div className="max-w-2xl mx-auto px-6">
           <Link
-            href="/stylesnap/blog"
+            href={`/${lang}/stylesnap/blog`}
             className="text-sm text-muted hover:text-foreground transition mb-8 inline-block"
           >
             ← {lang === "zh" ? "返回博客" : "Back to Blog"}

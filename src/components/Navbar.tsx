@@ -33,7 +33,7 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
-          <Link href="/stylesnap" className="text-sm font-light transition-colors duration-200 hover:opacity-70"
+          <Link href={`/${lang}/stylesnap`} className="text-sm font-light transition-colors duration-200 hover:opacity-70"
             style={{ color: "var(--muted)", fontFamily: "var(--font-sans)", fontWeight: 300 }}>
             {t("nav.stylesnap") as string}
           </Link>
@@ -71,7 +71,7 @@ export default function Navbar() {
                 <a key={link.href} href={link.href} onClick={() => setMobileOpen(false)}
                   className="text-sm font-light" style={{ color: "var(--muted)" }}>{link.label}</a>
               ))}
-              <Link href="/stylesnap" onClick={() => setMobileOpen(false)}
+              <Link href={`/${lang}/stylesnap`} onClick={() => setMobileOpen(false)}
                 className="text-sm font-light" style={{ color: "var(--muted)" }}>{t("nav.stylesnap") as string}</Link>
             </div>
           </motion.div>

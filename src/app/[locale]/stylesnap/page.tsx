@@ -29,6 +29,7 @@ export default function StyleSnapHome() {
   const features = (t("features.items", { returnObjects: true }) as Array<{ icon: string; title: string; desc: string }>) || [];
   const personas = (t("personas.items", { returnObjects: true }) as Array<{ who: string; desc: string; highlight: string }>) || [];
   const steps = (t("workflow.steps", { returnObjects: true }) as Array<{ num: string; title: string; desc: string }>) || [];
+  const screenshots = (t("screenshots.items", { returnObjects: true }) as Array<{ src: string; label: string; title: string; desc: string }>) || [];
 
   return (
     <>
@@ -138,21 +139,12 @@ export default function StyleSnapHome() {
       <section className="py-24 bg-background">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16">
-            <span className="text-xs font-semibold uppercase tracking-widest text-accent">See It In Action</span>
-            <h2 className="text-3xl md:text-5xl font-bold mt-3 mb-4 text-foreground">Real screenshots from real websites</h2>
-            <p className="text-muted text-lg max-w-2xl mx-auto">
-              Every feature shown below works on any website — Tailwind, Bootstrap, custom CSS, doesn't matter.
-            </p>
+            <span className="text-xs font-semibold uppercase tracking-widest text-accent">{t("screenshots.tag") as string}</span>
+            <h2 className="text-3xl md:text-5xl font-bold mt-3 mb-4 text-foreground">{t("screenshots.title") as string}</h2>
+            <p className="text-muted text-lg max-w-2xl mx-auto">{t("screenshots.subtitle") as string}</p>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
-            {[
-              { src: '/screenshots/css-inspection.png', label: 'CSS Inspection', title: 'Hover any element → instant CSS panel', desc: 'All computed styles organized by category: Typography, Visual, Layout. Copy CSS or Tailwind in one click.' },
-              { src: '/screenshots/tailwind-export.png', label: 'Tailwind Conversion', title: 'CSS → Tailwind in one click', desc: 'Deterministic mapping — no AI hallucinations. Every class maps precisely to the original CSS value.' },
-              { src: '/screenshots/design-tokens.png', label: 'Design Panel', title: 'Page colors & fonts in one click', desc: 'Extract the whole page’s color palette and font stack. Switch between HEX, RGB, and HSL. Export as CSS variables or JSON.' },
-              { src: '/screenshots/box-model.png', label: 'Box Model', title: 'See margin · border · padding · content', desc: 'A nested box-model diagram appears beside the locked element so you can read spacing at a glance.' },
-              { src: '/screenshots/ai-prompt.png', label: 'AI Prompt', title: 'Accessibility-aware AI prompts', desc: 'StyleSnap reads the element’s ARIA roles and writes a prompt telling the AI to implement keyboard nav, focus & state — output React, Vue, or HTML.' },
-              { src: '/screenshots/history.png', label: 'History', title: 'Jump back to anything you inspected', desc: 'Every locked element is saved this session — click to re-lock and reopen its styles instantly.' },
-            ].map((item, i) => (
+            {screenshots.map((item, i) => (
               <div key={i} className="group relative rounded-2xl border border-border bg-surface overflow-hidden hover:border-border-hover transition-all">
                 <div className="absolute top-3 left-3 z-10 bg-accent-soft text-accent border border-accent/30 backdrop-blur-sm text-xs font-semibold px-3 py-1 rounded-full">{item.label}</div>
                 <div className="aspect-[16/10] overflow-hidden bg-gradient-to-br from-slate-900 to-slate-800">
@@ -246,13 +238,15 @@ export default function StyleSnapHome() {
       <section className="relative py-24 overflow-hidden bg-gradient-to-br from-accent to-accent-2 text-white">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(255,255,255,0.15)_0%,transparent_60%)]" />
         <div className="relative max-w-3xl mx-auto px-6 text-center">
-          <h2 className="text-3xl md:text-5xl font-bold mb-6">Ready to stop digging through DevTools?</h2>
-          <p className="text-white/70 text-lg mb-10">One click. Full styles. Tailwind or AI prompts. {priceLoading ? t("pricing.price") : productPrice} once.</p>
+          <h2 className="text-3xl md:text-5xl font-bold mb-6">{t("bottomCta.title") as string}</h2>
+          <p className="text-white/70 text-lg mb-10">
+            {(t("bottomCta.subtitle") as string).replace("{price}", priceLoading ? (t("pricing.price") as string) : productPrice)}
+          </p>
           <button onClick={() => openCheckout()}
             className="inline-block bg-white text-accent font-semibold px-10 py-4 rounded-xl text-lg hover:scale-[1.02] shadow-xl shadow-black/10 transition-all cursor-pointer">
-            {t("hero.cta")} — {priceLoading ? t("pricing.price") : productPrice}
+            {(t("bottomCta.cta") as string).replace("{price}", priceLoading ? (t("pricing.price") as string) : productPrice)}
           </button>
-          <p className="text-xs text-white/50 mt-4">7-day money-back guarantee</p>
+          <p className="text-xs text-white/50 mt-4">{t("bottomCta.guarantee") as string}</p>
         </div>
       </section>
 

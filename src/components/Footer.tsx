@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useStudioI18n } from "@/i18n/context";
 
 export default function Footer() {
-  const { t } = useStudioI18n();
+  const { t, lang } = useStudioI18n();
 
   return (
     <footer id="contact" className="py-16" style={{ borderTop: "1px solid var(--border)", background: "var(--canvas)" }}>
@@ -47,7 +47,7 @@ export default function Footer() {
           <div className="flex items-center gap-6">
             <a href="https://github.com/lucidlabs84-sudo" target="_blank" rel="noopener noreferrer" className="text-sm hover:opacity-70 transition-opacity"
               style={{ color: "var(--muted)", fontWeight: 300 }}>{t("footer.links.github") as string}</a>
-            <Link href="/stylesnap" className="text-sm hover:opacity-70 transition-opacity"
+            <Link href={`/${lang}/stylesnap`} className="text-sm hover:opacity-70 transition-opacity"
               style={{ color: "var(--muted)", fontWeight: 300 }}>{t("footer.links.stylesnap") as string}</Link>
             <a href="mailto:lucidlibs@outlook.com" className="text-sm hover:opacity-70 transition-opacity"
               style={{ color: "var(--muted)", fontWeight: 300 }}>{t("footer.links.email") as string}</a>

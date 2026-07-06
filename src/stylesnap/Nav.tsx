@@ -5,22 +5,22 @@ import { useI18n } from "@/stylesnap/i18n/context";
 import { openCheckout } from "@/stylesnap/lib/checkout";
 import Link from "next/link";
 
-const navLinks = [
-  { labelKey: "nav.features", href: "/stylesnap#features" },
-  { labelKey: "nav.pricing", href: "/stylesnap#pricing" },
-  { labelKey: "nav.faq", href: "/stylesnap/faq" },
-  { labelKey: "nav.blog", href: "/stylesnap/blog" },
-];
-
 export default function StyleNav() {
-  const { t, toggleLang } = useI18n();
+  const { t, toggleLang, lang } = useI18n();
   const [mobileOpen, setMobileOpen] = useState(false);
+
+  const navLinks = [
+    { labelKey: "nav.features", href: `/${lang}/stylesnap#features` },
+    { labelKey: "nav.pricing", href: `/${lang}/stylesnap#pricing` },
+    { labelKey: "nav.faq", href: `/${lang}/stylesnap/faq` },
+    { labelKey: "nav.blog", href: `/${lang}/stylesnap/blog` },
+  ];
 
   return (
     <nav className="sticky top-0 z-50 border-b border-border bg-surface/80 backdrop-blur-md">
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/stylesnap" className="text-xl font-bold tracking-tight">
+        <Link href={`/${lang}/stylesnap`} className="text-xl font-bold tracking-tight">
           Style<span className="text-accent">Snap</span>
         </Link>
 

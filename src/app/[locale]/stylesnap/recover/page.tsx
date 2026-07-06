@@ -7,7 +7,7 @@ import Link from "next/link";
 const PROXY_BASE_URL = "https://api.lucidlibs.dev";
 
 export default function LicenseRecoveryPage() {
-  const { t } = useI18n();
+  const { t, lang } = useI18n();
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<{ sent: boolean; message: string } | null>(null);
@@ -105,7 +105,7 @@ export default function LicenseRecoveryPage() {
         {/* Back link */}
         <div className="mt-8 text-center space-y-2">
           <Link
-            href="/stylesnap"
+            href={`/${lang}/stylesnap`}
             className="inline-block text-sm text-muted hover:text-foreground transition"
           >
             ← {t("recovery.backHome") as string}

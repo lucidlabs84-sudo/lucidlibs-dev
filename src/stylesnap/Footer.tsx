@@ -4,7 +4,7 @@ import { useI18n } from "@/stylesnap/i18n/context";
 import Link from "next/link";
 
 export default function StyleFooter() {
-  const { t } = useI18n();
+  const { t, lang } = useI18n();
 
   return (
     <footer className="border-t border-border bg-background">
@@ -24,22 +24,22 @@ export default function StyleFooter() {
             </h4>
             <ul className="space-y-2 text-sm text-muted">
               <li>
-                <Link href="/stylesnap#features" className="hover:text-foreground transition">
+                <Link href={`/${lang}/stylesnap#features`} className="hover:text-foreground transition">
                   {t("footer.features") as string}
                 </Link>
               </li>
               <li>
-                <Link href="/stylesnap#pricing" className="hover:text-foreground transition">
+                <Link href={`/${lang}/stylesnap#pricing`} className="hover:text-foreground transition">
                   {t("footer.pricing") as string}
                 </Link>
               </li>
               <li>
-                <Link href="/stylesnap/faq" className="hover:text-foreground transition">
+                <Link href={`/${lang}/stylesnap/faq`} className="hover:text-foreground transition">
                   {t("footer.faq") as string}
                 </Link>
               </li>
               <li>
-                <Link href="/stylesnap/recover" className="hover:text-foreground transition">
+                <Link href={`/${lang}/stylesnap/recover`} className="hover:text-foreground transition">
                   {t("footer.recoverLicense") as string}
                 </Link>
               </li>
@@ -51,7 +51,7 @@ export default function StyleFooter() {
             </h4>
             <ul className="space-y-2 text-sm text-muted">
               <li>
-                <Link href="/stylesnap/blog" className="hover:text-foreground transition">
+                <Link href={`/${lang}/stylesnap/blog`} className="hover:text-foreground transition">
                   {t("footer.blog") as string}
                 </Link>
               </li>
@@ -72,7 +72,7 @@ export default function StyleFooter() {
                 <span className="text-muted/40">{t("footer.terms") as string}</span>
               </li>
               <li>
-                <Link href="/stylesnap/feedback" className="hover:text-foreground transition">
+                <Link href={`/${lang}/stylesnap/feedback`} className="hover:text-foreground transition">
                   {t("footer.feedback") as string}
                 </Link>
               </li>

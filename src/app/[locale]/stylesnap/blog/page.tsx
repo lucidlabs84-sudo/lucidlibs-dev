@@ -4,7 +4,7 @@ import { useI18n } from "@/stylesnap/i18n/context";
 import Link from "next/link";
 
 export default function BlogPage() {
-  const { t } = useI18n();
+  const { t, lang } = useI18n();
   const articles = t("blog.articles", { returnObjects: true }) as Array<{
     slug: string;
     title: string;
@@ -50,7 +50,7 @@ export default function BlogPage() {
             {articles.map((a, i) => (
               <Link
                 key={i}
-                href={`/stylesnap/blog/${a.slug}`}
+                href={`/${lang}/stylesnap/blog/${a.slug}`}
                 className="group block rounded-2xl border border-border p-8 hover:border-border-hover transition-all"
               >
                 <div className="flex items-center gap-3 mb-4">

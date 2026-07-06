@@ -1,9 +1,9 @@
 "use client";
 
-import { createContext, useContext, useState, useEffect, useCallback, ReactNode } from "react";
+import { createContext, useContext, useState, useCallback, ReactNode } from "react";
 import en from "./en.json";
 import zh from "./zh.json";
-import { Lang, detectLang, setStoredLang } from "@/lib/i18n-detect";
+import { Lang, setStoredLang } from "@/lib/i18n-detect";
 
 type Translations = Record<string, unknown>;
 
@@ -27,20 +27,14 @@ function getNestedValue(obj: Record<string, unknown>, path: string): unknown {
   return current;
 }
 
-export function StudioI18nProvider({ children }: { children: ReactNode }) {
-  // Start with "en" to match SSR output, detect real lang after hydration
-  const [lang, setLang] = useState<Lang>("en");
-  const [hydrated, setHydrated] = useState(false);
-
-  useEffect(() => {
-    detectLang().then((detected) => {
-      if (detected !== "en") {
-        setLang(detected);
-        document.documentElement.lang = detected;
-      }
-      setHydrated(true);
-    });
-  }, []);
+export function StudioI18nProvider({
+  children,
+  initialLocale,
+}: {
+  children: ReactNode;
+  initialLocale?: Lang;
+}) {
+  const [lang, setLang] = useState<Lang>(initialLocale || "en");
 
   const t = useCallback(
     (key: string, options?: { returnObjects?: boolean }) => {

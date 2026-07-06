@@ -20,7 +20,7 @@ export default function Products() {
 
   const productKeys = ["stylesnap", "coming", "planned"] as const;
   const productStatuses = ["live", "coming", "planned"] as const;
-  const productHrefs = ["/stylesnap", "#", "mailto:lucidlibs@outlook.com"];
+  const productHrefs = [`/${lang}/stylesnap`, "#", "mailto:lucidlibs@outlook.com"];
   const productIcons = ["SS", "?", "+"];
 
   const products: Product[] = productKeys.map((key, i) => ({
