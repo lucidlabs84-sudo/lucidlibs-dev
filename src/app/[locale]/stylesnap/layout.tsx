@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { StylesnapLayoutClient } from "./layout-client";
 
 export async function generateMetadata({
   params,
@@ -55,14 +56,15 @@ export async function generateMetadata({
   };
 }
 
-export default function StylesnapLayout({
+export default async function StylesnapLayout({
   children,
   params,
 }: {
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
 }) {
-  const locale = "en"; // will be resolved by parent, safe fallback
+  const { locale } = await params;
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
@@ -76,16 +78,12 @@ export default function StylesnapLayout({
     },
     description:
       "AI-powered CSS style extractor browser extension. Extract, convert, and export CSS from any website.",
-    url: `https://lucidlibs.dev/${locale || "en"}/stylesnap`,
+    url: `https://lucidlibs.dev/${locale}/stylesnap`,
   };
 
   return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+    <StylesnapLayoutClient locale={locale} jsonLd={jsonLd}>
       {children}
-    </>
+    </StylesnapLayoutClient>
   );
 }

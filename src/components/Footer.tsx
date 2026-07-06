@@ -19,8 +19,6 @@ export default function Footer() {
           <div className="flex items-center gap-6">
             <Link href={`/${lang}/stylesnap`} className="text-sm hover:opacity-70 transition-opacity"
               style={{ color: "var(--muted)", fontWeight: 400 }}>{t("footer.links.stylesnap") as string}</Link>
-            <a href="https://github.com/lucidlabs84-sudo" target="_blank" rel="noopener noreferrer" className="text-sm hover:opacity-70 transition-opacity"
-              style={{ color: "var(--muted)", fontWeight: 400 }}>{t("footer.links.github") as string}</a>
             <a href="mailto:lucidlibs@outlook.com" className="text-sm hover:opacity-70 transition-opacity"
               style={{ color: "var(--muted)", fontWeight: 400 }}>{t("footer.links.email") as string}</a>
           </div>
