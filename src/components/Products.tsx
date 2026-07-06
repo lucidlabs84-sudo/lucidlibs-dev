@@ -35,7 +35,7 @@ export default function Products() {
   }));
 
   return (
-    <section id="products" className="py-24 md:py-32" style={{ background: "#ffffff" }}>
+    <section id="products" className="py-24 md:py-32" style={{ background: "#f5f5f5" }}>
       <div className="max-w-5xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
