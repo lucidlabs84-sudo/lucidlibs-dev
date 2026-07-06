@@ -67,7 +67,7 @@ export default function Products() {
               >
                 <div className="group h-full rounded-xl p-8 transition-all duration-300 hover:shadow-lg"
                   style={{
-                    background: "var(--canvas)", border: "1px solid var(--border)",
+                    background: "#ffffff", border: "1px solid var(--border)",
                     boxShadow: product.status === "live" ? "var(--shadow-sm)" : "none",
                   }}>
                   <div className="flex items-center justify-between mb-6">
