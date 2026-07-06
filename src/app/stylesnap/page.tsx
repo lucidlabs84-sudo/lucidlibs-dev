@@ -11,6 +11,8 @@ const iconMap: Record<string, string> = {
   edit: "✎",
   box: "▣",
   ai: "✦",
+  zap: "⚡",
+  screenshot: "⎘",
 };
 
 export default function StyleSnapHome() {

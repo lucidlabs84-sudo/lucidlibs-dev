@@ -378,6 +378,27 @@
     "backHome": "返回首页",
     "contactSupport": "仍需帮助？联系客服"
   },
+  "success": {
+    "loading": "加载中...",
+    "title": "支付成功！",
+    "subtitle": "感谢购买 StyleSnap Pro！请按照以下步骤激活您的许可证。",
+    "licenseKeyLabel": "您的许可证密钥",
+    "copy": "复制",
+    "copied": "✓ 已复制",
+    "associatedEmail": "关联邮箱：",
+    "howToActivate": "如何激活",
+    "step1Title": "打开 StyleSnap",
+    "step1Desc": "点击浏览器工具栏中的 StyleSnap 图标打开侧边栏。",
+    "step2Title": "进入设置",
+    "step2Desc": "点击侧边栏顶部的齿轮图标。",
+    "step3Title": "输入许可证密钥",
+    "step3Desc": "将上方的许可证密钥粘贴到密钥输入框中，然后点击激活。",
+    "noteLabel": "提示：",
+    "noteText": "您的许可证最多支持在 2 台设备上激活。如需更换设备，请先在设置中停用旧设备。",
+    "invalidTitle": "链接无效",
+    "invalidDesc": "此页面仅在支付成功后可访问。如果您刚刚购买了 StyleSnap，请查收邮件获取许可证密钥。",
+    "backHome": "← 返回首页"
+  },
   "seo": {
     "homeTitle": "StyleSnap - AI 驱动的 CSS 样式提取器",
     "homeDesc": "提取任意 CSS 样式，直接编辑，导出 Tailwind 类。$29 一次性买断。",

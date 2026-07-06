@@ -241,6 +241,27 @@
     "backHome": "Back to home",
     "contactSupport": "Still need help? Contact support"
   },
+  "success": {
+    "loading": "Loading...",
+    "title": "Payment Successful!",
+    "subtitle": "Thank you for purchasing StyleSnap Pro! Follow the steps below to activate your license.",
+    "licenseKeyLabel": "Your License Key",
+    "copy": "Copy",
+    "copied": "✓ Copied",
+    "associatedEmail": "Associated email:",
+    "howToActivate": "How to Activate",
+    "step1Title": "Open StyleSnap",
+    "step1Desc": "Click the StyleSnap icon in your browser toolbar to open the side panel.",
+    "step2Title": "Go to Settings",
+    "step2Desc": "Click the gear icon in the side panel header.",
+    "step3Title": "Enter License Key",
+    "step3Desc": "Paste the license key above into the license key field and click Activate.",
+    "noteLabel": "Note:",
+    "noteText": "Your license allows activation on up to 2 devices. If you need to move to a new device, deactivate the old one first in Settings.",
+    "invalidTitle": "Invalid Link",
+    "invalidDesc": "This page is only accessible after a successful payment. If you just purchased StyleSnap, check your email for the license key.",
+    "backHome": "← Back to Home"
+  },
   "seo": {
     "blogDesc": "Tutorials, comparisons, and deep dives on CSS extraction, Tailwind conversion, and frontend tooling."
   }

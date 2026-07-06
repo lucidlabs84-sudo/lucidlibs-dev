@@ -47,7 +47,7 @@ export default function StyleNav() {
           </button>
           <button
             onClick={() => openCheckout()}
-            className="bg-gradient-to-r from-accent to-accent-2 text-white text-sm font-medium px-5 py-2 rounded-lg hover:scale-[1.03] shadow-lg shadow-accent/25 transition cursor-pointer"
+            className="whitespace-nowrap bg-gradient-to-r from-accent to-accent-2 text-white text-xs sm:text-sm font-medium px-3 sm:px-5 py-2 rounded-lg hover:scale-[1.03] shadow-lg shadow-accent/25 transition cursor-pointer"
           >
             {t("nav.getStarted") as string}
           </button>
