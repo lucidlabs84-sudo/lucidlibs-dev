@@ -28,11 +28,10 @@ export default function Hero() {
           <h1 className="mb-6" style={{
             fontFamily: "var(--font-sans)",
             fontSize: "clamp(40px, 8vw, 56px)",
-            fontWeight: 300,
-            lineHeight: 1.03,
-            letterSpacing: "-1.4px",
+            fontWeight: 400,
+            lineHeight: 1.1,
+            letterSpacing: "-0.8px",
             color: "var(--foreground)",
-            fontFeatureSettings: '"ss01" 1',
           }}>
             {t("hero.title") as string}
             <br />
@@ -42,9 +41,9 @@ export default function Hero() {
           <p className="mb-12 max-w-[55ch] mx-auto" style={{
             fontFamily: "var(--font-sans)",
             fontSize: "18px",
-            fontWeight: 300,
-            lineHeight: 1.55,
-            color: "var(--muted)",
+            fontWeight: 400,
+            lineHeight: 1.6,
+            color: "var(--ink-secondary)",
           }}>
             {t("hero.subtitle") as string}
           </p>

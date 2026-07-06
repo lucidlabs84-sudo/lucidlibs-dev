@@ -27,18 +27,18 @@ export default function Navbar() {
 
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
-            <a key={link.href} href={link.href} className="text-sm font-light transition-colors duration-200 hover:opacity-70"
-              style={{ color: "var(--muted)", fontFamily: "var(--font-sans)", fontWeight: 300 }}>
+            <a key={link.href} href={link.href} className="text-sm transition-colors duration-200 hover:opacity-70"
+              style={{ color: "var(--muted)", fontFamily: "var(--font-sans)", fontWeight: 400 }}>
               {link.label}
             </a>
           ))}
-          <Link href={`/${lang}/stylesnap`} className="text-sm font-light transition-colors duration-200 hover:opacity-70"
-            style={{ color: "var(--muted)", fontFamily: "var(--font-sans)", fontWeight: 300 }}>
+          <Link href={`/${lang}/stylesnap`} className="text-sm transition-colors duration-200 hover:opacity-70"
+            style={{ color: "var(--muted)", fontFamily: "var(--font-sans)", fontWeight: 400 }}>
             {t("nav.stylesnap") as string}
           </Link>
           <a href="https://tools.lucidlibs.dev" target="_blank" rel="noopener noreferrer"
-            className="text-sm font-light transition-colors duration-200 hover:opacity-70"
-            style={{ color: "var(--muted)", fontFamily: "var(--font-sans)", fontWeight: 300 }}>
+            className="text-sm transition-colors duration-200 hover:opacity-70"
+            style={{ color: "var(--muted)", fontFamily: "var(--font-sans)", fontWeight: 400 }}>
             Free Tools
           </a>
           <button onClick={toggleLang}
@@ -68,10 +68,10 @@ export default function Navbar() {
             <div className="px-6 py-4 flex flex-col gap-4">
               {navLinks.map((link) => (
                 <a key={link.href} href={link.href} onClick={() => setMobileOpen(false)}
-                  className="text-sm font-light" style={{ color: "var(--muted)" }}>{link.label}</a>
+                  className="text-sm" style={{ color: "var(--muted)" }}>{link.label}</a>
               ))}
               <Link href={`/${lang}/stylesnap`} onClick={() => setMobileOpen(false)}
-                className="text-sm font-light" style={{ color: "var(--muted)" }}>{t("nav.stylesnap") as string}</Link>
+                className="text-sm" style={{ color: "var(--muted)" }}>{t("nav.stylesnap") as string}</Link>
             </div>
           </motion.div>
         )}

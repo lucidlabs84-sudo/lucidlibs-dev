@@ -35,7 +35,7 @@ export default function Products() {
   }));
 
   return (
-    <section id="products" className="py-24 md:py-32" style={{ background: "var(--canvas-soft)" }}>
+    <section id="products" className="py-24 md:py-32" style={{ background: "#ffffff" }}>
       <div className="max-w-5xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -47,10 +47,10 @@ export default function Products() {
           <p className="mb-3 text-xs font-semibold uppercase tracking-wider" style={{ color: "var(--accent)" }}>
             {t("products.tag") as string}
           </p>
-          <h2 style={{ fontFamily: "var(--font-sans)", fontSize: "32px", fontWeight: 300, lineHeight: 1.1, letterSpacing: "-0.64px", color: "var(--foreground)", fontFeatureSettings: '"ss01" 1' }}>
+          <h2 style={{ fontFamily: "var(--font-sans)", fontSize: "32px", fontWeight: 500, lineHeight: 1.2, letterSpacing: "-0.5px", color: "var(--foreground)" }}>
             {t("products.title") as string}
           </h2>
-          <p className="mt-4 max-w-[50ch]" style={{ fontFamily: "var(--font-sans)", fontSize: "16px", fontWeight: 300, lineHeight: 1.4, color: "var(--muted)" }}>
+          <p className="mt-4 max-w-[50ch]" style={{ fontFamily: "var(--font-sans)", fontSize: "16px", fontWeight: 400, lineHeight: 1.5, color: "var(--ink-secondary)" }}>
             {t("products.subtitle") as string}
           </p>
         </motion.div>
@@ -93,16 +93,16 @@ export default function Products() {
                     style={{ fontFamily: "var(--font-sans)", fontWeight: 500, color: "var(--foreground)", letterSpacing: "-0.2px" }}>
                     {product.name}
                   </h3>
-                  <p className="text-sm mb-4" style={{ color: "var(--muted)", fontWeight: 300 }}>
+                  <p className="text-sm mb-4" style={{ color: "var(--ink-secondary)", fontWeight: 400 }}>
                     {product.tagline}
                   </p>
-                  <p className="text-sm leading-relaxed mb-6" style={{ color: "var(--ink-secondary)", fontWeight: 300, fontFeatureSettings: '"ss01" 1' }}>
+                  <p className="text-sm leading-relaxed mb-6" style={{ color: "var(--ink-secondary)", fontWeight: 400 }}>
                     {product.description}
                   </p>
 
                   <div className="space-y-2 mb-6">
                     {product.features.map((f) => (
-                      <div key={f} className="flex items-center gap-2 text-xs" style={{ color: "var(--muted)", fontWeight: 300 }}>
+                      <div key={f} className="flex items-center gap-2 text-xs" style={{ color: "var(--ink-secondary)", fontWeight: 400 }}>
                         <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="shrink-0" style={{ color: "var(--accent)" }}>
                           <path d="M2 7L5.5 10.5L12 3.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
@@ -116,7 +116,7 @@ export default function Products() {
                       {product.price}
                     </span>
                     {product.status === "live" && (
-                      <span className="text-xs flex items-center gap-1 transition-colors" style={{ color: "var(--muted)", fontWeight: 300 }}>
+                      <span className="text-xs flex items-center gap-1 transition-colors" style={{ color: "var(--ink-secondary)", fontWeight: 400 }}>
                         {t("products.getItNow") as string}
                         <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
                           <path d="M2 6H10M7 3L10 6L7 9" />

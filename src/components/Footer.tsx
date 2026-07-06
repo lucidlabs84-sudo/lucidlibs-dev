@@ -21,10 +21,10 @@ export default function Footer() {
             <p className="mb-3 text-xs font-semibold uppercase tracking-wider" style={{ color: "var(--accent)" }}>
               {t("footer.tag") as string}
             </p>
-            <h2 className="mb-4" style={{ fontFamily: "var(--font-sans)", fontSize: "26px", fontWeight: 300, lineHeight: 1.12, letterSpacing: "-0.26px", color: "var(--foreground)", fontFeatureSettings: '"ss01" 1' }}>
+            <h2 className="mb-4" style={{ fontFamily: "var(--font-sans)", fontSize: "26px", fontWeight: 500, lineHeight: 1.2, letterSpacing: "-0.3px", color: "var(--foreground)" }}>
               {t("footer.title") as string}
             </h2>
-            <p className="mb-8 max-w-[50ch] mx-auto" style={{ fontFamily: "var(--font-sans)", fontSize: "16px", fontWeight: 300, lineHeight: 1.4, color: "var(--ink-secondary)" }}>
+            <p className="mb-8 max-w-[50ch] mx-auto" style={{ fontFamily: "var(--font-sans)", fontSize: "16px", fontWeight: 400, lineHeight: 1.5, color: "var(--ink-secondary)" }}>
               {t("footer.subtitle") as string}
             </p>
             <a href="mailto:lucidlibs@outlook.com" className="btn-primary" style={{ padding: "10px 24px", fontSize: "16px", fontWeight: 400 }}>
@@ -41,16 +41,16 @@ export default function Footer() {
           <div className="flex items-center gap-2.5">
             <div className="w-6 h-6 rounded-md flex items-center justify-center text-xs font-bold"
               style={{ background: "var(--accent)", color: "var(--on-primary)", fontFamily: "var(--font-mono)" }}>LL</div>
-            <span className="text-sm" style={{ color: "var(--muted)", fontWeight: 300 }}>LucidLibs</span>
+            <span className="text-sm" style={{ color: "var(--muted)", fontWeight: 400 }}>LucidLibs</span>
           </div>
 
           <div className="flex items-center gap-6">
             <a href="https://github.com/lucidlabs84-sudo" target="_blank" rel="noopener noreferrer" className="text-sm hover:opacity-70 transition-opacity"
-              style={{ color: "var(--muted)", fontWeight: 300 }}>{t("footer.links.github") as string}</a>
+              style={{ color: "var(--muted)", fontWeight: 400 }}>{t("footer.links.github") as string}</a>
             <Link href={`/${lang}/stylesnap`} className="text-sm hover:opacity-70 transition-opacity"
-              style={{ color: "var(--muted)", fontWeight: 300 }}>{t("footer.links.stylesnap") as string}</Link>
+              style={{ color: "var(--muted)", fontWeight: 400 }}>{t("footer.links.stylesnap") as string}</Link>
             <a href="mailto:lucidlibs@outlook.com" className="text-sm hover:opacity-70 transition-opacity"
-              style={{ color: "var(--muted)", fontWeight: 300 }}>{t("footer.links.email") as string}</a>
+              style={{ color: "var(--muted)", fontWeight: 400 }}>{t("footer.links.email") as string}</a>
           </div>
 
           <p className="text-xs" style={{ color: "var(--ink-secondary)", fontWeight: 300, opacity: 0.6 }}>
