@@ -1,17 +1,5 @@
-import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
-import Products from "@/components/Products";
-import About from "@/components/About";
-import Footer from "@/components/Footer";
+import { redirect } from "next/navigation";
 
-export default function Home() {
-  return (
-    <>
-      <Navbar />
-      <Hero />
-      <Products />
-      <About />
-      <Footer />
-    </>
-  );
+export default function RootPage() {
+  redirect("/en");
 }
