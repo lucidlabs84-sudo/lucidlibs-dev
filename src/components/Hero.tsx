@@ -54,9 +54,6 @@ export default function Hero() {
             <a href="#products" className="btn-primary" style={{ padding: "10px 24px", fontSize: "16px", fontWeight: 400 }}>
               {t("hero.ctaPrimary") as string}
             </a>
-            <a href="#about" className="btn-secondary" style={{ padding: "10px 24px", fontSize: "16px", fontWeight: 400 }}>
-              {t("hero.ctaSecondary") as string}
-            </a>
           </div>
         </motion.div>
 

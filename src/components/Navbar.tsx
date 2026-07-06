@@ -11,7 +11,6 @@ export default function Navbar() {
 
   const navLinks = [
     { label: t("nav.products") as string, href: "#products" },
-    { label: t("nav.about") as string, href: "#about" },
     { label: t("nav.contact") as string, href: "#contact" },
   ];
 
