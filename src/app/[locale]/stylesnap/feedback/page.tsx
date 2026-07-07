@@ -59,7 +59,7 @@ export default function FeedbackPage() {
 
       {done ? (
         <div className="flex flex-col items-center gap-4 py-16 text-center">
-          <div className="w-16 h-16 rounded-full bg-green-50 border border-green-100 flex items-center justify-center text-3xl">
+          <div className="w-16 h-16 rounded-full flex items-center justify-center text-3xl" style={{ background: "rgba(34,197,94,0.15)", border: "1px solid rgba(34,197,94,0.3)" }}>
             ✅
           </div>
           <h2 className="text-xl font-bold">{t("feedback.thanks") as string}</h2>
@@ -146,7 +146,7 @@ export default function FeedbackPage() {
           </div>
 
           {error && (
-            <p className="text-sm text-red-500 bg-red-50 border border-red-100 rounded-xl px-4 py-3">
+            <p className="text-sm rounded-xl px-4 py-3" style={{ color: "#fca5a5", background: "rgba(239,68,68,0.1)", border: "1px solid rgba(239,68,68,0.25)" }}>
               {error}
             </p>
           )}
@@ -154,10 +154,10 @@ export default function FeedbackPage() {
           <button
             onClick={handleSubmit}
             disabled={loading || !message.trim()}
-            className="w-full flex items-center justify-center gap-2 bg-foreground text-background py-3 rounded-xl font-medium text-sm hover:bg-accent transition-colors disabled:opacity-40 cursor-pointer"
+            className="w-full flex items-center justify-center gap-2 bg-accent text-white py-3 rounded-xl font-medium text-sm hover:bg-accent/80 transition-colors disabled:opacity-40 cursor-pointer"
           >
             {loading ? (
-              <span className="inline-block w-4 h-4 border-2 border-background/30 border-t-background rounded-full animate-spin" />
+              <span className="inline-block w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
             ) : (
               <span>✉️</span>
             )}

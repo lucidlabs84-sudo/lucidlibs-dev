@@ -74,22 +74,22 @@ export default function LicenseRecoveryPage() {
             <button
               type="submit"
               disabled={loading || !email.trim() || !email.includes("@")}
-              className="w-full bg-foreground text-background font-medium py-3 rounded-xl hover:bg-accent transition disabled:opacity-40 cursor-pointer"
+              className="w-full bg-accent text-white font-medium py-3 rounded-xl hover:bg-accent/80 transition disabled:opacity-40 cursor-pointer"
             >
               {loading ? t("recovery.sending") as string : t("recovery.submit") as string}
             </button>
           </form>
         ) : (
-          <div className="bg-green-50 border border-green-200 rounded-xl p-6 text-center">
-            <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-green-100 flex items-center justify-center">
-              <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="rounded-xl p-6 text-center" style={{ background: "rgba(34,197,94,0.08)", border: "1px solid rgba(34,197,94,0.2)" }}>
+            <div className="w-12 h-12 mx-auto mb-4 rounded-full flex items-center justify-center" style={{ background: "rgba(34,197,94,0.15)" }}>
+              <svg className="w-6 h-6" style={{ color: "#4ade80" }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
             </div>
-            <p className="text-sm text-green-800 font-medium mb-1">
+            <p className="text-sm font-medium mb-1" style={{ color: "#bbf7d0" }}>
               {t("recovery.checkInbox") as string}
             </p>
-            <p className="text-xs text-green-600">
+            <p className="text-xs" style={{ color: "#86efac" }}>
               {t("recovery.checkSpam") as string}
             </p>
           </div>
