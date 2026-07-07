@@ -3,24 +3,37 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useStudioI18n } from "@/i18n/context";
 
 export default function Navbar() {
   const { t, toggleLang, lang } = useStudioI18n();
   const [mobileOpen, setMobileOpen] = useState(false);
+  const pathname = usePathname();
+  const isSnap = pathname?.includes("/stylesnap");
 
   const navLinks = [
     { label: t("nav.products") as string, href: "#products" },
     { label: t("nav.contact") as string, href: "#contact" },
   ];
 
+  const navBg = isSnap
+    ? "rgba(11,17,32,0.92)"
+    : "rgba(255,255,255,0.85)";
+  const textColor = isSnap ? "var(--muted)" : "var(--muted)";
+  // On dark bg, muted=#94a3b8 which is readable
+  // On light bg, muted=#64748d which is also readable
+  // But foreground needs to be explicit
+  const logoColor = isSnap ? "#e2e8f0" : "var(--foreground)";
+  const mobileBg = isSnap ? "#0f172a" : "var(--canvas)";
+
   return (
-    <nav className="fixed top-0 w-full z-50" style={{ borderBottom: "1px solid var(--border)", background: "rgba(255,255,255,0.85)", backdropFilter: "blur(20px)" }}>
+    <nav className="fixed top-0 w-full z-50" style={{ borderBottom: "1px solid var(--border)", background: navBg, backdropFilter: "blur(20px)" }}>
       <div className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2.5 group" style={{ textDecoration: "none" }}>
           <div className="w-8 h-8 rounded-lg flex items-center justify-center text-xs font-bold"
             style={{ background: "var(--accent)", color: "var(--on-primary)", fontFamily: "var(--font-mono)" }}>LL</div>
-          <span className="font-semibold tracking-tight" style={{ fontFamily: "var(--font-sans)", fontWeight: 500, color: "var(--foreground)", letterSpacing: "-0.3px" }}>
+          <span className="font-semibold tracking-tight" style={{ fontFamily: "var(--font-sans)", fontWeight: 500, color: logoColor, letterSpacing: "-0.3px" }}>
             LucidLibs
           </span>
         </Link>
@@ -64,7 +77,7 @@ export default function Navbar() {
       <AnimatePresence>
         {mobileOpen && (
           <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }} exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.2 }}
-            className="md:hidden overflow-hidden" style={{ background: "var(--canvas)", borderBottom: "1px solid var(--border)" }}>
+            className="md:hidden overflow-hidden" style={{ background: mobileBg, borderBottom: "1px solid var(--border)" }}>
             <div className="px-6 py-4 flex flex-col gap-4">
               {navLinks.map((link) => (
                 <a key={link.href} href={link.href} onClick={() => setMobileOpen(false)}
