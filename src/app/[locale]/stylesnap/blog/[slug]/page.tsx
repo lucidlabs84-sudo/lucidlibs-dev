@@ -61,7 +61,7 @@ export default function BlogPostPage() {
             ← {lang === "zh" ? "返回博客" : "Back to Blog"}
           </Link>
           <div className="flex items-center gap-3 mb-6">
-            <span className="text-xs font-semibold uppercase tracking-wider text-muted bg-background px-3 py-1 rounded-full">
+            <span className="text-xs font-semibold uppercase tracking-wider text-muted bg-surface px-3 py-1 rounded-full">
               {article.category}
             </span>
             <span className="text-xs text-muted">{article.date}</span>

@@ -8,17 +8,21 @@ const STATIC_PATHS = [
   "",
   "/privacy",
   "/stylesnap",
+  "/stylesnap/blog",
   "/stylesnap/faq",
   "/stylesnap/feedback",
   "/stylesnap/recover",
   "/stylesnap/success",
 ];
 
-// Blog slugs (mirror stylesnap/i18n/en.json blogArticles keys)
+// Blog slugs — must match stylesnap/i18n/en.json blogArticles keys
 const BLOG_SLUGS = [
   "css-to-tailwind-guide",
   "design-tokens-workflow",
-  "stylesnap-vs-cssscan",
+  "css-extraction-tools-guide",
+  "react-css-modules-best-practices",
+  "why-tailwind-wins",
+  "edge-extension-development",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
