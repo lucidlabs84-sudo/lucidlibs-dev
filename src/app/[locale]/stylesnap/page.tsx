@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { useI18n } from "@/stylesnap/i18n/context";
 import { openCheckout } from "@/stylesnap/lib/checkout";
+import StyleFooter from "@/stylesnap/Footer";
 
 const iconMap: Record<string, string> = {
   crosshair: "◎",
@@ -32,7 +33,7 @@ export default function StyleSnapHome() {
   const screenshots = (t("screenshots.items", { returnObjects: true }) as Array<{ src: string; label: string; title: string; desc: string }>) || [];
 
   return (
-    <>
+    <div className="snap-theme">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
@@ -250,6 +251,7 @@ export default function StyleSnapHome() {
         </div>
       </section>
 
-    </>
+      <StyleFooter />
+    </div>
   );
 }
