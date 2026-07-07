@@ -18,7 +18,7 @@ export function StylesnapLayoutClient({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <div className="snap-theme">
+      <div className="snap-theme bg-background">
         {children}
       </div>
     </I18nProvider>
