@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { useI18n } from "@/stylesnap/i18n/context";
 import { openCheckout } from "@/stylesnap/lib/checkout";
+import StyleFooter from "@/stylesnap/Footer";
 
 const iconMap: Record<string, string> = {
   crosshair: "◎",
@@ -250,6 +251,7 @@ export default function StyleSnapHome() {
         </div>
       </section>
 
+      <StyleFooter />
     </>
   );
 }

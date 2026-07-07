@@ -18,7 +18,9 @@ export function StylesnapLayoutClient({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      {children}
+      <div className="snap-theme">
+        {children}
+      </div>
     </I18nProvider>
   );
 }
