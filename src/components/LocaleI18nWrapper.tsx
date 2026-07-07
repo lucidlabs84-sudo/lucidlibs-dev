@@ -18,7 +18,7 @@ export default function LocaleI18nWrapper({
 
   return (
     <StudioI18nProvider initialLocale={initialLocale}>
-      <Navbar />
+      {!isStyleSnap && <Navbar />}
       <main className="flex-1">{children}</main>
       {!isStyleSnap && <Footer />}
     </StudioI18nProvider>

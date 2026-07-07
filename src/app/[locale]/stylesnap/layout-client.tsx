@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 import { I18nProvider } from "@/stylesnap/i18n/context";
 import { Lang } from "@/lib/i18n-detect";
+import StyleSnapHeader from "@/stylesnap/Header";
 
 export function StylesnapLayoutClient({
   children,
@@ -31,6 +32,7 @@ export function StylesnapLayoutClient({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <div className="snap-theme">
+        <StyleSnapHeader />
         {children}
       </div>
     </I18nProvider>
