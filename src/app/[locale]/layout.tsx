@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import LocaleI18nWrapper from "@/components/LocaleI18nWrapper";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 const localeMeta: Record<string, { title: string; description: string }> = {
   en: {
@@ -69,6 +70,7 @@ export default async function LocaleLayout({
 
   return (
     <LocaleI18nWrapper initialLocale={locale as "en" | "zh"}>
+      <BreadcrumbJsonLd />
       {children}
     </LocaleI18nWrapper>
   );
