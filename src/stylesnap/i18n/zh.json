@@ -449,5 +449,19 @@
     "subtitle": "一键。完整样式。Tailwind 或 AI 提示词。{price} 一次买断。",
     "cta": "获取 StyleSnap — {price}",
     "guarantee": "7 天无理由退款保障"
+  },
+  "buyModal": {
+    "title": "购买 StyleSnap Pro",
+    "subtitle": "输入邮箱继续。我们会预填邮箱并检查你是否已有许可证。",
+    "emailLabel": "邮箱地址",
+    "emailPlaceholder": "you@example.com",
+    "cta": "前往支付",
+    "cancel": "取消",
+    "checking": "检查中...",
+    "duplicateError": "你已拥有 StyleSnap Pro 许可证。请查收邮件或找回许可证密钥。",
+    "checkoutError": "启动支付失败，请重试。",
+    "networkError": "网络错误，请检查连接后重试。",
+    "recoverLink": "找回我的许可证密钥 →",
+    "guarantee": "通过 Dodo Payments 安全支付。7 天无理由退款。"
   }
 }

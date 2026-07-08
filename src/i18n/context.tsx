@@ -47,8 +47,13 @@ export function StudioI18nProvider({
 
   const toggleLang = useCallback(() => {
     const next: Lang = lang === "en" ? "zh" : "en";
-    setLang(next);
     setStoredLang(next);
+    // Navigate to the same page with new locale prefix, preserving query params
+    if (typeof window !== "undefined") {
+      const pathname = window.location.pathname;
+      const newPathname = pathname.replace(/^\/[a-z]{2}(\/|$)/, `/${next}$1`);
+      window.location.href = newPathname + window.location.search + window.location.hash;
+    }
   }, [lang]);
 
   return (

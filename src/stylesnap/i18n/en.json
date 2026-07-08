@@ -283,5 +283,19 @@
     "subtitle": "One click. Full styles. Tailwind or AI prompts. {price} once.",
     "cta": "Get StyleSnap — {price}",
     "guarantee": "7-day money-back guarantee"
+  },
+  "buyModal": {
+    "title": "Purchase StyleSnap Pro",
+    "subtitle": "Enter your email to continue. We'll pre-fill it and check if you already have a license.",
+    "emailLabel": "Email address",
+    "emailPlaceholder": "you@example.com",
+    "cta": "Continue to Checkout",
+    "cancel": "Cancel",
+    "checking": "Checking...",
+    "duplicateError": "You already own a StyleSnap Pro license. Please check your email or recover your license key.",
+    "checkoutError": "Failed to start checkout. Please try again.",
+    "networkError": "Network error. Please check your connection and try again.",
+    "recoverLink": "Recover my license key →",
+    "guarantee": "Secure checkout via Dodo Payments. 7-day money-back guarantee."
   }
 }

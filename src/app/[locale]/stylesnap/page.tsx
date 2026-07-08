@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useI18n } from "@/stylesnap/i18n/context";
-import { handleBuyClick } from "@/stylesnap/lib/checkout";
+import BuyButton from "@/stylesnap/components/BuyButton";
 import StyleFooter from "@/stylesnap/Footer";
 
 const iconMap: Record<string, string> = {
@@ -64,10 +64,10 @@ export default function StyleSnapHome() {
               {t("hero.subtitle")}
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <button onClick={() => handleBuyClick()}
+              <BuyButton
                 className="bg-gradient-to-r from-accent to-accent-2 text-white font-semibold px-8 py-4 rounded-xl text-lg transition-all hover:scale-[1.02] shadow-lg shadow-accent/25 hover:shadow-xl hover:shadow-accent/40 cursor-pointer">
                 {t("hero.cta")} — {priceLoading ? t("pricing.price") : productPrice}
-              </button>
+              </BuyButton>
               <span className="text-sm text-muted">{t("hero.ctaSub")}</span>
             </div>
             <p className="mt-8 text-sm text-muted">{t("hero.socialProof")}</p>
@@ -184,10 +184,10 @@ export default function StyleSnapHome() {
                   </li>
                 ))}
               </ul>
-              <button onClick={() => handleBuyClick()}
+              <BuyButton
                 className="block w-full bg-gradient-to-r from-accent to-accent-2 text-white font-semibold py-4 rounded-xl transition-all hover:scale-[1.02] shadow-lg shadow-accent/25 text-lg cursor-pointer">
                 {t("pricing.cta")}
-              </button>
+              </BuyButton>
               <p className="text-xs text-muted mt-4">{t("pricing.guarantee")}</p>
               <p className="text-xs text-muted mt-1">{t("pricing.note")}</p>
             </div>
@@ -243,10 +243,10 @@ export default function StyleSnapHome() {
           <p className="text-white/70 text-lg mb-10">
             {(t("bottomCta.subtitle") as string).replace("{price}", priceLoading ? (t("pricing.price") as string) : productPrice)}
           </p>
-          <button onClick={() => handleBuyClick()}
+          <BuyButton
             className="inline-block bg-white text-accent font-semibold px-10 py-4 rounded-xl text-lg hover:scale-[1.02] shadow-xl shadow-black/10 transition-all cursor-pointer">
             {(t("bottomCta.cta") as string).replace("{price}", priceLoading ? (t("pricing.price") as string) : productPrice)}
-          </button>
+          </BuyButton>
           <p className="text-xs text-white/50 mt-4">{t("bottomCta.guarantee") as string}</p>
         </div>
       </section>

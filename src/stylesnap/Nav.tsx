@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useI18n } from "@/stylesnap/i18n/context";
-import { handleBuyClick } from "@/stylesnap/lib/checkout";
+import BuyButton from "@/stylesnap/components/BuyButton";
 import Link from "next/link";
 
 export default function StyleNav() {
@@ -45,12 +45,11 @@ export default function StyleNav() {
           >
             {t("nav.switchLang") as string}
           </button>
-          <button
-            onClick={handleBuyClick}
+          <BuyButton
             className="whitespace-nowrap bg-gradient-to-r from-accent to-accent-2 text-white text-xs sm:text-sm font-medium px-3 sm:px-5 py-2 rounded-lg hover:scale-[1.03] shadow-lg shadow-accent/25 transition cursor-pointer"
           >
             {t("nav.getStarted") as string}
-          </button>
+          </BuyButton>
 
           {/* Mobile toggle */}
           <button

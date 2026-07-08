@@ -32,16 +32,3 @@ export async function openCheckout(email?: string): Promise<CheckoutResult> {
 
   return data;
 }
-
-/**
- * Convenience wrapper: opens checkout and shows alert for duplicate purchases.
- * Use this as the onClick handler for buy buttons.
- */
-export async function handleBuyClick(): Promise<void> {
-  const result = await openCheckout();
-  if (result.duplicate) {
-    alert(result.message || "You already own a StyleSnap Pro license.");
-  } else if (result.error) {
-    alert("Failed to start checkout. Please try again.");
-  }
-}
