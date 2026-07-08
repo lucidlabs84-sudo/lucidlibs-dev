@@ -126,10 +126,10 @@ export default function StyleSnapHome() {
           <div className="grid md:grid-cols-3 gap-8">
             {steps.map((s, i) => (
               <div key={i} className="relative">
-                {i < steps.length - 1 && <div className="hidden md:block absolute top-8 left-[60%] w-[80%] h-px border-t-2 border-dashed border-border" />}
-                <div className="text-6xl font-black text-border mb-4">{s.num}</div>
-                <h3 className="text-lg font-semibold mb-2 text-foreground">{s.title}</h3>
-                <p className="text-muted text-sm leading-relaxed">{s.desc}</p>
+                {i < steps.length - 1 && <div className="hidden md:block absolute top-7 left-[30%] right-0 h-px border-t-2 border-dashed border-border z-0" />}
+                <div className="relative z-10 text-6xl font-black text-border mb-4">{s.num}</div>
+                <h3 className="relative z-10 text-lg font-semibold mb-2 text-foreground">{s.title}</h3>
+                <p className="relative z-10 text-muted text-sm leading-relaxed">{s.desc}</p>
               </div>
             ))}
           </div>
