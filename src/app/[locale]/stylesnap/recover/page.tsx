@@ -1,14 +1,17 @@
 "use client";
 
-import { useState } from "react";
+import { useState, Suspense } from "react";
+import { useSearchParams } from "next/navigation";
 import { useI18n } from "@/stylesnap/i18n/context";
 import Link from "next/link";
 
 const PROXY_BASE_URL = "https://api.lucidlibs.dev";
 
-export default function LicenseRecoveryPage() {
+function RecoveryForm() {
   const { t, lang } = useI18n();
-  const [email, setEmail] = useState("");
+  const searchParams = useSearchParams();
+  const initialEmail = searchParams.get("email") || "";
+  const [email, setEmail] = useState(initialEmail);
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<{ sent: boolean; message: string } | null>(null);
 
@@ -120,5 +123,17 @@ export default function LicenseRecoveryPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function LicenseRecoveryPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-[60vh] flex items-center justify-center">
+        <p className="text-muted">Loading...</p>
+      </div>
+    }>
+      <RecoveryForm />
+    </Suspense>
   );
 }

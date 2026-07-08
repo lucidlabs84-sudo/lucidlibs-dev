@@ -75,7 +75,7 @@ export default function BuyModal({ open, onClose }: BuyModalProps) {
           <div className="mt-4 p-3 bg-amber-50/10 border border-amber-500/30 rounded-lg">
             <p className="text-sm text-amber-400">{error}</p>
             <a
-              href={`/${typeof window !== "undefined" ? window.location.pathname.split("/")[1] : "en"}/stylesnap/recover`}
+              href={`/${typeof window !== "undefined" ? window.location.pathname.split("/")[1] : "en"}/stylesnap/recover?email=${encodeURIComponent(email)}`}
               className="text-xs text-accent hover:underline mt-1 inline-block"
             >
               {t("buyModal.recoverLink") as string}
