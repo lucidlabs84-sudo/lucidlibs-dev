@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
 
-const SUPPORTED_LOCALES = ["en", "zh"];
 const DEFAULT_LOCALE = "en";
 
 export function middleware(request: NextRequest) {
@@ -27,12 +26,21 @@ export function middleware(request: NextRequest) {
     return NextResponse.next();
   }
 
-  // 3. No locale → detect from Accept-Language and redirect
-  const acceptLang = request.headers.get("accept-language") || "";
-  const detectedLocale = acceptLang.startsWith("zh") ? "zh" : DEFAULT_LOCALE;
+  // 3. No locale → detect from cookie first, then Accept-Language, then fallback
+  const langCookie = request.cookies.get("lang")?.value;
+  let detectedLocale: string;
+  if (langCookie === "en" || langCookie === "zh") {
+    detectedLocale = langCookie;
+  } else {
+    const acceptLang = request.headers.get("accept-language") || "";
+    detectedLocale = acceptLang.startsWith("zh") ? "zh" : DEFAULT_LOCALE;
+  }
 
   const newPathname = `/${detectedLocale}${pathname === "/" ? "" : pathname}`;
-  return NextResponse.redirect(new URL(newPathname, request.url));
+  const newUrl = new URL(newPathname, request.url);
+  // Preserve query params from original request (e.g. Dodo Payments callback params)
+  newUrl.search = request.nextUrl.search;
+  return NextResponse.redirect(newUrl);
 }
 
 export const config = {

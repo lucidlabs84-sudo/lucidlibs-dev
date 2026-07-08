@@ -52,10 +52,13 @@ export function getStoredLang(): Lang | null {
   return null;
 }
 
-/** Save language preference to localStorage */
+/** Save language preference to localStorage + cookie (for middleware server-side detection) */
 export function setStoredLang(lang: Lang): void {
   if (typeof window === "undefined") return;
   localStorage.setItem(STORAGE_KEY, lang);
+  // Also set cookie so middleware can read it server-side
+  // path=/ so it applies to all routes; maxAge=365 days
+  document.cookie = `lang=${lang};path=/;max-age=${365 * 24 * 60 * 60};SameSite=Lax`;
   document.documentElement.lang = lang;
 }
 
