@@ -1,4 +1,5 @@
 const PROXY_BASE_URL = "https://api.lucidlibs.dev";
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 export interface CheckoutResult {
   checkout_url?: string;
@@ -9,10 +10,14 @@ export interface CheckoutResult {
 }
 
 export async function openCheckout(email?: string): Promise<CheckoutResult> {
+  const trimmed = (email || "").trim();
+  if (!trimmed || !EMAIL_RE.test(trimmed)) {
+    return { error: "invalid_email" };
+  }
   const res = await fetch(`${PROXY_BASE_URL}/api/checkout`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ email: email || "" }),
+    body: JSON.stringify({ email: trimmed }),
   });
 
   const data = await res.json() as CheckoutResult;
