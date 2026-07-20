@@ -204,11 +204,21 @@ export default function StyleSnapHome() {
             <p className="text-muted text-lg mt-4 max-w-2xl mx-auto">{t("platforms.subtitle")}</p>
           </div>
           <div className="flex flex-wrap justify-center gap-4 mb-12">
-            <div className="flex items-center gap-3 px-5 py-3 rounded-xl bg-gradient-to-r from-accent to-accent-2 text-white shadow-lg shadow-accent/25">
+            <a
+              href="https://microsoftedge.microsoft.com/addons/detail/mjnjpoambdihceeodnfeencapifkalhp"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 px-5 py-3 rounded-xl bg-gradient-to-r from-accent to-accent-2 text-white shadow-lg shadow-accent/25 hover:scale-[1.03] transition-all cursor-pointer no-underline"
+            >
               <span className="text-lg">🔵</span>
               <div className="text-left"><div className="font-semibold text-sm">Edge</div><div className="text-xs opacity-80">Available now</div></div>
               <span className="ml-2 text-xs bg-white/20 text-white px-2 py-0.5 rounded-full">LIVE</span>
-            </div>
+              <svg className="w-4 h-4 ml-1 opacity-70" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                <polyline points="15 3 21 3 21 9" />
+                <line x1="10" y1="14" x2="21" y2="3" />
+              </svg>
+            </a>
             <div className="flex items-center gap-3 px-5 py-3 rounded-xl border border-border bg-background">
               <span className="text-lg">🌐</span>
               <div className="text-left"><div className="font-semibold text-sm">Chrome</div><div className="text-xs text-muted">Also available</div></div>
