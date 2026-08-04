@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { useRouter, usePathname } from "next/navigation";
 import { useI18n } from "@/stylesnap/i18n/context";
+import { localesWithArticle } from "@/lib/blog";
 
 export default function StyleSnapHeader() {
   const { t, lang } = useI18n();
@@ -16,6 +17,15 @@ export default function StyleSnapHeader() {
 
   const switchLang = () => {
     const rest = pathname?.replace(/^\/(zh|en)/, "") || "/stylesnap";
+
+    // en and zh carry different article sets, and a missing one is now a real 404 —
+    // fall back to the other language's blog index instead of a dead end.
+    const article = rest.match(/^\/stylesnap\/blog\/(.+)$/);
+    if (article && !localesWithArticle(article[1]).includes(otherLang)) {
+      router.push(`/${otherLang}/stylesnap/blog`);
+      return;
+    }
+
     router.push(`/${otherLang}${rest}`);
   };
 

@@ -1,14 +1,11 @@
 import type { Metadata } from "next";
-import enData from "@/stylesnap/i18n/en.json";
-import zhData from "@/stylesnap/i18n/zh.json";
+import { notFound } from "next/navigation";
+import { articlesFor, getArticle, localesWithArticle } from "@/lib/blog";
+import { alternates, SITE_URL, type Locale } from "@/lib/seo";
 
-type BlogArticle = {
-  title: string;
-  excerpt: string;
-  date: string;
-  slug: string;
-  tags?: string[];
-};
+export function generateStaticParams({ params }: { params: { locale: string } }) {
+  return articlesFor(params.locale as Locale).map((a) => ({ slug: a.slug }));
+}
 
 export async function generateMetadata({
   params,
@@ -16,18 +13,11 @@ export async function generateMetadata({
   params: Promise<{ locale: string; slug: string }>;
 }): Promise<Metadata> {
   const { locale, slug } = await params;
+  const article = getArticle(locale, slug);
 
-  const data: Record<string, BlogArticle> =
-    locale === "zh" ? (zhData as Record<string, unknown>).blogArticles as Record<string, BlogArticle>
-      : (enData as Record<string, unknown>).blogArticles as Record<string, BlogArticle>;
-
-  const article = data?.[slug];
-
-  if (!article) {
-    return {
-      title: locale === "zh" ? "文章未找到" : "Article Not Found",
-    };
-  }
+  // The layout below turns this into a real 404; without an override it would inherit the blog
+  // index's title and label the error page as the blog.
+  if (!article) return { title: "Page not found — LucidLibs", robots: { index: false } };
 
   return {
     title: `${article.title} — LucidLibs Blog`,
@@ -35,29 +25,33 @@ export async function generateMetadata({
     openGraph: {
       title: article.title,
       description: article.excerpt,
-      url: `https://lucidlibs.dev/${locale}/stylesnap/blog/${slug}`,
+      url: `${SITE_URL}/${locale}/stylesnap/blog/${slug}`,
       siteName: "LucidLibs",
       type: "article",
+      publishedTime: article.date,
     },
     twitter: {
       card: "summary_large_image",
       title: article.title,
       description: article.excerpt,
     },
-    alternates: {
-      canonical: `https://lucidlibs.dev/${locale}/stylesnap/blog/${slug}`,
-      languages:
-        locale === "en"
-          ? { zh: `/zh/stylesnap/blog/${slug}` }
-          : { en: `/en/stylesnap/blog/${slug}` },
-    },
+    // Only the locales that actually carry this article — several exist in one language only.
+    alternates: alternates(locale, `/stylesnap/blog/${slug}`, localesWithArticle(slug)),
   };
 }
 
-export default function BlogSlugLayout({
+export default async function BlogSlugLayout({
   children,
+  params,
 }: {
   children: React.ReactNode;
+  params: Promise<{ locale: string; slug: string }>;
 }) {
+  const { locale, slug } = await params;
+
+  // Previously an unknown slug rendered a client-side "Article Not Found" screen with HTTP 200,
+  // which Google files as a soft 404. Return a real 404 instead.
+  if (!getArticle(locale, slug)) notFound();
+
   return <>{children}</>;
 }

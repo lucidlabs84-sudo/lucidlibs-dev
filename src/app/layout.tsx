@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Script from "next/script";
+import { SITE_URL } from "@/lib/seo";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -14,6 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  // Without this, Next.js emits relative hreflang hrefs (href="/en"), which Google ignores.
+  metadataBase: new URL(SITE_URL),
   title: "LucidLibs — Indie Developer Studio",
   description:
     "Building tools that make development delightful. StyleSnap and more — crafted by an independent developer.",

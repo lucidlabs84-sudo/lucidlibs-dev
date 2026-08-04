@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { StylesnapLayoutClient } from "./layout-client";
+import { alternates } from "@/lib/seo";
 
 export async function generateMetadata({
   params,
@@ -37,13 +38,7 @@ export async function generateMetadata({
         ? "一键提取任意网页的CSS样式。$29一次性买断。"
         : "Extract CSS styles from any website. $29 one-time.",
     },
-    alternates: {
-      canonical: `https://lucidlibs.dev/${locale}/stylesnap`,
-      languages: {
-        en: "/en/stylesnap",
-        zh: "/zh/stylesnap",
-      },
-    },
+    alternates: alternates(locale, "/stylesnap"),
     keywords: [
       "CSS extractor",
       "StyleSnap",

@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import LocaleI18nWrapper from "@/components/LocaleI18nWrapper";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
+import HtmlLang from "@/components/HtmlLang";
+import { alternates, LOCALES } from "@/lib/seo";
 
 const localeMeta: Record<string, { title: string; description: string }> = {
   en: {
@@ -15,6 +17,10 @@ const localeMeta: Record<string, { title: string; description: string }> = {
   },
 };
 
+export function generateStaticParams() {
+  return LOCALES.map((locale) => ({ locale }));
+}
+
 export async function generateMetadata({
   params,
 }: {
@@ -26,13 +32,7 @@ export async function generateMetadata({
   return {
     title: meta.title,
     description: meta.description,
-    alternates: {
-      canonical: `https://lucidlibs.dev/${locale}`,
-      languages: {
-        en: "/en",
-        zh: "/zh",
-      },
-    },
+    alternates: alternates(locale),
     openGraph: {
       title: meta.title,
       description: meta.description,
@@ -70,6 +70,7 @@ export default async function LocaleLayout({
 
   return (
     <LocaleI18nWrapper initialLocale={locale as "en" | "zh"}>
+      <HtmlLang lang={locale} />
       <BreadcrumbJsonLd />
       {children}
     </LocaleI18nWrapper>

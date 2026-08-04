@@ -1,3 +1,27 @@
+import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+
+  return pageMetadata(locale, "/privacy", {
+    en: {
+      title: "Privacy Policy — LucidLibs",
+      description:
+        "How LucidLibs and StyleSnap handle your data: browsing activity and inspected CSS never leave your device. Only license keys, email, and feedback are processed.",
+    },
+    zh: {
+      title: "隐私政策 — LucidLibs",
+      description:
+        "LucidLibs 与 StyleSnap 如何处理你的数据：浏览行为和检查的 CSS 从不离开你的设备。仅处理许可证密钥、邮箱和反馈内容。",
+    },
+  });
+}
+
 export default function PrivacyPage() {
   return (
     <main className="min-h-screen bg-background text-foreground">
