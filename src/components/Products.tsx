@@ -18,10 +18,10 @@ export default function Products() {
     planned: t("products.statusPlanned") as string,
   };
 
-  const productKeys = ["stylesnap", "coming", "planned"] as const;
-  const productStatuses = ["live", "coming", "planned"] as const;
-  const productHrefs = [`/${lang}/stylesnap`, "#", "mailto:lucidlibs@outlook.com"];
-  const productIcons = ["SS", "?", "+"];
+  const productKeys = ["stylesnap", "goexam", "planned"] as const;
+  const productStatuses = ["live", "live", "planned"] as const;
+  const productHrefs = [`/${lang}/stylesnap`, "https://goexam.dev", "mailto:lucidlibs@outlook.com"];
+  const productIcons = ["SS", "GE", "+"];
 
   const products: Product[] = productKeys.map((key, i) => ({
     name: t(`products.${key}.name`) as string,
@@ -130,7 +130,7 @@ export default function Products() {
 
             return product.href.startsWith("/") ? (
               <Link key={productKeys[i]} href={product.href}>{card}</Link>
-            ) : product.href.startsWith("mailto:") ? (
+            ) : product.href.startsWith("mailto:") || product.href.startsWith("https://") ? (
               <a key={productKeys[i]} href={product.href}>{card}</a>
             ) : (
               <div key={productKeys[i]}>{card}</div>

@@ -33,19 +33,27 @@
         "Export to CSS / Tailwind / inline styles"
       ]
     },
-    "coming": {
-      "name": "More coming soon",
-      "tagline": "The next tool is on the way",
-      "description": "We're always building. The next product is already in the workshop. Follow us to get early access.",
-      "price": "TBA",
-      "features": ["Stay tuned", "Early access for followers"]
+    "goexam": {
+      "name": "GoExam",
+      "tagline": "Free practice tests for licence and civil-service exams",
+      "description": "Official question banks for driving, motorcycle and public-service exams in Thailand, Korea, Japan, the Philippines and more, with timed mock exams and missed-question review.",
+      "price": "Free",
+      "features": [
+        "Official question banks",
+        "Timed mock exams",
+        "Review of missed questions",
+        "Exams in 19 countries"
+      ]
     },
     "planned": {
       "name": "Your idea here",
       "tagline": "Got a developer tool idea?",
       "description": "We build what developers need. If you have a pain point that no tool solves well, let us know. We might just build it.",
       "price": "Open",
-      "features": ["Community-driven", "Real developer problems"]
+      "features": [
+        "Community-driven",
+        "Real developer problems"
+      ]
     }
   },
   "about": {
